@@ -24,7 +24,7 @@ namespace LESSON1
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = Color.Teal;
+            this.BackColor = Color.SlateGray;
             FoodARdbtn.Checked = false;
             DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
 
@@ -58,7 +58,7 @@ namespace LESSON1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = Color.MidnightBlue;
+            this.BackColor = Color.White;
             foodBRdbtn.Checked = false;
             DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Pikachu.png");
 
