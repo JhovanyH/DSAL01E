@@ -17,102 +17,90 @@ namespace LESSON1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            this.BackColor = Color.SlateGray;
-            FoodARdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
-
-
-            RandomPlushies.Checked = true;
-            handmade.Checked = true;
-            protectkit2.Checked = true;
-            notebooks.Checked = true;
-            limited2.Checked = true;
-
-            Keychains.Checked = false;
-            Plushies.Checked = false;
-            ProtectKit1.Checked = false;
-            Ballpens.Checked = false;
-            randomCollect1.Checked = false;
-
-
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            itemnametxtbox.Enabled = false;
+            pricetxtbox.Enabled = false;
+            discountedtxtbox.Enabled = false;
+            qty_totaltxtbox.Enabled = false;
+            discount_totaltxtbox.Enabled = false;
+            discounted_totaltxtbox.Enabled = false;
+            changetxtbox.Enabled = false;
 
+
+
+
+            
+            pictureBox20.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150621.png");
+            pictureBox19.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151421.png");
+            pictureBox18.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151154.png");
+            pictureBox17.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151314.png");
+            pictureBox16.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
+
+
+
+
+
+
+            label15.Text = "Winx Bloom Doll";
+            label16.Text = "Angry Red Bird";
+            label17.Text = "Pikachu Plushie";
+            label18.Text = "Wooden Bunny";
+            label19.Text = "Piggy Plushie";
+            label20.Text = "Kuromi Keychain";
+            label21.Text = "J. Rizal Statue";
+            label22.Text = "Sniper Toy Gun";
+            label23.Text = "Flying Elsa";
+            label24.Text = "Dinasaur Green";
+            
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White;
-            foodBRdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Pikachu.png");
-
-
-            RandomPlushies.Checked = false;
-            handmade.Checked = false;
-            protectkit2.Checked = false;
-            notebooks.Checked = false;
-            limited2.Checked = false;
-
-            Keychains.Checked = true;
-            Plushies.Checked = true;
-            ProtectKit1.Checked = true;
-            Ballpens.Checked = true;    
-            randomCollect1.Checked = true;
-
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FoodARdbtn.Checked = false;
-            foodBRdbtn.Checked = false;
-
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Question.png");
-            RandomPlushies.Checked = false;
-            handmade.Checked = false;
-            protectkit2.Checked = false;
-            notebooks.Checked = false;
-            limited2.Checked = false;
-
-            Keychains.Checked = false;
-            Plushies.Checked = false;
-            ProtectKit1.Checked = false;
-            Ballpens.Checked = false;
-            randomCollect1.Checked = false;
-
-            Pricetxtbox.Clear();
-            Discounttxtbox.Clear();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Keychains_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void randomCollect1_CheckedChanged(object sender, EventArgs e)
+        private void label20_Click(object sender, EventArgs e)
         {
 
         }

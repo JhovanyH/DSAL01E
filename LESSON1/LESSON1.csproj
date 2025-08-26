@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Activity2.Designer.cs">
-      <DependentUpon>Activity2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Activity3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Activity3.Designer.cs">
       <DependentUpon>Activity3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activity4.Designer.cs">
+      <DependentUpon>Activity4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activity2.Designer.cs">
+      <DependentUpon>Activity2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity3.resx">
       <DependentUpon>Activity3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activity4.resx">
+      <DependentUpon>Activity4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

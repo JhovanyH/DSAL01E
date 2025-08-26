@@ -17,92 +17,116 @@ namespace LESSON1
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            ITEMNAMETXTBOX.Clear();
+            pricetxtbox.Clear();
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            ITEMNAMETXTBOX.Text = "BABY ALIVE DOLL";
+            pricetxtbox.Text = "P250.00";
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            ITEMNAMETXTBOX.Text = "BAND AID";
+            pricetxtbox.Text = "P10.00";
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            ITEMNAMETXTBOX.Text = "ANGERY RED BIRD";
+            pricetxtbox.Text = "P70.00";
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            ITEMNAMETXTBOX.Text = "LIMITED BRATZ DOLL";
+            pricetxtbox.Text = "P1200.00";
         }
 
-        private void label14_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            ITEMNAMETXTBOX.Text = "WOOD STACK PUZZLE BUNNY";
+            pricetxtbox.Text = "P150.00";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Enabled = false;
-            pricetxtbox.Enabled = false;
-            discountedtxtbox.Enabled = false;
-            qty_totaltxtbox.Enabled = false;
-            discount_totaltxtbox.Enabled = false;
-            discounted_totaltxtbox.Enabled = false;
-            changetxtbox.Enabled = false;
-
-
-
-
-            
-            pictureBox20.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150621.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151421.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151154.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151314.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
-
-
-
-
-
-
-            label15.Text = "Winx Bloom Doll";
-            label16.Text = "Angry Red Bird";
-            label17.Text = "Pikachu Plushie";
-            label18.Text = "Wooden Bunny";
-            label19.Text = "Piggy Plushie";
-            label20.Text = "Kuromi Keychain";
-            label21.Text = "J. Rizal Statue";
-            label22.Text = "Sniper Toy Gun";
-            label23.Text = "Flying Elsa";
-            label24.Text = "Dinasaur Green";
-            
+            ITEMNAMETXTBOX.Text = "4 CUTE CAT";
+            pricetxtbox.Text = "P175.00";
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
+            ITEMNAMETXTBOX.Text = "FLYING ELSA";
+            pricetxtbox.Text = "P499.00";
+        }
 
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "ICE CREAM SET";
+            pricetxtbox.Text = "P550.00";
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "J. RIZAL STATUE";
+            pricetxtbox.Text = "P980.00";
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "PELLET TOY GUN";
+            pricetxtbox.Text = "P400.00";
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "KUROMI PLUSHY";
+            pricetxtbox.Text = "P99.00";
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "PIGGY PLUSHY";
+            pricetxtbox.Text = "P79.00";
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "SLEEPING PIKACHU COLLECTIBLE";
+            pricetxtbox.Text = "P399.00";
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "DINASAUR GREEN";
+            pricetxtbox.Text = "P55.00";
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            ITEMNAMETXTBOX.Text = "WINX BLOOM DOLL";
+            pricetxtbox.Text = "P60.00";
         }
     }
 }
