@@ -76,11 +76,11 @@ namespace LESSON1
 
 
             
-            pictureBox20.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150621.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151421.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151154.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 151314.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
+            pictureBox20.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
+            pictureBox19.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\perfum.png");
+            pictureBox18.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\liptint.png");
+            pictureBox17.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\labubu.png");
+            pictureBox16.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\brace.png");
 
 
 
