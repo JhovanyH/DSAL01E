@@ -71,16 +71,16 @@ namespace LESSON1
             discount_totaltxtbox.Enabled = false;
             discounted_totaltxtbox.Enabled = false;
             changetxtbox.Enabled = false;
-
+            discounttxtbox.Enabled = false;
 
 
 
             
-            pictureBox20.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\perfum.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\liptint.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\labubu.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\brace.png");
+            pictureBox20.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\haunted.png");
+            pictureBox19.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\perfum.png");
+            pictureBox18.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\liptint.png");
+            pictureBox17.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\labubu.png");
+            pictureBox16.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\brace.png");
 
 
 
@@ -107,12 +107,108 @@ namespace LESSON1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int qty = 0, qty_total = 0;
+            double discount_amt = 0, discounted_amt = 0, cash_rendered = 0, change = 0;
+            double discount_totalGiven = 0, discounted_totalGiven = 0;
 
+
+            qty = Convert.ToInt32(textBox3.Text);
+            discount_amt = Convert.ToDouble(discounttxtbox.Text);
+            discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
+            cash_rendered = Convert.ToDouble(textBox9.Text);
+
+            qty_total += qty;
+            discount_totalGiven += discount_amt;
+            discounted_totalGiven += discounted_amt;
+            change = cash_rendered - discounted_amt;
+
+
+            qty_totaltxtbox.Text = qty_total.ToString();
+            discount_totaltxtbox.Text += discount_totalGiven.ToString("n");
+            discounted_totaltxtbox.Text = discounted_totalGiven.ToString("n");
+            changetxtbox.Text = change.ToString("n");
+            textBox9.Text = cash_rendered.ToString("n");
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            int qty;
+                double price, discount_amt, discounted_amt;
+            qty = Convert.ToInt32(textBox3.Text);
+            price = Convert.ToDouble(pricetxtbox.Text);
+            discount_amt = (qty * price) * 0.30;
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            int qty;
+            double price, discount_amt, discounted_amt;
+            qty = Convert.ToInt32(textBox3.Text);
+            price = Convert.ToDouble(pricetxtbox.Text);
+            discount_amt = (qty * price) * 0.10;
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            radioButton1.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            int qty;
+            double price, discount_amt, discounted_amt;
+            qty = Convert.ToInt32(textBox3.Text);
+            price = Convert.ToDouble(pricetxtbox.Text);
+            discount_amt = (qty * price) * 0.15;
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            radioButton2.Checked = false;
+            radioButton1.Checked = false;
+            radioButton4.Checked = false;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            int qty;
+            double price, discount_amt, discounted_amt;
+            qty = Convert.ToInt32(textBox3.Text);
+            price = Convert.ToDouble(pricetxtbox.Text);
+            discount_amt = (qty * price) * 0;
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton1.Checked = false;
         }
     }
 }
