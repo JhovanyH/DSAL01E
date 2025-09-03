@@ -93,6 +93,16 @@ namespace LESSON1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brace {
+            get {
+                object obj = ResourceManager.GetObject("brace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bratz {
             get {
                 object obj = ResourceManager.GetObject("bratz", resourceCulture);
@@ -133,6 +143,16 @@ namespace LESSON1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap haunted {
+            get {
+                object obj = ResourceManager.GetObject("haunted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ice_cream {
             get {
                 object obj = ResourceManager.GetObject("ice cream", resourceCulture);
@@ -163,9 +183,39 @@ namespace LESSON1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap labubu {
+            get {
+                object obj = ResourceManager.GetObject("labubu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap liptint {
+            get {
+                object obj = ResourceManager.GetObject("liptint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pelet {
             get {
                 object obj = ResourceManager.GetObject("pelet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perfum {
+            get {
+                object obj = ResourceManager.GetObject("perfum", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

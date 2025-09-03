@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Piggy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Piggy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,8 @@
   <data name="elsa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elsa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Piggy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Piggy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="haunted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\haunted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="winx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +154,20 @@
   <data name="pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikachu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="liptint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\liptint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="band" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\band.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="labubu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labubu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bird" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jose rizal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jose rizal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +175,7 @@
   <data name="bratz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bratz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="band" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\band.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
