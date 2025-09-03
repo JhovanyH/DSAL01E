@@ -321,6 +321,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Activity2";
             this.Text = "Activity2";
+            this.Load += new System.EventHandler(this.Activity2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
