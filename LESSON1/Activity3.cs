@@ -116,7 +116,7 @@ namespace LESSON1
             discount_amt = Convert.ToDouble(discounttxtbox.Text);
             discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
             cash_rendered = Convert.ToDouble(textBox9.Text);
-
+            
             qty_total += qty;
             discount_totalGiven += discount_amt;
             discounted_totalGiven += discounted_amt;
@@ -209,6 +209,38 @@ namespace LESSON1
             radioButton2.Checked = false;
             radioButton3.Checked = false;
             radioButton1.Checked = false;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Clear();
+            pricetxtbox.Clear();
+            textBox3.Clear();
+            qty_totaltxtbox.Clear();
+            discounttxtbox.Clear();
+            discountedtxtbox.Clear();
+            changetxtbox.Clear();
+            textBox9.Clear();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Winx Doll Bloom";
+            pricetxtbox.Text = "100";
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Angry Bird Plushie";
+            pricetxtbox.Text = "89";
+
         }
     }
 }
