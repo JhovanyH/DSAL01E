@@ -182,9 +182,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox2.Location = new System.Drawing.Point(7, 216);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(538, 96);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -193,7 +193,7 @@
             // discounted_totaltxtbox
             // 
             this.discounted_totaltxtbox.Location = new System.Drawing.Point(145, 69);
-            this.discounted_totaltxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.discounted_totaltxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.discounted_totaltxtbox.Name = "discounted_totaltxtbox";
             this.discounted_totaltxtbox.Size = new System.Drawing.Size(389, 19);
             this.discounted_totaltxtbox.TabIndex = 25;
@@ -202,7 +202,7 @@
             // discount_totaltxtbox
             // 
             this.discount_totaltxtbox.Location = new System.Drawing.Point(121, 39);
-            this.discount_totaltxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.discount_totaltxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.discount_totaltxtbox.Name = "discount_totaltxtbox";
             this.discount_totaltxtbox.Size = new System.Drawing.Size(413, 19);
             this.discount_totaltxtbox.TabIndex = 24;
@@ -210,7 +210,7 @@
             // qty_totaltxtbox
             // 
             this.qty_totaltxtbox.Location = new System.Drawing.Point(121, 12);
-            this.qty_totaltxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.qty_totaltxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.qty_totaltxtbox.Name = "qty_totaltxtbox";
             this.qty_totaltxtbox.Size = new System.Drawing.Size(413, 19);
             this.qty_totaltxtbox.TabIndex = 21;
@@ -261,9 +261,9 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Location = new System.Drawing.Point(7, 317);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(538, 137);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
@@ -285,7 +285,7 @@
             // 
             this.changetxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changetxtbox.Location = new System.Drawing.Point(297, 40);
-            this.changetxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changetxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.changetxtbox.Multiline = true;
             this.changetxtbox.Name = "changetxtbox";
             this.changetxtbox.Size = new System.Drawing.Size(237, 86);
@@ -318,7 +318,7 @@
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(4, 40);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(248, 86);
@@ -370,9 +370,9 @@
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(549, 10);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(636, 627);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
@@ -634,8 +634,9 @@
             // pictureBox16
             // 
             this.pictureBox16.ErrorImage = global::LESSON1.Properties.Resources.brace;
+            this.pictureBox16.Image = global::LESSON1.Properties.Resources.brace;
             this.pictureBox16.Location = new System.Drawing.Point(502, 475);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(105, 109);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -645,8 +646,9 @@
             // pictureBox17
             // 
             this.pictureBox17.ErrorImage = global::LESSON1.Properties.Resources.labubu;
+            this.pictureBox17.Image = global::LESSON1.Properties.Resources.labubu;
             this.pictureBox17.Location = new System.Drawing.Point(383, 475);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(105, 109);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -656,8 +658,9 @@
             // pictureBox18
             // 
             this.pictureBox18.ErrorImage = global::LESSON1.Properties.Resources.liptint;
+            this.pictureBox18.Image = global::LESSON1.Properties.Resources.liptint;
             this.pictureBox18.Location = new System.Drawing.Point(267, 475);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(105, 109);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -667,8 +670,9 @@
             // pictureBox19
             // 
             this.pictureBox19.ErrorImage = global::LESSON1.Properties.Resources.perfum;
+            this.pictureBox19.Image = global::LESSON1.Properties.Resources.perfum;
             this.pictureBox19.Location = new System.Drawing.Point(149, 475);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(105, 109);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -678,9 +682,10 @@
             // pictureBox20
             // 
             this.pictureBox20.ErrorImage = null;
+            this.pictureBox20.Image = global::LESSON1.Properties.Resources.haunted;
             this.pictureBox20.InitialImage = null;
             this.pictureBox20.Location = new System.Drawing.Point(31, 475);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(105, 109);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -692,7 +697,7 @@
             // 
             this.pictureBox11.Image = global::LESSON1.Properties.Resources.band;
             this.pictureBox11.Location = new System.Drawing.Point(502, 324);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(105, 109);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -703,7 +708,7 @@
             // 
             this.pictureBox12.Image = global::LESSON1.Properties.Resources.baby;
             this.pictureBox12.Location = new System.Drawing.Point(383, 324);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(105, 109);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -714,7 +719,7 @@
             // 
             this.pictureBox13.Image = global::LESSON1.Properties.Resources.ice_cream;
             this.pictureBox13.Location = new System.Drawing.Point(265, 324);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(105, 109);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -725,7 +730,7 @@
             // 
             this.pictureBox14.Image = global::LESSON1.Properties.Resources.bratz;
             this.pictureBox14.Location = new System.Drawing.Point(149, 324);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(105, 109);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -736,7 +741,7 @@
             // 
             this.pictureBox15.Image = global::LESSON1.Properties.Resources.cat;
             this.pictureBox15.Location = new System.Drawing.Point(31, 324);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(105, 109);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -747,7 +752,7 @@
             // 
             this.pictureBox6.Image = global::LESSON1.Properties.Resources.trex;
             this.pictureBox6.Location = new System.Drawing.Point(502, 171);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(105, 109);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -758,7 +763,7 @@
             // 
             this.pictureBox7.Image = global::LESSON1.Properties.Resources.elsa;
             this.pictureBox7.Location = new System.Drawing.Point(383, 171);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(105, 109);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -769,7 +774,7 @@
             // 
             this.pictureBox8.Image = global::LESSON1.Properties.Resources.pelet;
             this.pictureBox8.Location = new System.Drawing.Point(265, 171);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(105, 109);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -780,7 +785,7 @@
             // 
             this.pictureBox9.Image = global::LESSON1.Properties.Resources.jose_rizal;
             this.pictureBox9.Location = new System.Drawing.Point(149, 171);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(105, 109);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -791,7 +796,7 @@
             // 
             this.pictureBox10.Image = global::LESSON1.Properties.Resources.kuromi;
             this.pictureBox10.Location = new System.Drawing.Point(31, 171);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(105, 109);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -802,7 +807,7 @@
             // 
             this.pictureBox5.Image = global::LESSON1.Properties.Resources.Piggy;
             this.pictureBox5.Location = new System.Drawing.Point(502, 21);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(105, 109);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -813,7 +818,7 @@
             // 
             this.pictureBox4.Image = global::LESSON1.Properties.Resources.bunny;
             this.pictureBox4.Location = new System.Drawing.Point(383, 21);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(105, 109);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -824,18 +829,19 @@
             // 
             this.pictureBox3.Image = global::LESSON1.Properties.Resources.pikachu;
             this.pictureBox3.Location = new System.Drawing.Point(265, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(105, 109);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LESSON1.Properties.Resources.bird;
             this.pictureBox2.Location = new System.Drawing.Point(149, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(105, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -847,7 +853,7 @@
             // 
             this.pictureBox1.Image = global::LESSON1.Properties.Resources.winx;
             this.pictureBox1.Location = new System.Drawing.Point(31, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -861,7 +867,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(7, 459);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(252, 178);
             this.button5.TabIndex = 21;
@@ -874,7 +880,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(263, 460);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(67, 46);
             this.button6.TabIndex = 22;
@@ -887,7 +893,7 @@
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(263, 503);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(67, 46);
             this.button7.TabIndex = 23;
@@ -900,7 +906,7 @@
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(263, 549);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(67, 46);
             this.button8.TabIndex = 24;
@@ -913,7 +919,7 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(263, 593);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 46);
             this.button9.TabIndex = 25;
@@ -926,7 +932,7 @@
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(334, 460);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button10.Size = new System.Drawing.Size(67, 46);
@@ -940,7 +946,7 @@
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Location = new System.Drawing.Point(406, 460);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(67, 46);
             this.button11.TabIndex = 27;
@@ -953,7 +959,7 @@
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(478, 460);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(67, 46);
             this.button12.TabIndex = 28;
@@ -966,7 +972,7 @@
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(334, 503);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(67, 46);
             this.button13.TabIndex = 23;
@@ -979,7 +985,7 @@
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(406, 503);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(67, 46);
             this.button14.TabIndex = 29;
@@ -992,7 +998,7 @@
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
             this.button15.Location = new System.Drawing.Point(478, 503);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(67, 46);
             this.button15.TabIndex = 30;
@@ -1006,7 +1012,7 @@
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(334, 549);
-            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button16.Margin = new System.Windows.Forms.Padding(2);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(67, 46);
             this.button16.TabIndex = 31;
@@ -1019,7 +1025,7 @@
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button17.ForeColor = System.Drawing.Color.White;
             this.button17.Location = new System.Drawing.Point(406, 549);
-            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(67, 46);
             this.button17.TabIndex = 32;
@@ -1032,7 +1038,7 @@
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button18.ForeColor = System.Drawing.Color.White;
             this.button18.Location = new System.Drawing.Point(478, 549);
-            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(67, 46);
             this.button18.TabIndex = 23;
@@ -1045,7 +1051,7 @@
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button19.ForeColor = System.Drawing.Color.White;
             this.button19.Location = new System.Drawing.Point(406, 593);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(67, 46);
             this.button19.TabIndex = 23;
@@ -1058,7 +1064,7 @@
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.button20.ForeColor = System.Drawing.Color.White;
             this.button20.Location = new System.Drawing.Point(478, 593);
-            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(67, 46);
             this.button20.TabIndex = 23;
@@ -1329,7 +1335,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Activity3";
             this.Text = "Activity2";
             this.Load += new System.EventHandler(this.Form1_Load);

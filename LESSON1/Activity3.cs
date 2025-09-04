@@ -76,11 +76,7 @@ namespace LESSON1
 
 
             
-            pictureBox20.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\haunted.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\perfum.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\liptint.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\labubu.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\brace.png");
+           
 
 
 
@@ -241,6 +237,12 @@ namespace LESSON1
             itemnametxtbox.Text = "Angry Bird Plushie";
             pricetxtbox.Text = "89";
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "PIKACHU";
+            pricetxtbox.Text = "50";
         }
     }
 }
