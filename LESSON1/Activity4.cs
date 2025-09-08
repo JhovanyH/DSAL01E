@@ -41,7 +41,7 @@ namespace LESSON1
             
             this.BackColor = Color.SlateGray;
             FoodARdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshot 2025-08-26 150856.png");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\brace.png");
 
 
             RandomPlushies.Checked = true;
@@ -243,7 +243,7 @@ namespace LESSON1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            listBox1.Items.RemoveAt (listBox1.SelectedIndex);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -261,6 +261,75 @@ namespace LESSON1
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FoodARdbtn.Checked = false;
+            foodBRdbtn.Checked = false;
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\question.png");
+            RandomPlushies.Checked = false;
+            handmade.Checked = false;
+            protectkit2.Checked = false;
+            notebooks.Checked = false;
+            limited2.Checked = false;
+
+            Keychains.Checked = false;
+            Plushies.Checked = false;
+            ProtectKit1.Checked = false;
+            Ballpens.Checked = false;
+            randomCollect1.Checked = false;
+
+            Pricetxtbox.Clear();
+            qtytxtbox.Clear();
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+            checkBox9.Checked = false;
+            checkBox10.Checked = false;
+            checkBox11.Checked = false;
+            checkBox12.Checked = false;
+            checkBox13.Checked = false;
+            checkBox14.Checked = false;
+            checkBox15.Checked = false;
+            checkBox16.Checked = false;
+            checkBox17.Checked = false;
+            checkBox18.Checked = false;
+            checkBox19.Checked = false;
+            checkBox20.Checked = false;
+
+            listBox1.Items.Clear();
+
+
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void qtytxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            double price, discounted_amount, discount_amount;
+
+            int qty;
+
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            qty = Convert.ToInt32 (qtytxtbox.Text);
+            discount_amount = Convert.ToDouble(discounttxtbox.Text);
+            discounted_amount = (price * qty) - discount_amount;
+            total_qty += qty;
+            totalqtytxtbox.Text = total_qty.ToString();
+            total_amount += discounted_amount;
+            totalbillstxtbox .Text = total_amount.ToString("n");
+         
         }
     }
 }
