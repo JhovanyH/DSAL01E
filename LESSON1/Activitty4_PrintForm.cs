@@ -15,6 +15,12 @@ namespace LESSON1
         public Activitty4_PrintForm()
         {
             InitializeComponent();
+            printlistBox1.Items.AddRange(printlistBox1.Items);
+        }
+
+        private void Activitty4_PrintForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

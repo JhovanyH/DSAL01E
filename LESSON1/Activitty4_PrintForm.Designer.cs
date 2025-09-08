@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Activitty4_PrintForm";
             this.Text = "Activitty4_PrintForm";
+            this.Load += new System.EventHandler(this.Activitty4_PrintForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
