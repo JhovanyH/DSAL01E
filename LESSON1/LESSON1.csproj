@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activitty4_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activitty4_PrintForm.Designer.cs">
+      <DependentUpon>Activitty4_PrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activity3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Activitty4_PrintForm.resx">
+      <DependentUpon>Activitty4_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Activity2.resx">
       <DependentUpon>Activity2.cs</DependentUpon>
     </EmbeddedResource>
