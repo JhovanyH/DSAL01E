@@ -45,15 +45,21 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add("Bundle B:");
-                listBox1.Items.Add(" - 5 Tote Bags");
-                listBox1.Items.Add(" - 1 Large Plushie");
-                listBox1.Items.Add(" - 3 Journals");
-                listBox1.Items.Add(" - 10 Gel Pens");
-                listBox1.Items.Add(" - Free Random Sticker Pack");
-                listBox1.Items.Add("Subtotal: P" + discounted.ToString("n2"));
-                listBox1.Items.Add("---------------------------");
+                listBox1.Items.Add("Bundle B: -P" + discounted.ToString("n2"));
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshots\\collectibles2.png");
 
+                Keychains.Checked = false;
+                Plushies.Checked = false;
+                ProtectKit1.Checked = false;
+                Ballpens.Checked = false;
+                randomCollect1.Checked = false;
+
+
+                RandomPlushies.Checked = true;
+                handmade.Checked = true;
+                protectkit2.Checked = true;
+                notebooks.Checked = true;
+                limited2.Checked = true;
 
             }
             }
@@ -89,7 +95,7 @@ namespace LESSON1
 
 
 
-
+            
 
 
 
@@ -118,14 +124,25 @@ namespace LESSON1
                 totalqtytxtbox.Text = total_qty.ToString();
 
                 // Show details in listbox
-                listBox1.Items.Add("Bundle A:");
-                listBox1.Items.Add(" - 10 Random KeyChains");
-                listBox1.Items.Add(" - 2 Medium Plushies");
-                listBox1.Items.Add(" - 1 Protection Kit");
-                listBox1.Items.Add(" - 4 Aesthetic Ballpens");
-                listBox1.Items.Add(" - Free Random Limited Collectibles");
-                listBox1.Items.Add("Subtotal: P" + discounted.ToString("n2"));
-                listBox1.Items.Add("---------------------------");
+                listBox1.Items.Add("Bundle A: -P" + discounted.ToString("n2"));
+
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshots\\collectibles.png");
+
+
+
+                Keychains.Checked = true;
+                Plushies.Checked = true;
+                ProtectKit1.Checked = true;
+                Ballpens.Checked = true;
+                randomCollect1.Checked = true;
+
+
+                RandomPlushies.Checked = false;
+                handmade.Checked = false;
+                protectkit2.Checked = false;
+                notebooks.Checked = false;
+                limited2.Checked = false;
+
 
             }
 
@@ -467,7 +484,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox6.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -491,7 +508,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox7.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -515,7 +532,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox8.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -539,7 +556,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox9.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -563,7 +580,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox10.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -587,7 +604,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox11.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -611,7 +628,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox12.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -635,7 +652,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox13.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -659,7 +676,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox14.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -683,7 +700,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox15.Text + " - P" + price.ToString("n2"));
             }
         }
 
@@ -706,7 +723,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox16.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -730,7 +747,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox17.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -754,7 +771,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox18.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -778,7 +795,7 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox19.Text + " - P" + price.ToString("n2"));
             }
 
         }
@@ -802,8 +819,58 @@ namespace LESSON1
                 totalbillstxtbox.Text = total_amount.ToString("n2");
                 totalqtytxtbox.Text = total_qty.ToString();
 
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
+                listBox1.Items.Add(checkBox20.Text + " - P" + price.ToString("n2"));
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        
+            
+        {
+            Activity4_transfer tf = new Activity4_transfer();
+
+            // Copy radio buttons
+
+
+                tf.FoodARdbtn.Checked = FoodARdbtn.Checked; 
+               
+            
+                tf.foodBRdbtn.Checked = foodBRdbtn.Checked;
+
+                tf.Keychains.Checked = Keychains.Checked;
+                tf.Plushies.Checked = Plushies.Checked;
+                tf.ProtectKit1.Checked = ProtectKit1.Checked;
+                tf.Ballpens.Checked = Ballpens.Checked;
+                tf.randomCollect1.Checked = randomCollect1.Checked;
+
+
+                tf.RandomPlushies.Checked = RandomPlushies.Checked;
+                tf.handmade.Checked = handmade.Checked;
+                tf.protectkit2.Checked = protectkit2.Checked;
+                tf.notebooks.Checked = notebooks.Checked;
+                tf.limited2.Checked = limited2.Checked;
+            
+
+                // Copy textboxes
+                tf.Pricetxtbox.Text = Pricetxtbox.Text;
+                tf.qtytxtbox.Text = qtytxtbox.Text;
+                tf.discounttxtbox.Text = discounttxtbox.Text;
+                tf.discountedtxtbox.Text = discountedtxtbox.Text;
+                tf.totalbillstxtbox.Text = totalbillstxtbox.Text;
+                tf.totalqtytxtbox.Text = totalqtytxtbox.Text;
+                tf.cashgiventxtbox.Text = cashgiventxtbox.Text;
+                tf.changetxtbox.Text = changetxtbox.Text;
+
+
+
+                tf.Show();
+            
+        }
+
+        private void DisplayPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

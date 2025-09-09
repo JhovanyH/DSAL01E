@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.foodBRdbtn = new System.Windows.Forms.RadioButton();
             this.FoodARdbtn = new System.Windows.Forms.RadioButton();
-            this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.changetxtbox = new System.Windows.Forms.MaskedTextBox();
             this.cashgiventxtbox = new System.Windows.Forms.MaskedTextBox();
@@ -93,6 +92,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
@@ -113,8 +113,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -139,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,6 +179,7 @@
             // foodBRdbtn
             // 
             this.foodBRdbtn.AutoSize = true;
+            this.foodBRdbtn.Checked = true;
             this.foodBRdbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodBRdbtn.ForeColor = System.Drawing.Color.Purple;
             this.foodBRdbtn.Location = new System.Drawing.Point(14, 87);
@@ -198,19 +200,9 @@
             this.FoodARdbtn.Name = "FoodARdbtn";
             this.FoodARdbtn.Size = new System.Drawing.Size(184, 21);
             this.FoodARdbtn.TabIndex = 0;
-            this.FoodARdbtn.TabStop = true;
             this.FoodARdbtn.Text = "Collectibles Bundle A";
             this.FoodARdbtn.UseVisualStyleBackColor = true;
             this.FoodARdbtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // DisplayPictureBox
-            // 
-            this.DisplayPictureBox.Location = new System.Drawing.Point(370, 573);
-            this.DisplayPictureBox.Name = "DisplayPictureBox";
-            this.DisplayPictureBox.Size = new System.Drawing.Size(307, 199);
-            this.DisplayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DisplayPictureBox.TabIndex = 0;
-            this.DisplayPictureBox.TabStop = false;
             // 
             // groupBox2
             // 
@@ -562,7 +554,7 @@
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(12, 570);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(352, 244);
+            this.listBox1.Size = new System.Drawing.Size(352, 199);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -924,6 +916,17 @@
             this.label14.Size = new System.Drawing.Size(0, 17);
             this.label14.TabIndex = 21;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(103, 779);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(140, 36);
+            this.button6.TabIndex = 64;
+            this.button6.Text = "TRANSFER";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // pictureBox16
             // 
             this.pictureBox16.ErrorImage = global::LESSON1.Properties.Resources.brace;
@@ -1153,11 +1156,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // DisplayPictureBox
+            // 
+            this.DisplayPictureBox.Location = new System.Drawing.Point(370, 570);
+            this.DisplayPictureBox.Name = "DisplayPictureBox";
+            this.DisplayPictureBox.Size = new System.Drawing.Size(307, 199);
+            this.DisplayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DisplayPictureBox.TabIndex = 0;
+            this.DisplayPictureBox.TabStop = false;
+            this.DisplayPictureBox.Click += new System.EventHandler(this.DisplayPictureBox_Click);
+            // 
             // Activity4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 815);
+            this.ClientSize = new System.Drawing.Size(1582, 884);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox4);
@@ -1173,7 +1187,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1202,6 +1215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1210,28 +1224,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox Pricetxtbox;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox DisplayPictureBox;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton FoodARdbtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox randomCollect1;
-        private System.Windows.Forms.CheckBox Ballpens;
-        private System.Windows.Forms.CheckBox ProtectKit1;
-        private System.Windows.Forms.CheckBox Plushies;
-        private System.Windows.Forms.CheckBox Keychains;
-        private System.Windows.Forms.MaskedTextBox qtytxtbox;
-        private System.Windows.Forms.CheckBox limited2;
-        private System.Windows.Forms.CheckBox protectkit2;
-        private System.Windows.Forms.CheckBox notebooks;
-        private System.Windows.Forms.CheckBox RandomPlushies;
-        private System.Windows.Forms.CheckBox handmade;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label34;
@@ -1257,17 +1254,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox changetxtbox;
-        private System.Windows.Forms.MaskedTextBox cashgiventxtbox;
-        private System.Windows.Forms.MaskedTextBox totalqtytxtbox;
-        private System.Windows.Forms.MaskedTextBox totalbillstxtbox;
-        private System.Windows.Forms.MaskedTextBox discountedtxtbox;
-        private System.Windows.Forms.MaskedTextBox discounttxtbox;
         private System.Windows.Forms.CheckBox checkBox20;
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.CheckBox checkBox18;
@@ -1294,5 +1283,31 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.RadioButton foodBRdbtn;
+        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.MaskedTextBox Pricetxtbox;
+        public System.Windows.Forms.RadioButton FoodARdbtn;
+        public System.Windows.Forms.CheckBox randomCollect1;
+        public System.Windows.Forms.CheckBox Ballpens;
+        public System.Windows.Forms.CheckBox ProtectKit1;
+        public System.Windows.Forms.CheckBox Plushies;
+        public System.Windows.Forms.CheckBox Keychains;
+        public System.Windows.Forms.MaskedTextBox qtytxtbox;
+        public System.Windows.Forms.CheckBox limited2;
+        public System.Windows.Forms.CheckBox protectkit2;
+        public System.Windows.Forms.CheckBox notebooks;
+        public System.Windows.Forms.CheckBox RandomPlushies;
+        public System.Windows.Forms.CheckBox handmade;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.MaskedTextBox changetxtbox;
+        public System.Windows.Forms.MaskedTextBox cashgiventxtbox;
+        public System.Windows.Forms.MaskedTextBox totalqtytxtbox;
+        public System.Windows.Forms.MaskedTextBox totalbillstxtbox;
+        public System.Windows.Forms.MaskedTextBox discountedtxtbox;
+        public System.Windows.Forms.MaskedTextBox discounttxtbox;
     }
 }
