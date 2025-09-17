@@ -37,6 +37,22 @@ namespace LESSON1
 
         private void savebttn_Click(object sender, EventArgs e)
         {
+            string name = fnametxtbox.Text + " " + Mnametxtbox.Text + " " + Snametxtbox.Text;        
+            Lesson5_SaveForm sf = new Lesson5_SaveForm();
+            sf.employee_codesave.Text = employeenumtxtbox.Text;
+            sf.employee_namesave.Text = name;
+            sf.department_save.Text = departmenttxtbox.Text;
+            sf.companytxtbox.Text = "Lyceum of the Philippines University Cavite";
+            sf.cutoff_save.Text = paydatetxtbox.Text;
+            sf.payperiod_save.Text = paydatetxtbox.Text;
+            sf.withholdingtax_txtbox.Text = incometaxtxtbox.Text;
+            sf.sss_contribSave.Text = ssscontritxtbox.Text;
+            sf.PhilhealthSave.Text = philhealthcontritxtbox.Text;
+            sf.hdmf_contribsave.Text = pagibigcontrittxtbox.Text;
+            
+
+
+            sf.Show();
 
         }
 

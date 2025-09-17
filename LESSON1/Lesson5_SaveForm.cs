@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LESSON1
+{
+    public partial class Lesson5_SaveForm : Form
+    {
+        public Lesson5_SaveForm()
+        {
+            InitializeComponent();
+
+            
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lesson5_SaveForm_Load(object sender, EventArgs e)
+        {
+            employee_codesave.Enabled = false;
+            employee_namesave.Enabled = false;
+            companytxtbox.Enabled = false;
+            department_save.Enabled = false;
+            cutoff_save.Enabled = false;
+            payperiod_save.Enabled = false;
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
