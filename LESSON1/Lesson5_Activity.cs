@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,10 +37,13 @@ namespace LESSON1
             wisp = 750,
             deductions = 0.00,
             netpay = 0.00,
+            taxable_income = 0.00,
             pagibig = 200;
 
-        
-        
+        private void netincometxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void savebttn_Click(object sender, EventArgs e)
         {
@@ -443,22 +447,22 @@ namespace LESSON1
 
 
 
-
+            taxable_income = gross_income - sss_contrib - phil_contrib - pagibig;
 
 
             //COMPUTATIOM FOR INCOME TAX CONTRIBUTIONS // CONVERT IT INTO  MONTHLY
-            if (gross_income <= 20833.33)
+            if (taxable_income <= 20833.33)
                 income_tax = 0.00;
-            else if (gross_income > 20833.33 && gross_income <= 33333.33)
-                income_tax = (gross_income - 20833.33) * 0.15;
-            else if (gross_income > 33333.33 && gross_income <= 66666.67)
+            else if (taxable_income > 20833.33 && taxable_income <= 33333.33)
+                income_tax = (taxable_income - 20833.33) * 0.15;
+            else if (taxable_income > 33333.33 && taxable_income <= 66666.67)
                 income_tax = 1875 + ((gross_income - 33333.33) * 0.20);
-            else if (gross_income > 66666.67 && gross_income <= 166666.67)
-                income_tax = 8541.70 + ((gross_income - 66666.67) * 0.25);
-            else if (gross_income > 166666.67 && gross_income <= 666666.67)
-                income_tax = 33541.70 + ((gross_income - 166666.67) * 0.30);
-            else if (gross_income > 666666.67)
-                income_tax = 183541.70 + ((gross_income - 666666.67) * 0.35);
+            else if (taxable_income > 66666.67 && taxable_income <= 166666.67)
+                income_tax = 8541.70 + ((taxable_income - 66666.67) * 0.25);
+            else if (taxable_income > 166666.67 && taxable_income <= 666666.67)
+                income_tax = 33541.70 + ((taxable_income - 166666.67) * 0.30);
+            else if (taxable_income > 666666.67)
+                income_tax = 183541.70 + ((taxable_income - 666666.67) * 0.35);
 
 
             //SEMI MONTHLY

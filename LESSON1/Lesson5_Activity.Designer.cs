@@ -471,6 +471,7 @@
             // rate_hour_basicIntxtbox
             // 
             this.rate_hour_basicIntxtbox.BackColor = System.Drawing.Color.LavenderBlush;
+            this.rate_hour_basicIntxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rate_hour_basicIntxtbox.Location = new System.Drawing.Point(173, 350);
             this.rate_hour_basicIntxtbox.Name = "rate_hour_basicIntxtbox";
             this.rate_hour_basicIntxtbox.Size = new System.Drawing.Size(141, 20);
@@ -552,6 +553,7 @@
             this.netincometxtbox.Name = "netincometxtbox";
             this.netincometxtbox.Size = new System.Drawing.Size(141, 20);
             this.netincometxtbox.TabIndex = 51;
+            this.netincometxtbox.TextChanged += new System.EventHandler(this.netincometxtbox_TextChanged);
             // 
             // grossIncometxtbox
             // 
