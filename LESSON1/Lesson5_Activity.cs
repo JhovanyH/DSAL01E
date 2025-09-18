@@ -35,10 +35,11 @@ namespace LESSON1
             net_income = 0.00,
             wisp = Convert.ToDouble("750"),
             deductions = 0.00,
-            
+            netpay = 0.00,
             pagibig = Convert.ToDouble("200");
 
 
+        private Lesson5_SaveForm sf;
 
         private void savebttn_Click(object sender, EventArgs e)
         {
@@ -62,6 +63,14 @@ namespace LESSON1
             sf.dayshrs_honor.Text = hono_income.ToString("n");
             sf.dayshrs_sub.Text = "0.00";
             sf.dayshrs_tardy.Text = "0.00";
+            sf.textBox2.Text = gross_income.ToString("n");
+            sf.textBox19.Text = sf.deductionsSAve.Text;
+            sf.textBox20.Text = netpay.ToString("n");
+            sf.textBox3.Text = "0.00";
+
+
+
+
 
 
 
@@ -217,7 +226,7 @@ namespace LESSON1
             // COMPUTATION FOR DEDUCTION IN THE SAVE FORM
             deductions = income_tax + sss_contrib + phil_contrib + pagibig + wisp;
             
-
+            netpay = gross_income - deductions;
 
 
         }

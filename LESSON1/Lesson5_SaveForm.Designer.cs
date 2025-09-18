@@ -820,7 +820,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(68, 35);
+            this.label14.Location = new System.Drawing.Point(27, 35);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(426, 23);
             this.label14.TabIndex = 3;
@@ -887,6 +887,7 @@
             // 
             // panel17
             // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel17.Controls.Add(this.textBox3);
             this.panel17.Controls.Add(this.label17);
             this.panel17.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1005,7 +1006,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1518, 1091);
+            this.ClientSize = new System.Drawing.Size(1797, 1091);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.textBox2);
