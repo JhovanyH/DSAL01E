@@ -63,7 +63,7 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox100 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dayhrs_basic = new System.Windows.Forms.TextBox();
@@ -371,7 +371,7 @@
             this.panel9.Controls.Add(this.textBox10);
             this.panel9.Controls.Add(this.textBox9);
             this.panel9.Controls.Add(this.textBox8);
-            this.panel9.Controls.Add(this.textBox7);
+            this.panel9.Controls.Add(this.textBox100);
             this.panel9.Controls.Add(this.textBox6);
             this.panel9.Controls.Add(this.textBox5);
             this.panel9.Controls.Add(this.dayhrs_basic);
@@ -490,14 +490,14 @@
             this.textBox8.Size = new System.Drawing.Size(106, 31);
             this.textBox8.TabIndex = 15;
             // 
-            // textBox7
+            // textBox100
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox7.Location = new System.Drawing.Point(359, 344);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 31);
-            this.textBox7.TabIndex = 15;
+            this.textBox100.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox100.Location = new System.Drawing.Point(359, 344);
+            this.textBox100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox100.Name = "textBox100";
+            this.textBox100.Size = new System.Drawing.Size(106, 31);
+            this.textBox100.TabIndex = 15;
             // 
             // textBox6
             // 
@@ -1144,7 +1144,7 @@
         public System.Windows.Forms.TextBox textBox10;
         public System.Windows.Forms.TextBox textBox9;
         public System.Windows.Forms.TextBox textBox8;
-        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox100;
         public System.Windows.Forms.TextBox textBox6;
         public System.Windows.Forms.TextBox textBox5;
         public System.Windows.Forms.TextBox dayhrs_basic;
