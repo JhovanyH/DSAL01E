@@ -33,10 +33,16 @@ namespace LESSON1
             other_loan = 0.00,
             total_deductions = 0.00,
             net_income = 0.00,
+            wisp = Convert.ToDouble("750"),
+            deductions = 0.00,
+            
             pagibig = Convert.ToDouble("200");
+
+
 
         private void savebttn_Click(object sender, EventArgs e)
         {
+           
             string name = fnametxtbox.Text + " " + Mnametxtbox.Text + " " + Snametxtbox.Text;        
             Lesson5_SaveForm sf = new Lesson5_SaveForm();
             sf.employee_codesave.Text = employeenumtxtbox.Text;
@@ -49,7 +55,24 @@ namespace LESSON1
             sf.sss_contribSave.Text = ssscontritxtbox.Text;
             sf.PhilhealthSave.Text = philhealthcontritxtbox.Text;
             sf.hdmf_contribsave.Text = pagibigcontrittxtbox.Text;
-            
+            sf.sss_WIspsave.Text = wisp.ToString("n");
+            sf.deductionsSAve.Text = deductions.ToString("n");
+            sf.dayhrs_basic.Text = basic_income.ToString("n");
+            sf.dayhrs_over.Text = other_income.ToString("n");
+            sf.dayshrs_honor.Text = hono_income.ToString("n");
+            sf.dayshrs_sub.Text = "0.00";
+            sf.dayshrs_tardy.Text = "0.00";
+
+
+
+            sf.textBox1.Text = gross_income.ToString("n");
+
+
+
+
+
+
+
 
 
             sf.Show();
@@ -189,6 +212,11 @@ namespace LESSON1
             philhealthcontritxtbox.Text = phil_contrib.ToString("n");
             pagibigcontrittxtbox.Text = pagibig.ToString("n");
             incometaxtxtbox.Text = income_tax.ToString("n");
+
+
+            // COMPUTATION FOR DEDUCTION IN THE SAVE FORM
+            deductions = income_tax + sss_contrib + phil_contrib + pagibig + wisp;
+            
 
 
 
