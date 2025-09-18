@@ -33,18 +33,18 @@ namespace LESSON1
             other_loan = 0.00,
             total_deductions = 0.00,
             net_income = 0.00,
-            wisp = Convert.ToDouble("750"),
+            wisp = 750,
             deductions = 0.00,
             netpay = 0.00,
-            pagibig = Convert.ToDouble("200");
+            pagibig = 200;
 
-
-        private Lesson5_SaveForm sf;
+        
+        
 
         private void savebttn_Click(object sender, EventArgs e)
         {
-           
-            string name = fnametxtbox.Text + " " + Mnametxtbox.Text + " " + Snametxtbox.Text;        
+            //CALL FROM ANOTHER DIMENSION
+            string name = fnametxtbox.Text + " " + Mnametxtbox.Text + " " + Snametxtbox.Text;
             Lesson5_SaveForm sf = new Lesson5_SaveForm();
             sf.employee_codesave.Text = employeenumtxtbox.Text;
             sf.employee_namesave.Text = name;
@@ -72,7 +72,7 @@ namespace LESSON1
 
 
 
-
+            //DISPLAY
 
             sf.textBox1.Text = gross_income.ToString("n");
 
@@ -90,6 +90,7 @@ namespace LESSON1
 
         private void newbttn_Click(object sender, EventArgs e)
         {
+            //FOR EASY AND INSTANT CLEARING
             foreach (Control textbox in this.Controls)
             {
                 if (textbox is TextBox)
@@ -146,21 +147,22 @@ namespace LESSON1
 
         private void Lesson5_Activity_Load(object sender, EventArgs e)
         {
+            //DISABLING THE TEXTBOXES
             income_basicintxtbox.Enabled = false;
             incomeHonorariumtxtbox.Enabled = false;
             IncomeOtherstxtbox.Enabled = false;
             grossIncometxtbox.Enabled = false;
             ssscontritxtbox.Enabled = false;
             philhealthcontritxtbox.Enabled = false;
-            pagibigcontrittxtbox.Enabled=false;
-            incometaxtxtbox.Enabled=false;
-            totaldeductionstxtbox.Enabled=false;
-            netincometxtbox.Enabled=false;
+            pagibigcontrittxtbox.Enabled = false;
+            incometaxtxtbox.Enabled = false;
+            totaldeductionstxtbox.Enabled = false;
+            netincometxtbox.Enabled = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
@@ -173,11 +175,11 @@ namespace LESSON1
 
             // COMPUTATION FOR BASIC INCOME, HONORARIUM, AND OTHER INCOME
             rate_basic = Convert.ToDouble(rate_hour_basicIntxtbox.Text);
-            no_hours_basic = Convert.ToDouble(no_hours_basicIntxtbox.Text);           
+            no_hours_basic = Convert.ToDouble(no_hours_basicIntxtbox.Text);
             rate_hono = Convert.ToDouble(ratehourHonorariumtxtbox.Text);
-            no_hours_hono = Convert.ToDouble(noHoursHonorariumtxtbox.Text);           
+            no_hours_hono = Convert.ToDouble(noHoursHonorariumtxtbox.Text);
             rate_other = Convert.ToDouble(ratehourOthertxtbox.Text);
-            no_hours_others = Convert.ToDouble(nohoursOthertxtbox.Text);          
+            no_hours_others = Convert.ToDouble(nohoursOthertxtbox.Text);
             basic_income = rate_basic * no_hours_basic;
             hono_income = rate_hono * no_hours_hono;
             other_income = rate_other * no_hours_others;
@@ -188,31 +190,283 @@ namespace LESSON1
 
 
             //COMPUTATION FOR PHILHEALTH CONTRIBUTIONS
-            phil_contrib = gross_income * 0.05;
-            
+            phil_contrib = gross_income * 0.05/2;
+
             //COMPUTATION FOR SSS CONTRIBUTIONS
-            if (gross_income < 14750)
-                sss_contrib = (gross_income * 0.15) + 10;
+            if (gross_income < 5250)
+            {
+                sss_contrib = 250.00 / 2;
+            }
+
+            else if (gross_income > 5250 && gross_income <= 5749.99)
+            {
+                sss_contrib = 275.00 / 2;
+            }
+            else if (gross_income > 5749.99 && gross_income <= 6299.99)
+            {
+                sss_contrib = 300.00 / 2;
+            }
+            else if (gross_income > 62499.99 && gross_income <= 6749.99)
+            {
+                sss_contrib = 325.00 / 2;
+            }
+            else if (gross_income > 6749.99 && gross_income <= 7249.99)
+            {
+                sss_contrib = 350.00 / 2;
+            }
+            else if (gross_income > 7249.99 && gross_income <= 7749.99)
+            {
+                sss_contrib = 375.00 / 2;
+            }
+            else if (gross_income > 7749.99 && gross_income <= 8249.99)
+            {
+                sss_contrib = 400.00 / 2;
+            }
+            else if (gross_income > 8249.99 && gross_income <= 8749.99)
+            {
+                sss_contrib = 425.00 / 2;
+            }
+            else if (gross_income > 8749.99 && gross_income <= 9249.99)
+            {
+                sss_contrib = 450.00 / 2;
+            }
+            else if (gross_income > 9249.99 && gross_income <= 9749.99)
+            {
+                sss_contrib = 475.00 / 2;
+            }
+            else if (gross_income > 9749.99 && gross_income <= 10499.99)
+            {
+                sss_contrib = 500.00 / 2;
+            }
+            else if (gross_income > 102499.99 && gross_income <= 10749.99)
+            {
+                sss_contrib = 525.00 / 2;
+            }
+            else if (gross_income > 10749.99 && gross_income <= 11249.99)
+            {
+                sss_contrib = 550.00 / 2;
+            }
+            else if (gross_income > 11249.99 && gross_income <= 11749.99)
+            {
+                sss_contrib = 575.00 / 2;
+            }
+            else if (gross_income > 11749.99 && gross_income <= 12249.99)
+            {
+                sss_contrib = 600.00 / 2;
+            }
+            else if (gross_income > 12249.99 && gross_income <= 12749.99)
+            {
+                sss_contrib = 625.00 / 2;
+            }
+            else if (gross_income > 12749.99 && gross_income <= 13249.99)
+            {
+                sss_contrib = 650.00 / 2;
+            }
+
+            else if (gross_income > 13249.99 && gross_income <= 13749.99)
+            {
+                sss_contrib = 675.00 / 2;
+            }
+            else if (gross_income > 13749.99 && gross_income <= 14499.99)
+            {
+                sss_contrib = 700.00 / 2;
+            }
+            else if (gross_income > 142499.99 && gross_income <= 14749.99)
+            {
+                sss_contrib = 725.00 / 2;
+            }
+            else if (gross_income > 14749.99 && gross_income <= 15249.99)
+            {
+                sss_contrib = 750.00 / 2;
+            }
+            else if (gross_income > 15249.99 && gross_income <= 15749.99)
+            {
+                sss_contrib = 775.00 / 2;
+            }
+            else if (gross_income > 15749.99 && gross_income <= 16249.99)
+            {
+                sss_contrib = 800.00 / 2;
+            }
+            else if (gross_income > 16249.99 && gross_income <= 16749.99)
+            {
+                sss_contrib = 825.00 / 2;
+            }
+            else if (gross_income > 16749.99 && gross_income <= 17249.99)
+            {
+                sss_contrib = 850.00 / 2;
+            }
+            else if (gross_income > 17249.99 && gross_income <= 17749.99)
+            {
+                sss_contrib = 875.00 / 2;
+            }
+            else if (gross_income > 17749.99 && gross_income <= 18499.99)
+            {
+                sss_contrib = 900.00 / 2;
+            }
+            else if (gross_income > 182499.99 && gross_income <= 18749.99)
+            {
+                sss_contrib = 925.00 / 2;
+            }
+            else if (gross_income > 18749.99 && gross_income <= 19249.99)
+            {
+                sss_contrib = 950.00 / 2;
+            }
+            else if (gross_income > 19249.99 && gross_income <= 19749.99)
+            {
+                sss_contrib = 975.00 / 2;
+            }
+            else if (gross_income > 19749.99 && gross_income <= 20249.99)
+            {
+                sss_contrib = 1000.00 / 2;
+            }
+            else if (gross_income > 20249.99 && gross_income <= 20749.99)
+            {
+                sss_contrib = 1025.00 / 2;
+            }
+            else if (gross_income > 20749.99 && gross_income <= 21249.99)
+            {
+                sss_contrib = 1050.00 / 2;
+            }
+            else if (gross_income > 21249.99 && gross_income <= 21749.99)
+            {
+                sss_contrib = 1075.00 / 2;
+            }
+            else if (gross_income > 21749.99 && gross_income <= 22249.99)
+            {
+                sss_contrib = 1100.00 / 2;
+            }
+            else if (gross_income > 22249.99 && gross_income <= 22749.99)
+            {
+                sss_contrib = 1125.00 / 2;
+            }
+            else if (gross_income > 22749.99 && gross_income <= 23249.99)
+            {
+                sss_contrib = 1150.00 / 2;
+            }
+            else if (gross_income > 23249.99 && gross_income <= 23749.99)
+            {
+                sss_contrib = 1175.00 / 2;
+            }
+            else if (gross_income > 23749.99 && gross_income <= 24249.99)
+            {
+                sss_contrib = 1200.00 / 2;
+            }
+            else if (gross_income > 24249.99 && gross_income <= 24749.99)
+            {
+                sss_contrib = 1225.00 / 2;
+            }
+            else if (gross_income > 24749.99 && gross_income <= 25249.99)
+            {
+                sss_contrib = 1250.00 / 2;
+            }
+            else if (gross_income > 25249.99 && gross_income <= 25749.99)
+            {
+                sss_contrib = 1275.00 / 2;
+            }
+            else if (gross_income > 25749.99 && gross_income <= 26249.99)
+            {
+                sss_contrib = 1300.00 / 2;
+            }
+            else if (gross_income > 26249.99 && gross_income <= 26749.99)
+            {
+                sss_contrib = 1325.00 / 2;
+            }
+            else if (gross_income > 26749.99 && gross_income <= 27249.99)
+            {
+                sss_contrib = 1350.00 / 2;
+            }
+            else if (gross_income > 27249.99 && gross_income <= 27749.99)
+            {
+                sss_contrib = 1375.00 / 2;
+            }
+            else if (gross_income > 27749.99 && gross_income <= 28249.99)
+            {
+                sss_contrib = 1400.00 / 2;
+            }
+            else if (gross_income > 28249.99 && gross_income <= 28749.99)
+            {
+                sss_contrib = 1425.00 / 2;
+            }
+            else if (gross_income > 28749.99 && gross_income <= 29249.99)
+            {
+                sss_contrib = 1450.00 / 2;
+            }
+            else if (gross_income > 29249.99 && gross_income <= 29749.99)
+            {
+                sss_contrib = 1475.00 / 2;
+            }
+            else if (gross_income > 29749.99 && gross_income <= 30249.99)
+            {
+                sss_contrib = 1500.00 / 2;
+            }
+            else if (gross_income > 30249.99 && gross_income <= 30749.99)
+            {
+                sss_contrib = 1525.00 / 2;
+            }
+            else if (gross_income > 30749.99 && gross_income <= 31249.99)
+            {
+                sss_contrib = 1550.00 / 2;
+            }
+            else if (gross_income > 31249.99 && gross_income <= 31749.99)
+            {
+                sss_contrib = 1575.00 / 2;
+            }
+            else if (gross_income > 31749.99 && gross_income <= 32249.99)
+            {
+                sss_contrib = 1600.00 / 2;
+            }
+            else if (gross_income > 32249.99 && gross_income <= 32749.99)
+            {
+                sss_contrib = 1625.00 / 2;
+            }
+            else if (gross_income > 32749.99 && gross_income <= 33249.99)
+            {
+                sss_contrib = 1650.00 / 2;
+            }
+            else if (gross_income > 33249.99 && gross_income <= 33749.99)
+            {
+                sss_contrib = 1675.00 / 2;
+            }
+            else if (gross_income > 33749.99 && gross_income <= 34249.99)
+            {
+                sss_contrib = 1700.00 / 2;
+            }
+            else if (gross_income > 34249.99 && gross_income <= 34749.99)
+            {
+                sss_contrib = 1725.00 / 2;
+            }
             else
-                sss_contrib = (gross_income * 0.15) + 30;
+            {
+                sss_contrib = 1750.00 / 2;  // For incomes above 34,750
+            }
 
-            //COMPUTATIOM FOR INCOME TAX CONTRIBUTIONS
-            if (gross_income <= 250000)
+
+
+
+
+
+
+            //COMPUTATIOM FOR INCOME TAX CONTRIBUTIONS // CONVERT IT INTO  MONTHLY
+            if (gross_income <= 20833.33)
                 income_tax = 0.00;
-            else if (gross_income > 250000 && gross_income <= 400000)
-                income_tax = (gross_income - 250000) * 0.15;
-            else if (gross_income > 400000 && gross_income <= 800000)
-                income_tax = 22500 + ((gross_income - 400000) * 0.20);
-            else if (gross_income > 800000 && gross_income <= 2000000)
-                income_tax = 102500 + ((gross_income - 800000) * 0.25);
-            else if (gross_income > 2000000 && gross_income <= 8000000)
-                income_tax = 402500 + ((gross_income - 2000000) * 0.30);
-            else if (gross_income > 8000000)
-                income_tax = 2202500 + ((gross_income - 8000000) * 0.35);
+            else if (gross_income > 20833.33 && gross_income <= 33333.33)
+                income_tax = (gross_income - 20833.33) * 0.15;
+            else if (gross_income > 33333.33 && gross_income <= 66666.67)
+                income_tax = 1875 + ((gross_income - 33333.33) * 0.20);
+            else if (gross_income > 66666.67 && gross_income <= 166666.67)
+                income_tax = 8541.70 + ((gross_income - 66666.67) * 0.25);
+            else if (gross_income > 166666.67 && gross_income <= 666666.67)
+                income_tax = 33541.70 + ((gross_income - 166666.67) * 0.30);
+            else if (gross_income > 666666.67)
+                income_tax = 183541.70 + ((gross_income - 666666.67) * 0.35);
+
+
+            //SEMI MONTHLY
+            income_tax = income_tax / 2;
 
 
 
-                //DISPLAYING RESULTS
+            //DISPLAYING RESULTS
             grossIncometxtbox.Text = gross_income.ToString("n");
             income_basicintxtbox.Text = basic_income.ToString("n");
             incomeHonorariumtxtbox.Text = hono_income.ToString("n");
@@ -225,10 +479,13 @@ namespace LESSON1
 
             // COMPUTATION FOR DEDUCTION IN THE SAVE FORM
             deductions = income_tax + sss_contrib + phil_contrib + pagibig + wisp;
-            
+
             netpay = gross_income - deductions;
 
 
         }
     }
 }
+
+
+

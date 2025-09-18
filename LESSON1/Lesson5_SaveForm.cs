@@ -48,7 +48,11 @@ namespace LESSON1
             textBox19.Enabled = false;
             textBox20.Enabled = false;
             deductionsSAve.Enabled = false;
-
+            withholdingtax_txtbox.Enabled=false;
+            sss_contribSave.Enabled = false;
+            hdmf_contribsave.Enabled = false;
+            PhilhealthSave.Enabled = false;
+            sss_WIspsave.Enabled = false;
 
             
 
