@@ -66,7 +66,7 @@ namespace LESSON1
             sf.textBox2.Text = gross_income.ToString("n");
             sf.textBox19.Text = sf.deductionsSAve.Text;
             sf.textBox20.Text = netpay.ToString("n");
-            sf.textBox3.Text = "0.00";
+            sf.textBox3.Text = other_income.ToString("n");
 
 
 
