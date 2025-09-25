@@ -35,16 +35,16 @@ namespace LESSON1
             if (usernameTxtbox.Text == "Cashier1" && passwordTxtbox.Text == "jhovany")
             {
                 MessageBox.Show("Welcome .|.");
-                MainForm adminfrm = new MainForm();
-                adminfrm.Show();
+                Activity3 activity3 = new Activity3();
+                activity3.Show();
                 this.Hide();
             }
             else if
                 (usernameTxtbox.Text == "Cashier2" && passwordTxtbox.Text == "honorio")
             {
                 MessageBox.Show("Welcome .|.");
-                MainForm adminfrm = new MainForm();
-                adminfrm.Show();
+                Activity4 activity4 = new Activity4();
+                activity4.Show();
                 this.Hide();
             }
             else if (usernameTxtbox.Text == "Admin" && passwordTxtbox.Text == "admin123")
@@ -57,8 +57,8 @@ namespace LESSON1
             else if (usernameTxtbox.Text == "Accountant" && passwordTxtbox.Text == "accounting")
             {
                 MessageBox.Show("Welcome .|.");
-                MainForm adminfrm = new MainForm();
-                adminfrm.Show();
+                Lesson5_Activity activity5 = new Lesson5_Activity();
+                activity5.Show();
                 this.Hide();
             }
             else
