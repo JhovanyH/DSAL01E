@@ -114,6 +114,12 @@
     <Compile Include="UserAccount.Designer.cs">
       <DependentUpon>UserAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAccount_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccount_PrintForm.Designer.cs">
+      <DependentUpon>UserAccount_PrintForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Acitivity1.resx">
       <DependentUpon>Acitivity1.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="UserAccount.resx">
       <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccount_PrintForm.resx">
+      <DependentUpon>UserAccount_PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
