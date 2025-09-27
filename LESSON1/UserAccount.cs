@@ -38,6 +38,11 @@ namespace LESSON1
             total_contrib = 0.00,
             total_loan = 0.00;
 
+        private void fnametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void grossIncometxtbox_TextChanged(object sender, EventArgs e)
         {
            
@@ -49,8 +54,7 @@ namespace LESSON1
         }
 
         private void no_HoursOtherTxtbox_TextChanged(object sender, EventArgs e)
-        {
-            double rate_other, no_hours_others, other_income, gross_income;
+        {           
             if (Double.TryParse(ratehour_OtherTxtbox.Text, out rate_other) &&
                 Double.TryParse(no_HoursOtherTxtbox.Text, out no_hours_others))
             {
@@ -129,8 +133,11 @@ namespace LESSON1
 
         private void newbttn_Click(object sender, EventArgs e)
         {
-            Payslip_viewlistbox.Items.Add("Employee Number:  "+ "   " +
-                "   " + employeenumtxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Employee Number:".PadRight(30) + employeenumtxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Firstname:".PadRight(30) + fnametxtbox.Text);
+            Payslip_viewlistbox.Items.Add("MiddleName:".PadRight(30) + Mnametxtbox.Text);
+
+
 
         }
 

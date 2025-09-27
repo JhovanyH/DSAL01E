@@ -48,20 +48,20 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.income_HonorariumTxtbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.no_hoursHonotxtbox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.rate_hourHonorTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Income_otherTxtbox = new System.Windows.Forms.TextBox();
+            this.ratehour_OtherTxtbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.no_HoursOtherTxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ratehour_OtherTxtbox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.netincometxtbox = new System.Windows.Forms.TextBox();
             this.grossIncometxtbox = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -75,15 +75,17 @@
             this.numberDependentsTxtbox = new System.Windows.Forms.TextBox();
             this.departmentTxtbox = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tax_contribTxtbox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pagibigcontrittxtbox = new System.Windows.Forms.TextBox();
             this.philhealthcontritxtbox = new System.Windows.Forms.TextBox();
             this.ssscontritxtbox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tax_contribTxtbox = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.other_loanTxtbox = new System.Windows.Forms.TextBox();
+            this.other_loanCombo = new System.Windows.Forms.ComboBox();
             this.salaryloantxtbox = new System.Windows.Forms.TextBox();
             this.facultysavingstxtbox = new System.Windows.Forms.TextBox();
             this.facultydeposittxtbox = new System.Windows.Forms.TextBox();
@@ -109,8 +111,6 @@
             this.Payslip_viewlistbox = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.other_loanCombo = new System.Windows.Forms.ComboBox();
-            this.other_loanTxtbox = new System.Windows.Forms.TextBox();
             this.picpathtxtbox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -177,6 +177,7 @@
             this.fnametxtbox.Name = "fnametxtbox";
             this.fnametxtbox.Size = new System.Drawing.Size(244, 22);
             this.fnametxtbox.TabIndex = 60;
+            this.fnametxtbox.TextChanged += new System.EventHandler(this.fnametxtbox_TextChanged);
             // 
             // label33
             // 
@@ -343,38 +344,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "HONORARIUM:";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox3.Controls.Add(this.Income_otherTxtbox);
-            this.groupBox3.Controls.Add(this.ratehour_OtherTxtbox);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.no_HoursOtherTxtbox);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 494);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(468, 134);
-            this.groupBox3.TabIndex = 74;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "OTHER INCOME:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox4.Controls.Add(this.netincometxtbox);
-            this.groupBox4.Controls.Add(this.grossIncometxtbox);
-            this.groupBox4.Controls.Add(this.label39);
-            this.groupBox4.Controls.Add(this.label36);
-            this.groupBox4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(16, 634);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(468, 134);
-            this.groupBox4.TabIndex = 74;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "INCOME SUMMARY:";
-            // 
             // income_HonorariumTxtbox
             // 
             this.income_HonorariumTxtbox.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -387,6 +356,17 @@
             this.income_HonorariumTxtbox.TabIndex = 80;
             this.income_HonorariumTxtbox.TextChanged += new System.EventHandler(this.income_HonorariumTxtbox_TextChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 34);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "No. of Hours / Cut \r\nOff:\r\n";
+            // 
             // no_hoursHonotxtbox
             // 
             this.no_hoursHonotxtbox.BackColor = System.Drawing.Color.LavenderBlush;
@@ -397,6 +377,17 @@
             this.no_hoursHonotxtbox.Size = new System.Drawing.Size(242, 30);
             this.no_hoursHonotxtbox.TabIndex = 79;
             this.no_hoursHonotxtbox.TextChanged += new System.EventHandler(this.no_hoursHonotxtbox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(23, 95);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 17);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "Income / Cut Off:";
             // 
             // rate_hourHonorTxtbox
             // 
@@ -420,27 +411,22 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "Rate / Hour:";
             // 
-            // label2
+            // groupBox3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 34);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "No. of Hours / Cut \r\nOff:\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 95);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Income / Cut Off:";
+            this.groupBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox3.Controls.Add(this.Income_otherTxtbox);
+            this.groupBox3.Controls.Add(this.ratehour_OtherTxtbox);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.no_HoursOtherTxtbox);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(16, 494);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(468, 134);
+            this.groupBox3.TabIndex = 74;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "OTHER INCOME:";
             // 
             // Income_otherTxtbox
             // 
@@ -454,6 +440,17 @@
             this.Income_otherTxtbox.TabIndex = 86;
             this.Income_otherTxtbox.TextChanged += new System.EventHandler(this.Income_otherTxtbox_TextChanged);
             // 
+            // ratehour_OtherTxtbox
+            // 
+            this.ratehour_OtherTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ratehour_OtherTxtbox.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratehour_OtherTxtbox.Location = new System.Drawing.Point(203, 30);
+            this.ratehour_OtherTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.ratehour_OtherTxtbox.Name = "ratehour_OtherTxtbox";
+            this.ratehour_OtherTxtbox.Size = new System.Drawing.Size(242, 30);
+            this.ratehour_OtherTxtbox.TabIndex = 84;
+            this.ratehour_OtherTxtbox.TextChanged += new System.EventHandler(this.ratehour_OtherTxtbox_TextChanged);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -464,6 +461,17 @@
             this.label5.Size = new System.Drawing.Size(160, 34);
             this.label5.TabIndex = 82;
             this.label5.Text = "No. of Hours / Cut \r\nOff:\r\n";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(23, 36);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.TabIndex = 83;
+            this.label7.Text = "Rate / Hour:";
             // 
             // no_HoursOtherTxtbox
             // 
@@ -487,27 +495,20 @@
             this.label6.TabIndex = 81;
             this.label6.Text = "Income / Cut Off:";
             // 
-            // ratehour_OtherTxtbox
+            // groupBox4
             // 
-            this.ratehour_OtherTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ratehour_OtherTxtbox.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ratehour_OtherTxtbox.Location = new System.Drawing.Point(203, 30);
-            this.ratehour_OtherTxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.ratehour_OtherTxtbox.Name = "ratehour_OtherTxtbox";
-            this.ratehour_OtherTxtbox.Size = new System.Drawing.Size(242, 30);
-            this.ratehour_OtherTxtbox.TabIndex = 84;
-            this.ratehour_OtherTxtbox.TextChanged += new System.EventHandler(this.ratehour_OtherTxtbox_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 36);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
-            this.label7.TabIndex = 83;
-            this.label7.Text = "Rate / Hour:";
+            this.groupBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox4.Controls.Add(this.netincometxtbox);
+            this.groupBox4.Controls.Add(this.grossIncometxtbox);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Controls.Add(this.label36);
+            this.groupBox4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(16, 634);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(468, 134);
+            this.groupBox4.TabIndex = 74;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "INCOME SUMMARY:";
             // 
             // netincometxtbox
             // 
@@ -651,6 +652,27 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "REGULAR DEDUCTIONS:";
             // 
+            // tax_contribTxtbox
+            // 
+            this.tax_contribTxtbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tax_contribTxtbox.ForeColor = System.Drawing.Color.Black;
+            this.tax_contribTxtbox.Location = new System.Drawing.Point(250, 126);
+            this.tax_contribTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.tax_contribTxtbox.Name = "tax_contribTxtbox";
+            this.tax_contribTxtbox.Size = new System.Drawing.Size(187, 30);
+            this.tax_contribTxtbox.TabIndex = 70;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(34, 139);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 17);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Tax:";
+            // 
             // pagibigcontrittxtbox
             // 
             this.pagibigcontrittxtbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -714,27 +736,6 @@
             this.label20.TabIndex = 63;
             this.label20.Text = "SSS Contributions:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 139);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 17);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Tax:";
-            // 
-            // tax_contribTxtbox
-            // 
-            this.tax_contribTxtbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tax_contribTxtbox.ForeColor = System.Drawing.Color.Black;
-            this.tax_contribTxtbox.Location = new System.Drawing.Point(250, 126);
-            this.tax_contribTxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.tax_contribTxtbox.Name = "tax_contribTxtbox";
-            this.tax_contribTxtbox.Size = new System.Drawing.Size(187, 30);
-            this.tax_contribTxtbox.TabIndex = 70;
-            // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
@@ -758,6 +759,24 @@
             this.groupBox6.TabIndex = 75;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "OTHER DEDUCTIONS:";
+            // 
+            // other_loanTxtbox
+            // 
+            this.other_loanTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
+            this.other_loanTxtbox.Location = new System.Drawing.Point(250, 232);
+            this.other_loanTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.other_loanTxtbox.Name = "other_loanTxtbox";
+            this.other_loanTxtbox.Size = new System.Drawing.Size(187, 30);
+            this.other_loanTxtbox.TabIndex = 90;
+            // 
+            // other_loanCombo
+            // 
+            this.other_loanCombo.BackColor = System.Drawing.Color.Lavender;
+            this.other_loanCombo.FormattingEnabled = true;
+            this.other_loanCombo.Location = new System.Drawing.Point(250, 194);
+            this.other_loanCombo.Name = "other_loanCombo";
+            this.other_loanCombo.Size = new System.Drawing.Size(187, 31);
+            this.other_loanCombo.TabIndex = 89;
             // 
             // salaryloantxtbox
             // 
@@ -1014,11 +1033,12 @@
             // 
             // Payslip_viewlistbox
             // 
+            this.Payslip_viewlistbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Payslip_viewlistbox.FormattingEnabled = true;
-            this.Payslip_viewlistbox.ItemHeight = 16;
+            this.Payslip_viewlistbox.ItemHeight = 17;
             this.Payslip_viewlistbox.Location = new System.Drawing.Point(1003, 67);
             this.Payslip_viewlistbox.Name = "Payslip_viewlistbox";
-            this.Payslip_viewlistbox.Size = new System.Drawing.Size(526, 772);
+            this.Payslip_viewlistbox.Size = new System.Drawing.Size(526, 769);
             this.Payslip_viewlistbox.TabIndex = 87;
             // 
             // label11
@@ -1040,24 +1060,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(200, 151);
             this.pictureBox1.TabIndex = 85;
             this.pictureBox1.TabStop = false;
-            // 
-            // other_loanCombo
-            // 
-            this.other_loanCombo.BackColor = System.Drawing.Color.Lavender;
-            this.other_loanCombo.FormattingEnabled = true;
-            this.other_loanCombo.Location = new System.Drawing.Point(250, 194);
-            this.other_loanCombo.Name = "other_loanCombo";
-            this.other_loanCombo.Size = new System.Drawing.Size(187, 31);
-            this.other_loanCombo.TabIndex = 89;
-            // 
-            // other_loanTxtbox
-            // 
-            this.other_loanTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
-            this.other_loanTxtbox.Location = new System.Drawing.Point(250, 232);
-            this.other_loanTxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.other_loanTxtbox.Name = "other_loanTxtbox";
-            this.other_loanTxtbox.Size = new System.Drawing.Size(187, 30);
-            this.other_loanTxtbox.TabIndex = 90;
             // 
             // picpathtxtbox
             // 
