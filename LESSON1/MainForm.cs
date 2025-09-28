@@ -76,5 +76,24 @@ namespace LESSON1
             useracc.MdiParent = this;
             useracc.Show();
         }
+
+        private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //all child forms in vertical display
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void tileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //all child forms in horizontal display
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //all child forms in cascade display
+            this.LayoutMdi(MdiLayout.Cascade);
+
+        }
     }
 }
