@@ -295,6 +295,12 @@ namespace LESSON1
 
             Pricetxtbox.Clear();
             qtytxtbox.Clear();
+            discountedtxtbox.Clear();
+            discounttxtbox.Clear();
+            totalbillstxtbox.Clear();
+            totalqtytxtbox.Clear();
+            cashgiventxtbox.Clear();
+            changetxtbox.Clear();
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;

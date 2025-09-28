@@ -106,7 +106,7 @@
             this.netincomebttn = new System.Windows.Forms.Button();
             this.grossincomebutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.paydateCombo = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.Payslip_viewlistbox = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -952,6 +952,7 @@
             this.updatebttn.TabIndex = 81;
             this.updatebttn.Text = "PRINT PAYSLIP";
             this.updatebttn.UseVisualStyleBackColor = false;
+            this.updatebttn.Click += new System.EventHandler(this.updatebttn_Click);
             // 
             // savebttn
             // 
@@ -1010,12 +1011,12 @@
             this.button1.Text = "EXIT";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // paydateCombo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(543, 43);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(239, 22);
-            this.dateTimePicker1.TabIndex = 84;
+            this.paydateCombo.Location = new System.Drawing.Point(543, 43);
+            this.paydateCombo.Name = "paydateCombo";
+            this.paydateCombo.Size = new System.Drawing.Size(239, 22);
+            this.paydateCombo.TabIndex = 84;
             // 
             // button2
             // 
@@ -1081,7 +1082,7 @@
             this.Controls.Add(this.Payslip_viewlistbox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.paydateCombo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.newbttn);
             this.Controls.Add(this.updatebttn);
@@ -1216,7 +1217,7 @@
         private System.Windows.Forms.Button netincomebttn;
         private System.Windows.Forms.Button grossincomebutton;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker paydateCombo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox Payslip_viewlistbox;

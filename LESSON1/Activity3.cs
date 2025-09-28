@@ -133,7 +133,8 @@ namespace LESSON1
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-
+            itemnametxtbox.Text = "Haunted Doll";
+            pricetxtbox.Text = "999";
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -144,7 +145,7 @@ namespace LESSON1
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             int qty;
-                double price, discount_amt, discounted_amt;
+            double price, discount_amt, discounted_amt;
             qty = Convert.ToInt32(textBox3.Text);
             price = Convert.ToDouble(pricetxtbox.Text);
             discount_amt = (qty * price) * 0.30;
@@ -217,6 +218,8 @@ namespace LESSON1
             discountedtxtbox.Clear();
             changetxtbox.Clear();
             textBox9.Clear();
+            discounted_totaltxtbox.Clear();
+            discount_totaltxtbox.Clear();
 
         }
 
@@ -243,6 +246,104 @@ namespace LESSON1
         {
             itemnametxtbox.Text = "PIKACHU";
             pricetxtbox.Text = "50";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Wooden Bunny";
+            pricetxtbox.Text = "109";
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Piggy Plushy";
+            pricetxtbox.Text = "120";
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Kuromi Plushy";
+            pricetxtbox.Text = "150";
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "J.Rizal Statue";
+            pricetxtbox.Text = "499";
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Sniper Toy Gun";
+            pricetxtbox.Text = "399";
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Spinning Elsa";
+            pricetxtbox.Text = "218";
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Green Dino";
+            pricetxtbox.Text = "79";
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Cat Plushy";
+            pricetxtbox.Text = "200";
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Bratz Doll";
+            pricetxtbox.Text = "400";
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "ICE CREAM SET";
+            pricetxtbox.Text = "678";
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "BaBy Alive";
+            pricetxtbox.Text = "800";
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Band Aid";
+            pricetxtbox.Text = "45";
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Perfum Sprayer";
+            pricetxtbox.Text = "67";
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "BatangInaVlog Liptint";
+            pricetxtbox.Text = "25";
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "Original Labubu";
+            pricetxtbox.Text = "1200";
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Text = "BarangKateh Bracelet";
+            pricetxtbox.Text = "120";
         }
     }
 }

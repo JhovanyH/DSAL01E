@@ -38,6 +38,15 @@ namespace LESSON1
             total_contrib = 0.00,
             total_loan = 0.00;
 
+        private void updatebttn_Click(object sender, EventArgs e)
+        {
+            //codes for calling the other form connected to the current form
+            UserAccount_PrintForm pf = new UserAccount_PrintForm();
+            //codes to display the contents of the listbox from other form to the current form.
+            pf.Display_ListBox.Items.AddRange(this.Payslip_viewlistbox.Items);
+            pf.Show();
+        }
+
         private void fnametxtbox_TextChanged(object sender, EventArgs e)
         {
 
@@ -133,9 +142,46 @@ namespace LESSON1
 
         private void newbttn_Click(object sender, EventArgs e)
         {
+            //payslip view list box
             Payslip_viewlistbox.Items.Add("Employee Number:".PadRight(30) + employeenumtxtbox.Text);
             Payslip_viewlistbox.Items.Add("Firstname:".PadRight(30) + fnametxtbox.Text);
             Payslip_viewlistbox.Items.Add("MiddleName:".PadRight(30) + Mnametxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Surname:".PadRight(30) + Snametxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Designation:".PadRight(30) + designationtxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Employee Status:".PadRight(30) + employeestatustxtbox.Text);
+            Payslip_viewlistbox.Items.Add("DEpartment:".PadRight(30) + departmentTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Pay Date:".PadRight(30) + paydateCombo.Text);
+            Payslip_viewlistbox.Items.Add("_________________________________________________________________");
+
+            Payslip_viewlistbox.Items.Add("BP Num. of Hrs.:".PadRight(30) + "P" +  no_hours_basicIntxtbox.Text);
+            Payslip_viewlistbox.Items.Add("BP Rate / Hr.:".PadRight(30) + "P" +  rate_hour_basicIntxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Basic Pay Income:".PadRight(30) + "P" + income_basicintxtbox.Text);
+            Payslip_viewlistbox.Items.Add("");
+            Payslip_viewlistbox.Items.Add("HI Num. of Hrs.:".PadRight(30) + "P" +  no_hoursHonotxtbox.Text);
+            Payslip_viewlistbox.Items.Add("HI Rate / Hr.:".PadRight(30) + "P" + rate_hourHonorTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Honararium Income:".PadRight(30) + "P" + income_HonorariumTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("");
+            Payslip_viewlistbox.Items.Add("OTI Num. of Hrs.:".PadRight(30) + "P" + no_HoursOtherTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("OTI Rate / Hr.:".PadRight(30) + "P" + ratehour_OtherTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Other Income:".PadRight(30) + "P" + Income_otherTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("_________________________________________________________________");
+            
+            Payslip_viewlistbox.Items.Add("SSS Contribution:".PadRight(30) + "P" + ssscontritxtbox.Text);
+            Payslip_viewlistbox.Items.Add("PhilHealth Contribution:".PadRight(30) + "P" + philhealthcontritxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Pagibig Contribution:".PadRight(30) +"P" + pagibigcontrittxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Tax Contribution:".PadRight(30) + "P" + tax_contribTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("SSS Loan:".PadRight(30) + "P" + sssloantxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Pagibig Loan:".PadRight(30) + "P" + pagibigloantxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Faculty Savings Deposit:".PadRight(30) + "P" + facultydeposittxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Faculty Savings Loan:".PadRight(30) + "P" + facultysavingstxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Salary Loan:".PadRight(30) + "P" + salaryloantxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Other Loan:".PadRight(30) + "P" + other_loanTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("_________________________________________________________________");
+
+            Payslip_viewlistbox.Items.Add("Total Deduction:".PadRight(30) + "P" + total_deducTxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Gross Income:".PadRight(30) + "P" + grossIncometxtbox.Text);
+            Payslip_viewlistbox.Items.Add("Net Income:".PadRight(30) + "P" + netincometxtbox.Text);
+
 
 
 

@@ -33,11 +33,12 @@
             // 
             // Display_ListBox
             // 
+            this.Display_ListBox.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Display_ListBox.FormattingEnabled = true;
-            this.Display_ListBox.ItemHeight = 16;
+            this.Display_ListBox.ItemHeight = 23;
             this.Display_ListBox.Location = new System.Drawing.Point(22, 22);
             this.Display_ListBox.Name = "Display_ListBox";
-            this.Display_ListBox.Size = new System.Drawing.Size(824, 772);
+            this.Display_ListBox.Size = new System.Drawing.Size(824, 763);
             this.Display_ListBox.TabIndex = 0;
             // 
             // UserAccount_PrintForm
@@ -54,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox Display_ListBox;
+        public System.Windows.Forms.ListBox Display_ListBox;
     }
 }
