@@ -26,8 +26,7 @@ namespace LESSON1
         {
             usernameTxtbox.Focus();
             passwordTxtbox.PasswordChar = '*';
-           
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

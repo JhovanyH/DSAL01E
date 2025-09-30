@@ -595,7 +595,7 @@
             this.listBox1.Location = new System.Drawing.Point(9, 463);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(265, 148);
+            this.listBox1.Size = new System.Drawing.Size(265, 164);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1228,6 +1228,7 @@
             // 
             // DisplayPictureBox
             // 
+            this.DisplayPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DisplayPictureBox.Location = new System.Drawing.Point(278, 463);
             this.DisplayPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DisplayPictureBox.Name = "DisplayPictureBox";
@@ -1255,7 +1256,6 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Activity4";
-            this.Text = "Activity3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
