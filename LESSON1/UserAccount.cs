@@ -247,7 +247,7 @@ namespace LESSON1
             other_loanCombo.Items.Add("Other 3");
             picpathtxtbox.Hide();
 
-
+            this.WindowState = FormWindowState.Maximized;
 
         }
     }

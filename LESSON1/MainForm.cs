@@ -27,6 +27,7 @@ namespace LESSON1
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
+            this.WindowState = FormWindowState.Maximized;
 
         }
 

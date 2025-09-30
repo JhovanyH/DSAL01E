@@ -162,6 +162,7 @@ namespace LESSON1
             incometaxtxtbox.Enabled = false;
             totaldeductionstxtbox.Enabled = false;
             netincometxtbox.Enabled = false;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

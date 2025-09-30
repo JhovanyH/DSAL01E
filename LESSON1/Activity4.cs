@@ -94,7 +94,7 @@ namespace LESSON1
             limited2.Enabled = false;
 
 
-
+            this.WindowState = FormWindowState.Maximized;
             
 
 
@@ -236,18 +236,28 @@ namespace LESSON1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            double cash = Convert.ToDouble(cashgiventxtbox.Text);
-            double total = Convert.ToDouble(totalbillstxtbox.Text);
-            double change = cash - total;
+            try
 
-            changetxtbox.Text = change.ToString("n2");
+            {
+                double cash = Convert.ToDouble(cashgiventxtbox.Text);
+                double total = Convert.ToDouble(totalbillstxtbox.Text);
+                double change = cash - total;
 
-            listBox1.Items.Add("Total Bills: P" + total.ToString("n2"));
-            listBox1.Items.Add("Cash Given: P" + cash.ToString("n2"));
-            listBox1.Items.Add("Change: P" + change.ToString("n2"));
-            listBox1.Items.Add("---------------------------");
+                changetxtbox.Text = change.ToString("n2");
+
+                listBox1.Items.Add("Total Bills: P" + total.ToString("n2"));
+                listBox1.Items.Add("Cash Given: P" + cash.ToString("n2"));
+                listBox1.Items.Add("Change: P" + change.ToString("n2"));
+                listBox1.Items.Add("---------------------------");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Enter Valid data in cash given textbox!");
+                cashgiventxtbox.Clear();
+                cashgiventxtbox.Focus();
+
+            }
         }
-
         private void cashgiventxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             
@@ -337,19 +347,29 @@ namespace LESSON1
 
         private void qtytxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            double price, discounted_amount, discount_amount;
+            try
+            {
+                double price, discounted_amount, discount_amount;
 
-            int qty;
+                int qty;
 
-            price = Convert.ToDouble(Pricetxtbox.Text);
-            qty = Convert.ToInt32 (qtytxtbox.Text);
-            discount_amount = Convert.ToDouble(discounttxtbox.Text);
-            discounted_amount = (price * qty) - discount_amount;
-            total_qty += qty;
-            totalqtytxtbox.Text = total_qty.ToString();
-            total_amount += discounted_amount;
-            totalbillstxtbox .Text = total_amount.ToString("n");
-         
+                price = Convert.ToDouble(Pricetxtbox.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                discount_amount = Convert.ToDouble(discounttxtbox.Text);
+                discounted_amount = (price * qty) - discount_amount;
+                total_qty += qty;
+                totalqtytxtbox.Text = total_qty.ToString();
+                total_amount += discounted_amount;
+                totalbillstxtbox.Text = total_amount.ToString("n");
+                discountedtxtbox.Text = discounted_amount.ToString("n");
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Enter number of quantity ordered!");
+                qtytxtbox.Focus();
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -874,6 +894,16 @@ namespace LESSON1
         }
 
         private void DisplayPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discountedtxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

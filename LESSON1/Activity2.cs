@@ -131,7 +131,7 @@ namespace LESSON1
 
         private void Activity2_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

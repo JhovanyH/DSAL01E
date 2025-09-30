@@ -26,12 +26,13 @@ namespace LESSON1
         {
             usernameTxtbox.Focus();
             passwordTxtbox.PasswordChar = '*';
+           
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             if (usernameTxtbox.Text == "Cashier1" && passwordTxtbox.Text == "jhovany")
             {
                 MessageBox.Show("Welcome .|.");
@@ -67,6 +68,7 @@ namespace LESSON1
 
             }
 
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,6 +80,11 @@ namespace LESSON1
         private void passwordTxtbox_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void usernameTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
