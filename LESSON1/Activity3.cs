@@ -13,6 +13,8 @@ namespace LESSON1
 {
     public partial class Activity3 : Form
     {
+        private Size baseSize;
+
         public Activity3()
         {
             InitializeComponent();
@@ -74,15 +76,7 @@ namespace LESSON1
             changetxtbox.Enabled = false;
             discounttxtbox.Enabled = false;
 
-            this.WindowState = FormWindowState.Maximized;
-
-            
            
-
-
-
-
-
 
             label15.Text = "Winx Bloom Doll";
             label16.Text = "Angry Red Bird";
@@ -94,7 +88,15 @@ namespace LESSON1
             label22.Text = "Sniper Toy Gun";
             label23.Text = "Flying Elsa";
             label24.Text = "Dinasaur Green";
-            
+
+            //scaling to the highest level
+            baseSize = this.Size;
+
+            // maximize the window
+            this.WindowState = FormWindowState.Maximized;
+
+            // scale once to fit the screen
+            ScaleToScreen();
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -395,5 +397,21 @@ namespace LESSON1
             itemnametxtbox.Text = "BarangKateh Bracelet";
             pricetxtbox.Text = "120";
         }
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
+
+
     }
 }
