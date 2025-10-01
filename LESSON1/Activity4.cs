@@ -319,155 +319,247 @@ namespace LESSON1
 
         private void qtytxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            try
-            {
-                double price, discounted_amount, discount_amount;
-
-                int qty;
-
-                price = Convert.ToDouble(Pricetxtbox.Text);
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                discount_amount = Convert.ToDouble(discounttxtbox.Text);
-                discounted_amount = (price * qty) - discount_amount;
-                total_qty += qty;
-                totalqtytxtbox.Text = total_qty.ToString();
-                total_amount += discounted_amount;
-                totalbillstxtbox.Text = total_amount.ToString("n");
-                discountedtxtbox.Text = discounted_amount.ToString("n");
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Enter number of quantity ordered!");
-                qtytxtbox.Focus();
-            }
+           
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                double price;
-                discounttxtbox.Text = "0.00";
-                Pricetxtbox.Text = "100.00";
-                price = Convert.ToDouble(Pricetxtbox.Text);
-                listBox1.Items.Add("Winx Doll:    " + Pricetxtbox.Text);
-                qtytxtbox.Text = "0";
-                qtytxtbox.Focus();
-            }
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "100.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Winx Doll:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
-            }
+        }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "99.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Angry Bird:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
+
+
 
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "79.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Pikachu Plushy:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "69.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Wood Bunny:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "80.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Piggy Plushy:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
+        
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-           
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "199.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Kuromi Plushy    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "499.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Jose Rizal Statue:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "350.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Sniper Toy Gun::    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            
 
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "399.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Spinning Elsa:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "49.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Green Dinasaur:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            
 
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "560.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Cat Plushy Set:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "700.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("limited Bratz Doll:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "677.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Ice Cream Set:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            
 
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "400.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Baby Alive:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "10.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Band Aid:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            
 
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "899.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Haunted Legit Doll:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "120.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Perfume Sprayer:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "37.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("BatangInaVlog Liptint:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
 
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            
-
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "1000.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("Legit Labubu:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
+
+        
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            
+            double price;
+            discounttxtbox.Text = "0.00";
+            Pricetxtbox.Text = "290.00";
+            price = Convert.ToDouble(Pricetxtbox.Text);
+            listBox1.Items.Add("BarangKaTeh bracelet:    " + Pricetxtbox.Text);
+            qtytxtbox.Text = "0";
+            qtytxtbox.Focus();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -526,6 +618,34 @@ namespace LESSON1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void qtytxtbox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double price, discounted_amount, discount_amount;
+
+                int qty;
+
+                price = Convert.ToDouble(Pricetxtbox.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                discount_amount = Convert.ToDouble(discounttxtbox.Text);
+                discounted_amount = (price * qty) - discount_amount;
+                total_qty += qty;
+                totalqtytxtbox.Text = total_qty.ToString();
+                total_amount += discounted_amount;
+                totalbillstxtbox.Text = total_amount.ToString("n");
+                discountedtxtbox.Text = discounted_amount.ToString("n");
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Enter number of quantity ordered!");
+                qtytxtbox.Focus();
+            }
 
         }
     }
