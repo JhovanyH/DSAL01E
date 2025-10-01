@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace LESSON1
 {
@@ -17,7 +18,7 @@ namespace LESSON1
         private int total_qty = 0;
         public Activity4()
         {
-            
+
             InitializeComponent();
         }
 
@@ -28,25 +29,18 @@ namespace LESSON1
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (foodBRdbtn.Checked)
+            if (foodBRdbtn.Checked)   // Only run when it becomes checked
             {
-                double price = 1899.00;  // bundle base price
-                double discount = 250.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
+                double price;
+                Pricetxtbox.Text = "1,299.00";
+                discounttxtbox.Text = "194.85";
+                price = Convert.ToDouble(Pricetxtbox.Text);
+                listBox1.Items.Add(FoodARdbtn.Text + ": P" + Pricetxtbox.Text);
+                listBox1.Items.Add("Discount Amount: P" + discounttxtbox.Text);
+                qtytxtbox.Text = "0";
+                qtytxtbox.Focus();
 
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add("Bundle B: -P" + discounted.ToString("n2"));
-                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshots\\collectibles2.png");
+                DisplayPictureBox.Image = Image.FromFile(@"C:\Users\jhovany\OneDrive\Pictures\Screenshots\collectibles2.png");
 
                 Keychains.Checked = false;
                 Plushies.Checked = false;
@@ -54,15 +48,14 @@ namespace LESSON1
                 Ballpens.Checked = false;
                 randomCollect1.Checked = false;
 
-
                 RandomPlushies.Checked = true;
                 handmade.Checked = true;
                 protectkit2.Checked = true;
                 notebooks.Checked = true;
                 limited2.Checked = true;
-
             }
-            }
+        }
+        
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
@@ -81,7 +74,7 @@ namespace LESSON1
 
 
             Keychains.Enabled = false;
-            Plushies.Enabled = false;   
+            Plushies.Enabled = false;
             ProtectKit1.Enabled = false;
             Ballpens.Enabled = false;
             randomCollect1.Enabled = false;
@@ -90,12 +83,14 @@ namespace LESSON1
             RandomPlushies.Enabled = false;
             handmade.Enabled = false;
             protectkit2.Enabled = false;
-            notebooks.Enabled = false; 
+            notebooks.Enabled = false;
             limited2.Enabled = false;
 
 
             this.WindowState = FormWindowState.Maximized;
-            
+
+            FoodARdbtn.Checked = false;
+            foodBRdbtn.Checked = false;
 
 
 
@@ -104,38 +99,24 @@ namespace LESSON1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (FoodARdbtn.Checked)
+            if (FoodARdbtn.Checked)   // Only run when it becomes checked
             {
-                double price = 1299.00;  // bundle base price
-                double discount = 194.85;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
+                double price;
+                Pricetxtbox.Text = "1,000.00";
+                discounttxtbox.Text = "200.00";
+                price = Convert.ToDouble(Pricetxtbox.Text);
+                listBox1.Items.Add(FoodARdbtn.Text + ": P" + Pricetxtbox.Text);
+                listBox1.Items.Add("Discount Amount: P" + discounttxtbox.Text);
+                qtytxtbox.Text = "0";
+                qtytxtbox.Focus();
 
-                // Show in textboxes
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                // Update totals
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                // Show details in listbox
-                listBox1.Items.Add("Bundle A: -P" + discounted.ToString("n2"));
-
-                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\Screenshots\\collectibles.png");
-
-
+                DisplayPictureBox.Image = Image.FromFile(@"C:\Users\jhovany\OneDrive\Pictures\Screenshots\collectibles.png");
 
                 Keychains.Checked = true;
                 Plushies.Checked = true;
                 ProtectKit1.Checked = true;
                 Ballpens.Checked = true;
                 randomCollect1.Checked = true;
-
 
                 RandomPlushies.Checked = false;
                 handmade.Checked = false;
@@ -144,12 +125,11 @@ namespace LESSON1
                 limited2.Checked = false;
 
 
+
             }
 
 
-
-
-           }
+            }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -236,28 +216,20 @@ namespace LESSON1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
+            double cash_given, change, total_amountPaid;
+            cash_given = Convert.ToDouble(cashgiventxtbox.Text);
+            total_amountPaid = Convert.ToDouble(totalbillstxtbox.Text);
+            change = cash_given - total_amountPaid;
+            changetxtbox.Text = change.ToString("n");
+            listBox1.Items.Add("Total Bills: " + totalbillstxtbox.Text);
+            listBox1.Items.Add("Cash Given: " + cashgiventxtbox.Text);
+            listBox1.Items.Add("Change: " + changetxtbox.Text);
+            listBox1.Items.Add("Total Quantity: " + totalqtytxtbox.Text);
 
-            {
-                double cash = Convert.ToDouble(cashgiventxtbox.Text);
-                double total = Convert.ToDouble(totalbillstxtbox.Text);
-                double change = cash - total;
 
-                changetxtbox.Text = change.ToString("n2");
-
-                listBox1.Items.Add("Total Bills: P" + total.ToString("n2"));
-                listBox1.Items.Add("Cash Given: P" + cash.ToString("n2"));
-                listBox1.Items.Add("Change: P" + change.ToString("n2"));
-                listBox1.Items.Add("---------------------------");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Enter Valid data in cash given textbox!");
-                cashgiventxtbox.Clear();
-                cashgiventxtbox.Focus();
 
             }
-        }
+        
         private void cashgiventxtbox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             
@@ -376,477 +348,126 @@ namespace LESSON1
         {
             if (checkBox1.Checked)
             {
-                double price = 99.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox1.Text + " - P" + price.ToString("n2"));
+                double price;
+                discounttxtbox.Text = "0.00";
+                Pricetxtbox.Text = "100.00";
+                price = Convert.ToDouble(Pricetxtbox.Text);
+                listBox1.Items.Add("Winx Doll:    " + Pricetxtbox.Text);
+                qtytxtbox.Text = "0";
+                qtytxtbox.Focus();
             }
 
             }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
-            {
-                double price = 150.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox2.Text + " - P" + price.ToString("n2"));
-            }
+            
+            
 
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (checkBox3.Checked)
-            {
-                double price = 200.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox3.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked)
-            {
-                double price = 250.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox4.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox5.Checked)
-            {
-                double price = 300.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox5.Text + " - P" + price.ToString("n2"));
-            }
+            
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox6.Checked)
-            {
-                double price = 78.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox6.Text + " - P" + price.ToString("n2"));
-            }
+           
 
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox7.Checked)
-            {
-                double price = 190.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox7.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox8.Checked)
-            {
-                double price = 399.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox8.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox9.Checked)
-            {
-                double price = 299.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox9.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox10.Checked)
-            {
-                double price = 30.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox10.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox11.Checked)
-            {
-                double price = 199.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox11.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox12.Checked)
-            {
-                double price = 230.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox12.Text + " - P" + price.ToString("n2"));
-            }
-
+            
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox13.Checked)
-            {
-                double price = 320.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox13.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox14.Checked)
-            {
-                double price = 399.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox14.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox15.Checked)
-            {
-                double price = 699.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox15.Text + " - P" + price.ToString("n2"));
-            }
+            
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox16.Checked)
-            {
-                double price = 9.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox16.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox17.Checked)
-            {
-                double price = 270.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox17.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox18.Checked)
-            {
-                double price = 40.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox18.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox19.Checked)
-            {
-                double price = 999.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox19.Text + " - P" + price.ToString("n2"));
-            }
+            
 
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox20.Checked)
-            {
-                double price = 150.00;
-                double discount = 0.00;
-                int qty = 1;
-                double discounted = (price * qty) - discount;
-
-                Pricetxtbox.Text = price.ToString("n2");
-                qtytxtbox.Text = qty.ToString();
-                discounttxtbox.Text = discount.ToString("n2");
-                discountedtxtbox.Text = discounted.ToString("n2");
-
-                total_amount += discounted;
-                total_qty += qty;
-                totalbillstxtbox.Text = total_amount.ToString("n2");
-                totalqtytxtbox.Text = total_qty.ToString();
-
-                listBox1.Items.Add(checkBox20.Text + " - P" + price.ToString("n2"));
-            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
