@@ -13,6 +13,7 @@ namespace LESSON1
 {
     public partial class Lesson5_Activity : Form
     {
+        private Size baseSize;
         private double basic_income = 0.00,
             rate_basic = 0.00,
             no_hours_basic = 0.00,
@@ -162,7 +163,16 @@ namespace LESSON1
             incometaxtxtbox.Enabled = false;
             totaldeductionstxtbox.Enabled = false;
             netincometxtbox.Enabled = false;
+            
+
+            //scaling to the highest level
+            baseSize = this.Size;
+
+            // maximize the window
             this.WindowState = FormWindowState.Maximized;
+
+            // scale once to fit the screen
+            ScaleToScreen();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -489,7 +499,22 @@ namespace LESSON1
 
 
         }
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
     }
+
 }
 
 

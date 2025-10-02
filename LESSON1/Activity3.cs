@@ -13,8 +13,12 @@ namespace LESSON1
 {
     public partial class Activity3 : Form
     {
+        //auto size the application within the windows
         private Size baseSize;
 
+        
+
+        
         public Activity3()
         {
             InitializeComponent();
@@ -113,7 +117,7 @@ namespace LESSON1
                 double discount_totalGiven = 0, discounted_totalGiven = 0;
 
 
-                qty = Convert.ToInt32(textBox3.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
                 discount_amt = Convert.ToDouble(discounttxtbox.Text);
                 discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
                 cash_rendered = Convert.ToDouble(textBox9.Text);
@@ -160,7 +164,7 @@ namespace LESSON1
             {
                 int qty;
                 double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(textBox3.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
                 price = Convert.ToDouble(pricetxtbox.Text);
                 discount_amt = (qty * price) * 0.30;
                 discounted_amt = (qty * price) - discount_amt;
@@ -174,8 +178,8 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                textBox3.Clear();
-                textBox3.Focus();
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
             }
         }
 
@@ -186,7 +190,7 @@ namespace LESSON1
             {
                 int qty;
                 double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(textBox3.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
                 price = Convert.ToDouble(pricetxtbox.Text);
                 discount_amt = (qty * price) * 0.10;
                 discounted_amt = (qty * price) - discount_amt;
@@ -199,8 +203,8 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                textBox3.Clear();
-                textBox3.Focus();
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
             }
         }
 
@@ -210,7 +214,7 @@ namespace LESSON1
             {
                 int qty;
                 double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(textBox3.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
                 price = Convert.ToDouble(pricetxtbox.Text);
                 discount_amt = (qty * price) * 0.15;
                 discounted_amt = (qty * price) - discount_amt;
@@ -223,8 +227,8 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                textBox3.Clear();
-                textBox3.Focus();
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
             }
         }
         
@@ -241,7 +245,7 @@ namespace LESSON1
             {
                 int qty;
                 double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(textBox3.Text);
+                qty = Convert.ToInt32(qtytxtbox.Text);
                 price = Convert.ToDouble(pricetxtbox.Text);
                 discount_amt = (qty * price) * 0;
                 discounted_amt = (qty * price) - discount_amt;
@@ -254,8 +258,8 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                textBox3.Clear();
-                textBox3.Focus();
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
 
             }
         }
@@ -264,7 +268,7 @@ namespace LESSON1
         {
             itemnametxtbox.Clear();
             pricetxtbox.Clear();
-            textBox3.Clear();
+            qtytxtbox.Clear();
             qty_totaltxtbox.Clear();
             discounttxtbox.Clear();
             discountedtxtbox.Clear();

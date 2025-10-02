@@ -16,6 +16,7 @@ namespace LESSON1
     {
         private double total_amount = 0;
         private int total_qty = 0;
+        private Size baseSize;
         public Activity4()
         {
 
@@ -87,13 +88,20 @@ namespace LESSON1
             limited2.Enabled = false;
 
 
-            this.WindowState = FormWindowState.Maximized;
+           
 
             FoodARdbtn.Checked = false;
             foodBRdbtn.Checked = false;
 
 
+            //scaling to the highest level
+            baseSize = this.Size;
 
+            // maximize the window
+            this.WindowState = FormWindowState.Maximized;
+
+            // scale once to fit the screen
+            ScaleToScreen();
 
         }
 
@@ -648,6 +656,22 @@ namespace LESSON1
             }
 
         }
+
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
     }
+
 }
 
