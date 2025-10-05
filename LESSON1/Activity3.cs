@@ -16,9 +16,13 @@ namespace LESSON1
         //auto size the application within the windows
         private Size baseSize;
 
-        
+        int qty_total = 0;
+        double discount_totalGiven = 0;
+        double discounted_totalGiven = 0;
+        int qty = 0;
+        double discount_amt = 0, discounted_amt = 0, cash_rendered = 0, change = 0;
 
-        
+
         public Activity3()
         {
             InitializeComponent();
@@ -112,9 +116,8 @@ namespace LESSON1
         {
             try
             {
-                int qty = 0, qty_total = 0;
-                double discount_amt = 0, discounted_amt = 0, cash_rendered = 0, change = 0;
-                double discount_totalGiven = 0, discounted_totalGiven = 0;
+                
+               
 
 
                 qty = Convert.ToInt32(qtytxtbox.Text);
@@ -125,11 +128,11 @@ namespace LESSON1
                 qty_total += qty;
                 discount_totalGiven += discount_amt;
                 discounted_totalGiven += discounted_amt;
-                change = cash_rendered - discounted_amt;
+                change = cash_rendered - discounted_totalGiven;
 
 
                 qty_totaltxtbox.Text = qty_total.ToString();
-                discount_totaltxtbox.Text += discount_totalGiven.ToString("n");
+                discount_totaltxtbox.Text = discount_totalGiven.ToString("n");
                 discounted_totaltxtbox.Text = discounted_totalGiven.ToString("n");
                 changetxtbox.Text = change.ToString("n");
                 textBox9.Text = cash_rendered.ToString("n");
@@ -277,6 +280,9 @@ namespace LESSON1
             discounted_totaltxtbox.Clear();
             discount_totaltxtbox.Clear();
 
+            qty_total = 0;
+            discount_totalGiven = 0;
+            discounted_totalGiven = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -289,6 +295,11 @@ namespace LESSON1
         {
             itemnametxtbox.Text = "Winx Doll Bloom";
             pricetxtbox.Text = "100";
+            //this code should in the all the picture box
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;   
+            radioButton4.Checked = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
