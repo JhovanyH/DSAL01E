@@ -118,6 +118,12 @@
     <Compile Include="pos2.Designer.cs">
       <DependentUpon>pos2.cs</DependentUpon>
     </Compile>
+    <Compile Include="pos2function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pos2function.Designer.cs">
+      <DependentUpon>pos2function.cs</DependentUpon>
+    </Compile>
     <Compile Include="pos2_printform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pos2.resx">
       <DependentUpon>pos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pos2function.resx">
+      <DependentUpon>pos2function.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pos2_printform.resx">
       <DependentUpon>pos2_printform.cs</DependentUpon>
