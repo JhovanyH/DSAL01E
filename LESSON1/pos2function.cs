@@ -194,8 +194,8 @@ namespace LESSON1
             price = Convert.ToDouble(Pricetxtbox.Text);
             listBox1.Items.Add(FoodARdbtn.Text + ": P" + Pricetxtbox.Text);
             listBox1.Items.Add("Discount Amount: P" + discounttxtbox.Text);
-            qtytextbox.Text = "0";
-            qtytextbox.Focus();
+            // call the function
+            Quantitytxtbox();
 
         }
 
@@ -216,8 +216,8 @@ namespace LESSON1
             Pricetxtbox.Text = "1,300";
             discounttxtbox.Text = "195";
             listBox1.Items.Add(FoodARdbtn.Text);
-            qtytextbox.Text = "0";
-            qtytextbox.Focus();
+            //call the function
+            Quantitytxtbox();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -286,6 +286,12 @@ namespace LESSON1
             checkBox19.Checked = false;
             checkBox20.Checked = false;
             listBox1.Items.Clear();
+            discountedtxtbox.Clear();
+            discounttxtbox.Clear();
+            totalbillstxtbox.Clear();
+            totalqtytxtbox.Clear();
+            cashgiventxtbox.Clear();
+            changetxtbox.Clear();
 
         }
 
