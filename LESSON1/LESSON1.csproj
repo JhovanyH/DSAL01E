@@ -58,6 +58,12 @@
     <Compile Include="Activitty4_PrintForm.Designer.cs">
       <DependentUpon>Activitty4_PrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activity3_Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activity3_Class.Designer.cs">
+      <DependentUpon>Activity3_Class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activity3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,7 @@
     <Compile Include="pos2_transfer.Designer.cs">
       <DependentUpon>pos2_transfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price_Item_Value.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAccount.cs">
@@ -150,6 +157,7 @@
     <Compile Include="UserAccount_PrintForm.Designer.cs">
       <DependentUpon>UserAccount_PrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Variables1.cs" />
     <EmbeddedResource Include="Acitivity1.resx">
       <DependentUpon>Acitivity1.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity2.resx">
       <DependentUpon>Activity2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activity3_Class.resx">
+      <DependentUpon>Activity3_Class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activity3.resx">
       <DependentUpon>Activity3.cs</DependentUpon>
