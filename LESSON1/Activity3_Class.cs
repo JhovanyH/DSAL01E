@@ -67,16 +67,6 @@ namespace LESSON1
             v.price = Convert.ToDouble(pricetxtbox.Text);
         }
 
-        private void StoreOriginalFontSizes()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl.Font != null && !originalFontSizes.ContainsKey(ctrl))
-                {
-                    originalFontSizes[ctrl] = ctrl.Font.Size;
-                }
-            }
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -454,8 +444,10 @@ namespace LESSON1
 
             this.ResumeLayout();
         }
-        
 
+        private void qtytxtbox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
