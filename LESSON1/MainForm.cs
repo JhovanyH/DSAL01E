@@ -19,7 +19,7 @@ namespace LESSON1
 
         private void pOSVanyColleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Activity3 activity3 = new Activity3();
+            pos1function activity3 = new pos1function();
             activity3.MdiParent = this;
             activity3.Show();
         }
@@ -33,7 +33,7 @@ namespace LESSON1
 
         private void pOSVanyOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Activity4 activity4 = new Activity4();
+            pos2function activity4 = new pos2function();
             activity4.MdiParent = this;
             activity4.Show();
         }
