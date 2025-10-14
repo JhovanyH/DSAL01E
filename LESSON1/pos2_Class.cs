@@ -56,6 +56,28 @@ namespace LESSON1
             quantityTextBox(); // resets qtytextbox
         }
 
+        private void UpdateTotals()
+        {
+            try
+            {
+                int qty = Convert.ToInt32(qtytextbox.Text);
+
+                // Correct discounted amount calculation
+                V.discounted_amt = (V.price - V.discount_amt) * qty;
+
+                V.qty_total = qty;
+                V.discounted_total = V.discounted_amt;
+
+                discountedtxtbox.Text = V.discounted_amt.ToString("n2");
+                totalbillstxtbox.Text = V.discounted_total.ToString("n2");
+                totalqtytxtbox.Text = V.qty_total.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Input");
+            }
+        }
+
 
 
 
@@ -84,54 +106,46 @@ namespace LESSON1
 
         private void FoodARdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            foodBRdbtn.Checked = false;
-            Keychains.Checked = true;
-            Plushies.Checked = true;
-            ProtectKit1.Checked = true;
-            Ballpens.Checked = true;
-            randomCollect1.Checked = true;
-            RandomPlushies.Checked = false;
-            handmade.Checked = false;
-            protectkit2.Checked = false;
-            notebooks.Checked = false;
-            limited2.Checked = false;
-            Pricetxtbox.Text = "1,000";
-            discounttxtbox.Text = "200";
-            price = Convert.ToDouble(Pricetxtbox.Text);
-            listBox1.Items.Add(FoodARdbtn.Text + ": P" + Pricetxtbox.Text);
-            listBox1.Items.Add("Discount Amount: P" + discounttxtbox.Text);
-            qtytextbox.Text = "0";
-            qtytextbox.Focus();
+            if (!FoodARdbtn.Checked) return;
 
+            foodBRdbtn.Checked = false;
+
+            // Numeric values without commas
+            V.price = 1000; // assign numeric directly
+            V.discount_amt = 200;
+
+            Pricetxtbox.Text = V.price.ToString("n0");
+            discounttxtbox.Text = V.discount_amt.ToString("n0");
+
+            // Set default quantity
+            qtytextbox.Text = "1";
+
+            // Calculate totals properly
+            UpdateTotals();
+
+            // Add to listbox
+            listBox1.Items.Add(FoodARdbtn.Text + ": P" + V.price.ToString("n0"));
+            listBox1.Items.Add("Discount Amount: P" + V.discount_amt.ToString("n0"));
         }
 
         private void foodBRdbtn_CheckedChanged(object sender, EventArgs e)
         {
+            if (!foodBRdbtn.Checked) return;
+
             FoodARdbtn.Checked = false;
 
-            Keychains.Checked = false;
-            Plushies.Checked = false;
-            ProtectKit1.Checked = false;
-            Ballpens.Checked = false;
-            randomCollect1.Checked = false;
+            V.price = 1300;
+            V.discount_amt = 195;
 
-            RandomPlushies.Checked = true;
-            handmade.Checked = true;
-            protectkit2.Checked = true;
-            notebooks.Checked = true;
-            limited2.Checked = true;
+            Pricetxtbox.Text = V.price.ToString("n0");
+            discounttxtbox.Text = V.discount_amt.ToString("n0");
 
-            Pricetxtbox.Text = "1,300";
-            discounttxtbox.Text = "195";
+            qtytextbox.Text = "1";
 
-            // reset quantity just like the first radio button
-            qtytextbox.Text = "0";
-            qtytextbox.Focus();
+            UpdateTotals();
 
-            // Add to listbox
-            listBox1.Items.Add(foodBRdbtn.Text + ": P" + Pricetxtbox.Text);
-            listBox1.Items.Add("Discount Amount: P" + discounttxtbox.Text);
+            listBox1.Items.Add(foodBRdbtn.Text + ": P" + V.price.ToString("n0"));
+            listBox1.Items.Add("Discount Amount: P" + V.discount_amt.ToString("n0"));
         }
 
 
