@@ -26,7 +26,7 @@ namespace LESSON1
         public Activity1()
         {
             InitializeComponent();
-            connectionString = @"Data Source = LAPTOP-8COQ8R8Q\SQLEXPRESS; Initial Catalog = simpledatabaseDb;Integrated Security=True;";
+            connectionString = @"Data Source = C203-36; Initial Catalog = SampleDB; user id = SA; password = B1Admin123@";
             connection = new SqlConnection(connectionString);
         }
 
@@ -66,7 +66,7 @@ namespace LESSON1
             dset = new DataSet();
             adaptersql.Fill(dset, "studenttbl");
             dataGridView1.DataSource = dset.Tables[0];
-            picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\baby.png");
+            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
             student_numtxtbox.Clear();
             stud_depttxtbox.Clear();
             stud_nametxtbox.Clear();
@@ -108,7 +108,7 @@ namespace LESSON1
             }
             else
             {
-                picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\baby.png");
+                picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\question.png");
             }
             //
             connection.Close();
@@ -140,7 +140,7 @@ namespace LESSON1
 
             dataGridView1.DataSource = dset.Tables[0];
 
-            picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\haunted.png");
+            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
             connection.Close();
         }
 
@@ -171,7 +171,7 @@ namespace LESSON1
 
             dataGridView1.DataSource = dset.Tables[0];
 
-            picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\baby.png");
+            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
             student_numtxtbox.Clear();
             stud_depttxtbox.Clear();
             stud_nametxtbox.Clear();
@@ -183,7 +183,7 @@ namespace LESSON1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\baby.png");
+            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
             student_numtxtbox.Clear();
             stud_depttxtbox.Clear();
             stud_nametxtbox.Clear();
@@ -192,7 +192,7 @@ namespace LESSON1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            picturebox.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\baby.png");
+            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
             student_numtxtbox.Clear();
             stud_depttxtbox.Clear();
             stud_nametxtbox.Clear();
