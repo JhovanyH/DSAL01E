@@ -20,7 +20,8 @@ namespace LESSON1
     public void pos_connString()
         {
             pos_sql_connection = new SqlConnection();
-            pos_connectionString = "Data Source = C203-36; Initial Catalog = SampleDB; user id = SA; password = B1Admin123@";
+            //pos_connectionString = "Data Source = C203-36; Initial Catalog = SampleDB; user id = SA; password = B1Admin123@";
+            pos_connectionString = "Data Source = LAPTOP-8COQ8R8Q\\SQLEXPRESS; Initial Catalog = POSDB; trusted_connection = True";
             pos_sql_connection = new SqlConnection(pos_connectionString);
             pos_sql_connection.ConnectionString = pos_connectionString;
             pos_sql_connection.Open();
@@ -36,7 +37,7 @@ namespace LESSON1
         {
             pos_sql_dataadapter = new SqlDataAdapter();
             pos_sql_dataadapter.SelectCommand = pos_sql_command;
-            pos_sql_command.ExecuteNonQuery();
+           
         }
     public void pos_sqladapterInsert()
         {
@@ -69,23 +70,17 @@ namespace LESSON1
         }
     public void pos_select()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl " +
-                "INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id" +
-                "INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id";
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id";
                 
         }
     public void pos_select_cashier()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl " +
-               "INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id" +
-               "INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id " +
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id " + 
                "WHERE pos_nameTbl.pos_id = 1";
         }
     public void pos_select_cashier1()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl " +
-               "INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id" +
-               "INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id " +
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id " + 
                "WHERE pos_nameTbl.pos_id = 2";
         }
     public void pos_select_cashier_display()
