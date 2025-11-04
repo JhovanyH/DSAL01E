@@ -85,13 +85,14 @@ namespace LESSON1
         }
     public void pos_select_cashier_display()
         {
-            pos_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_sname, " +
-               "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl" +
-               "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type = 'Administrator' "; 
+            pos_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_surname, " +
+                "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl " +
+                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type = 'Administrator'";
         }
     public void pos_select_cashier_SELECTdisplay()
         {
             pos_sql_dataset = new DataSet();
+            pos_sql_dataadapter = new SqlDataAdapter(pos_sql, pos_sql_connection);
             pos_sql_dataadapter.Fill(pos_sql_dataset, "pos_empRegTbl");
         }
   

@@ -312,22 +312,22 @@ namespace LESSON1
                
 
 
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                discount_amt = Convert.ToDouble(discounttxtbox.Text);
-                discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
-                cash_rendered = Convert.ToDouble(textBox9.Text);
+                v.quantity = Convert.ToInt32(qtytxtbox.Text);
+                v.discount_amt = Convert.ToDouble(discounttxtbox.Text);
+                v.discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
+                v.cash_given= Convert.ToDouble(textBox9.Text);
 
-                qty_total += qty;
-                discount_totalGiven += discount_amt;
-                discounted_totalGiven += discounted_amt;
-                change = cash_rendered - discounted_totalGiven;
+                v.qty_total += v.quantity;
+                v.discount_totalgiven += v.discount_amt;
+                v.discounted_total += v.discounted_amt;
+                v.change = v.cash_given - v.discounted_total;
 
 
-                qty_totaltxtbox.Text = qty_total.ToString();
-                discount_totaltxtbox.Text = discount_totalGiven.ToString("n");
-                discounted_totaltxtbox.Text = discounted_totalGiven.ToString("n");
-                changetxtbox.Text = change.ToString("n");
-                textBox9.Text = cash_rendered.ToString("n");
+                qty_totaltxtbox.Text = v.qty_total.ToString();
+                discount_totaltxtbox.Text = v.discount_totalgiven.ToString("n");
+                discounted_totaltxtbox.Text = v.discounted_total.ToString("n");
+                changetxtbox.Text = v.change.ToString("n");
+                textBox9.Text = v.cash_given.ToString("n");
             }
             catch (Exception)
             {
@@ -344,8 +344,9 @@ namespace LESSON1
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Haunted Doll";
-            pricetxtbox.Text = "999";
+            piv.SetPriceItemValue(name16.Text, price16.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -357,14 +358,20 @@ namespace LESSON1
         {
             try
             {
-                int qty;
-                double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                price = Convert.ToDouble(pricetxtbox.Text);
-                discount_amt = (qty * price) * 0.30;
-                discounted_amt = (qty * price) - discount_amt;
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
+                //int qty;
+                //double price, discount_amt, discounted_amt;
+                //qty = Convert.ToInt32(qtytxtbox.Text);
+                //price = Convert.ToDouble(pricetxtbox.Text);
+                //discount_amt = (qty * price) * 0.30;
+                //discounted_amt = (qty * price) - discount_amt;
+                //discounttxtbox.Text = discount_amt.ToString("n");
+                //discountedtxtbox.Text = discounted_amt.ToString("n");
+                //radioButton2.Checked = false;
+                //radioButton3.Checked = false;
+                //radioButton4.Checked = false;
+                quantity_price_convert();
+                v.discount_amt = (v.quantity * v.price) * 0.30;
+                computation_formula_and_displaydata();
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
@@ -373,8 +380,7 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                qtytxtbox.Clear();
-                qtytxtbox.Focus();
+                quantityTxtbox();
             }
         }
 
@@ -383,14 +389,20 @@ namespace LESSON1
             try
 
             {
-                int qty;
-                double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                price = Convert.ToDouble(pricetxtbox.Text);
-                discount_amt = (qty * price) * 0.10;
-                discounted_amt = (qty * price) - discount_amt;
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
+                //int qty;
+                //double price, discount_amt, discounted_amt;
+                //qty = Convert.ToInt32(qtytxtbox.Text);
+                //price = Convert.ToDouble(pricetxtbox.Text);
+                //discount_amt = (qty * price) * 0.10;
+                //discounted_amt = (qty * price) - discount_amt;
+                //discounttxtbox.Text = discount_amt.ToString("n");
+                //discountedtxtbox.Text = discounted_amt.ToString("n");
+                //radioButton1.Checked = false;
+                //radioButton3.Checked = false;
+                //radioButton4.Checked = false;
+                quantity_price_convert();
+                v.discount_amt = (v.quantity * v.price) * 0.10;
+                computation_formula_and_displaydata();
                 radioButton1.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
@@ -398,8 +410,7 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                qtytxtbox.Clear();
-                qtytxtbox.Focus();
+                quantityTxtbox();
             }
         }
 
@@ -407,14 +418,21 @@ namespace LESSON1
         {
             try
             {
-                int qty;
-                double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                price = Convert.ToDouble(pricetxtbox.Text);
-                discount_amt = (qty * price) * 0.15;
-                discounted_amt = (qty * price) - discount_amt;
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
+                //int qty;
+                //double price, discount_amt, discounted_amt;
+                //qty = Convert.ToInt32(qtytxtbox.Text);
+                //price = Convert.ToDouble(pricetxtbox.Text);
+                //discount_amt = (qty * price) * 0.15;
+                //discounted_amt = (qty * price) - discount_amt;
+                //discounttxtbox.Text = discount_amt.ToString("n");
+                //discountedtxtbox.Text = discounted_amt.ToString("n");
+                //radioButton2.Checked = false;
+                //radioButton1.Checked = false;
+                //radioButton4.Checked = false;
+
+                quantity_price_convert();
+                v.discount_amt = (v.quantity * v.price) * 0.15;
+                computation_formula_and_displaydata();
                 radioButton2.Checked = false;
                 radioButton1.Checked = false;
                 radioButton4.Checked = false;
@@ -422,8 +440,7 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                qtytxtbox.Clear();
-                qtytxtbox.Focus();
+                quantityTxtbox();
             }
         }
         
@@ -438,14 +455,21 @@ namespace LESSON1
             try
 
             {
-                int qty;
-                double price, discount_amt, discounted_amt;
-                qty = Convert.ToInt32(qtytxtbox.Text);
-                price = Convert.ToDouble(pricetxtbox.Text);
-                discount_amt = (qty * price) * 0;
-                discounted_amt = (qty * price) - discount_amt;
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
+                //int qty;
+                //double price, discount_amt, discounted_amt;
+                //qty = Convert.ToInt32(qtytxtbox.Text);
+                //price = Convert.ToDouble(pricetxtbox.Text);
+                //discount_amt = (qty * price) * 0;
+                //discounted_amt = (qty * price) - discount_amt;
+                //discounttxtbox.Text = discount_amt.ToString("n");
+                //discountedtxtbox.Text = discounted_amt.ToString("n");
+                //radioButton2.Checked = false;
+                //radioButton3.Checked = false;
+                //radioButton1.Checked = false;
+
+                quantity_price_convert();
+                v.discount_amt = (v.quantity * v.price) * 0;
+                computation_formula_and_displaydata();
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton1.Checked = false;
@@ -453,8 +477,7 @@ namespace LESSON1
             catch (Exception)
             {
                 MessageBox.Show("Input is invalid");
-                qtytxtbox.Clear();
-                qtytxtbox.Focus();
+                quantityTxtbox();
 
             }
         }
@@ -485,112 +508,124 @@ namespace LESSON1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name1.Text;
-            pricetxtbox.Text = "100";
-            //this code should in the all the picture box
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;   
-            radioButton4.Checked = false;
+            piv.SetPriceItemValue(name1.Text, price1.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name2.Text;
-            pricetxtbox.Text = "89";
+            piv.SetPriceItemValue(name2.Text, price2.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
 
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name3.Text;
-            pricetxtbox.Text = "50";
+            piv.SetPriceItemValue(name3.Text, price3.Text);
+            GetpriceItemValue();
+            quantityTxtbox(); ;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name4.Text;
-            pricetxtbox.Text = "109";
+            piv.SetPriceItemValue(name4.Text, price4.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name5.Text ;
-            pricetxtbox.Text = "120";
+            piv.SetPriceItemValue(name5.Text, price5.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
 
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name6.Text;
-            pricetxtbox.Text = "150";
+            piv.SetPriceItemValue(name6.Text, price6.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name7.Text;
-            pricetxtbox.Text = "499";
+            piv.SetPriceItemValue(name7.Text, price7.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name8.Text;
-            pricetxtbox.Text = "399";
+            piv.SetPriceItemValue(name8.Text, price8.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name9.Text;
-            pricetxtbox.Text = "218";
+            piv.SetPriceItemValue(name9.Text, price9.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = name10.Text;
-            pricetxtbox.Text = "79";
+            piv.SetPriceItemValue(name10.Text, price10.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Cat Plushy";
-            pricetxtbox.Text = "200";
+            piv.SetPriceItemValue(name11.Text, price11.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Bratz Doll";
-            pricetxtbox.Text = "400";
+            piv.SetPriceItemValue(name12.Text, price12.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "ICE CREAM SET";
-            pricetxtbox.Text = "678";
+            piv.SetPriceItemValue(name13.Text, price13.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "BaBy Alive";
-            pricetxtbox.Text = "800";
+            piv.SetPriceItemValue(name14.Text, price14.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Band Aid";
-            pricetxtbox.Text = "45";
+            piv.SetPriceItemValue(name15.Text, price15.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Perfum Sprayer";
-            pricetxtbox.Text = "67";
+            piv.SetPriceItemValue(name17.Text, price17.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "BatangInaVlog Liptint";
-            pricetxtbox.Text = "25";
+            piv.SetPriceItemValue(name18.Text, price18.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -607,7 +642,7 @@ namespace LESSON1
                 clearTxtboxes();
 
             }
-            else if (radioButton2.Checked == true) 
+            else if (radioButton2.Checked == true)
             {
                 pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
                               "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
@@ -622,19 +657,42 @@ namespace LESSON1
             }
             else if (radioButton3.Checked == true)
             {
-
+                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
+                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
+                               + "', '" + pricetxtbox.Text + "', '" + radioButton3.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
+                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
+                               time_date.Text + "', '" + emp_id.Text + "')";
+                pb.pos_cmd();
+                pb.pos_sqladapterInsert();
+                clearTxtboxes();
             }
+            else if (radioButton4.Checked == true)
+            {
+                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
+                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
+                               + "', '" + pricetxtbox.Text + "', '" + radioButton4.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
+                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
+                               time_date.Text + "', '" + emp_id.Text + "')";
+                pb.pos_cmd();
+                pb.pos_sqladapterInsert();
+                clearTxtboxes();
+            }
+            else
+                MessageBox.Show("No selected discount option!");
+        }
 
-                private void pictureBox17_Click(object sender, EventArgs e)
-                {
-                    itemnametxtbox.Text = "Original Labubu";
-                    pricetxtbox.Text = "1200";
-                }
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            piv.SetPriceItemValue(name19.Text, price19.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
+        }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "BarangKateh Bracelet";
-            pricetxtbox.Text = "120";
+            piv.SetPriceItemValue(name20.Text, price20.Text);
+            GetpriceItemValue();
+            quantityTxtbox();
         }
         private void ScaleToScreen()
         {
