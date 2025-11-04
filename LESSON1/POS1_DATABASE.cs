@@ -607,15 +607,29 @@ namespace LESSON1
                 clearTxtboxes();
 
             }
+            else if (radioButton2.Checked == true) 
+            {
+                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
+                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
+                               + "', '" + pricetxtbox.Text + "', '" + radioButton2.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
+                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
+                               time_date.Text + "', '" + emp_id.Text + "')";
+                pb.pos_cmd();
+                pb.pos_sqladapterInsert();
+                clearTxtboxes();
 
 
-        }
+            }
+            else if (radioButton3.Checked == true)
+            {
 
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "Original Labubu";
-            pricetxtbox.Text = "1200";
-        }
+            }
+
+                private void pictureBox17_Click(object sender, EventArgs e)
+                {
+                    itemnametxtbox.Text = "Original Labubu";
+                    pricetxtbox.Text = "1200";
+                }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
