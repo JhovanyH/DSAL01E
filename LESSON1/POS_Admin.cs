@@ -26,8 +26,8 @@ namespace LESSON1
 
         private void POS_Admin_Load(object sender, EventArgs e)
         {
-           // try
-           // {
+            try
+            {
                 picpath1.Hide(); picpath2.Hide(); picpath3.Hide(); picpath4.Hide(); picpath5.Hide();
                 picpath6.Hide(); picpath7.Hide(); picpath8.Hide(); picpath9.Hide(); picpath10.Hide();
                 picpath11.Hide(); picpath12.Hide(); picpath13.Hide(); picpath14.Hide(); picpath15.Hide();
@@ -38,21 +38,21 @@ namespace LESSON1
                 posdb.pos_sqladapterSelect();
                 posdb.pos_sqldatasetSELECT();
                 dataGridView1.DataSource = posdb.pos_sql_dataset.Tables[0];
-           // }
-          //  catch (Exception)
-           // {
+            }
+            catch (Exception)
+            {
                 //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-           // }
+            }
 
         }
 
         
         private void cleartextboxes()
         {
-            //try
-            // {
+            try
+             {
             //pic = Image.FromFile("C:\\Users\\C203-36\\Pictures\\perfum.png");\
-            pic = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\brace.png");
+            pic = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\question.png");
 
                 //picpath
                 picpath1.Clear(); picpath2.Clear(); picpath3.Clear(); picpath4.Clear(); picpath5.Clear();
@@ -74,11 +74,11 @@ namespace LESSON1
                 nametxtbox6.Clear(); nametxtbox7.Clear(); nametxtbox8.Clear(); nametxtbox9.Clear(); nametxtbox10.Clear();
                 nametxtbox11.Clear(); nametxtbox12.Clear(); nametxtbox13.Clear(); nametxtbox14.Clear(); nametxtbox15.Clear();
                 nametxtbox16.Clear(); nametxtbox17.Clear(); nametxtbox18.Clear(); nametxtbox19.Clear(); nametxtbox20.Clear();
-            //}
-           // catch (Exception)
-           // {
-               // MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-           // }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
         private void open_file_image()
         {
@@ -88,8 +88,8 @@ namespace LESSON1
 
         private void savebutton_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+           // try
+           //{
                 posdb.pos_sql = "INSERT INTO pos_nameTbl (pos_id, name1, name2, name3, name4, name5," +
                     "name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17," +
                     "name18, name19, name20) VALUES('" + pos_Id_noComboBox.Text + "', '" + nametxtbox1.Text +
@@ -129,11 +129,11 @@ namespace LESSON1
                 dataGridView1.DataSource = posdb.pos_sql_dataset.Tables[0];
                 cleartextboxes();
 
-           // }
-           // catch (Exception)
+           //}
+           //catch (Exception)
            // {
-             //  MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-           // }
+           //    MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+           //}
         }
 
         private void searchbutton_Click(object sender, EventArgs e)
@@ -317,7 +317,7 @@ namespace LESSON1
             cleartextboxes();
 
             //}
-            //catch (exception)
+            //catch (Exception)
             //{
             //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
             //}
@@ -325,8 +325,8 @@ namespace LESSON1
 
         private void deletebutton_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             posdb.pos_sql = "DELETE FROM pos_priceTbl WHERE pos_priceTbl.pos_id = '" + pos_Id_noComboBox.Text + "'";
             posdb.pos_cmd();
             posdb.pos_sqladapterDelete();
@@ -346,11 +346,11 @@ namespace LESSON1
             dataGridView1.DataSource = posdb.pos_sql_dataset.Tables[0];
             cleartextboxes();
 
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void new_cancelbutton_Click(object sender, EventArgs e)
@@ -365,302 +365,302 @@ namespace LESSON1
 
         private void picturebox1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox1.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath1.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox2.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath2.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox3_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox3.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath3.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox4_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox4.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath4.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox5_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox5.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath5.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox6_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox6.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath6.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox7_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox7.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath7.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox8_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox8.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath8.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox9_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox9.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath9.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox10_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox10.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath10.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox11_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox11.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath11.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox12_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox12.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath12.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox13_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox13.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath13.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox14_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox14.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath14.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox15_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox15.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath15.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox16_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox16.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath16.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox17_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox17.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath17.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox18_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox18.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath18.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox19_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox19.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath19.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
 
         private void picturebox20_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
             open_file_image();
             picturebox20.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
             picpath20.Text = picpath;
-            //}
-            //catch (exception)
-            //{
-            //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            //}
+            }
+            catch (Exception)
+            {
+            MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
         }
     }  
 }

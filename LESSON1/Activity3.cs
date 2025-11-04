@@ -293,7 +293,7 @@ namespace LESSON1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Winx Doll Bloom";
+            itemnametxtbox.Text = label15.Text;
             pricetxtbox.Text = "100";
             //this code should in the all the picture box
             radioButton1.Checked = false;
@@ -304,58 +304,58 @@ namespace LESSON1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Angry Bird Plushie";
+            itemnametxtbox.Text = label16.Text;
             pricetxtbox.Text = "89";
 
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "PIKACHU";
+            itemnametxtbox.Text = label17.Text;
             pricetxtbox.Text = "50";
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Wooden Bunny";
+            itemnametxtbox.Text = label18.Text;
             pricetxtbox.Text = "109";
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Piggy Plushy";
+            itemnametxtbox.Text = label19.Text ;
             pricetxtbox.Text = "120";
 
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Kuromi Plushy";
+            itemnametxtbox.Text = label20.Text;
             pricetxtbox.Text = "150";
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "J.Rizal Statue";
+            itemnametxtbox.Text = label21.Text;
             pricetxtbox.Text = "499";
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Sniper Toy Gun";
+            itemnametxtbox.Text = label22.Text;
             pricetxtbox.Text = "399";
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Spinning Elsa";
+            itemnametxtbox.Text = label23.Text;
             pricetxtbox.Text = "218";
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Green Dino";
+            itemnametxtbox.Text = label24.Text;
             pricetxtbox.Text = "79";
         }
 
