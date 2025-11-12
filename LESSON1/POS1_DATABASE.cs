@@ -494,6 +494,10 @@ namespace LESSON1
             textBox9.Clear();
             discounted_totaltxtbox.Clear();
             discount_totaltxtbox.Clear();
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
 
             qty_total = 0;
             discount_totalGiven = 0;

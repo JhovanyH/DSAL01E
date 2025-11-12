@@ -295,17 +295,28 @@ namespace LESSON1
                 " name9 = '" + nametxtbox9.Text + "',  name10 = '" + nametxtbox10.Text + "',  name11 = '" + nametxtbox11.Text + "', " +
                 " name12 = '" + nametxtbox12.Text + "',  name13 = '" + nametxtbox13.Text + "',  name14 = '" + nametxtbox14.Text + "', " +
                 " name15 = '" + nametxtbox15.Text + "',  name16 = '" + nametxtbox16.Text + "',  name17 = '" + nametxtbox17.Text + "', " +
-                " name18 = '" + nametxtbox18.Text + "',  name19 = '" + nametxtbox19.Text + "',  name20 = '" + nametxtbox20.Text + "' WHERE" +
-                "pos_id = '" + pos_Id_noComboBox + "'";
+                " name18 = '" + nametxtbox18.Text + "',  name19 = '" + nametxtbox19.Text + "',  name20 = '" + nametxtbox20.Text + "' WHERE " +
+                "pos_id = '" + pos_Id_noComboBox.Text + "'";
             posdb.pos_cmd();
             posdb.pos_sqladapterUpdate();
 
             posdb.pos_sql = "UPDATE pos_picTbl SET pic1 = '" + picpath1.Text + "', pic2 = '" + picpath2.Text + "', pic3 = '" + picpath3.Text + "'," +
-                "pic4 = '" + picpath14.Text + "', pic5 = '" + picpath5.Text + "', pic6 = '" + picpath6.Text + "', pic7 = '" + picpath7.Text + "'," +
+                "pic4 = '" + picpath4.Text + "', pic5 = '" + picpath5.Text + "', pic6 = '" + picpath6.Text + "', pic7 = '" + picpath7.Text + "'," +
                 "pic8 = '" + picpath8.Text + "', pic9 = '" + picpath9.Text + "', pic10 = '" + picpath10.Text + "', pic11 = '" + picpath11.Text + "'," +
-                "pic12 = '" + picpath12.Text + "', pic13 = '" + picpath13.Text + "', pic14 = '" + picpath15.Text + "', pic15 = '" + picpath15.Text + "'," +
+                "pic12 = '" + picpath12.Text + "', pic13 = '" + picpath13.Text + "', pic14 = '" + picpath14.Text + "', pic15 = '" + picpath15.Text + "'," +
                 "pic16 = '" + picpath16.Text + "', pic17 = '" + picpath17.Text + "', pic18 = '" + picpath18.Text + "', pic19 = '" + picpath19.Text + "', " +
-                "pic20 = '" + picpath20.Text + "' + WHERE pos_id = '" + pos_Id_noComboBox.Text + "'";
+                "pic20 = '" + picpath20.Text + "' WHERE pos_id = '" + pos_Id_noComboBox.Text + "'";
+            posdb.pos_cmd();
+            posdb.pos_sqladapterUpdate();
+
+            posdb.pos_sql = "UPDATE pos_priceTbl SET price1 = '" + pricetxtbox1.Text + "', price2 = '" + pricetxtbox2.Text + "'," +
+            "price3 = '" + pricetxtbox3.Text + "', price4 = '" + pricetxtbox4.Text + "', price5 = '" + pricetxtbox5.Text + "'," +
+            "price6 = '" + pricetxtbox6.Text + "', price7 = '" + pricetxtbox7.Text + "', price8 = '" + pricetxtbox8.Text + "'," +
+            "price9 = '" + pricetxtbox9.Text + "', price10 = '" + pricetxtbox10.Text + "', price11 = '" + pricetxtbox11.Text + "'," +
+            "price12 = '" + pricetxtbox12.Text + "', price13 = '" + pricetxtbox13.Text + "', price14 = '" + pricetxtbox14.Text + "'," +
+            "price15 = '" + pricetxtbox15.Text + "', price16 = '" + pricetxtbox16.Text + "', price17 = '" + pricetxtbox17.Text + "'," +
+            "price18 = '" + pricetxtbox18.Text + "', price19 = '" + pricetxtbox19.Text + "', price20 = '" + pricetxtbox20.Text + "' WHERE " +
+            "pos_id = '" + pos_Id_noComboBox.Text + "'";
             posdb.pos_cmd();
             posdb.pos_sqladapterUpdate();
 

@@ -87,7 +87,7 @@ namespace LESSON1
         {
             pos_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_surname, " +
                 "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl " +
-                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type = 'Administrator'";
+                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type = 'Administrator' AND pos_terminal_no = '2'";
         }
     public void pos_select_cashier_SELECTdisplay()
         {
