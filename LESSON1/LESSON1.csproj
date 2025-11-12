@@ -132,6 +132,12 @@
     <Compile Include="pos1function.Designer.cs">
       <DependentUpon>pos1function.cs</DependentUpon>
     </Compile>
+    <Compile Include="POS2_DATABASE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_DATABASE.Designer.cs">
+      <DependentUpon>POS2_DATABASE.cs</DependentUpon>
+    </Compile>
     <Compile Include="pos2_Class.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pos1function.resx">
       <DependentUpon>pos1function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_DATABASE.resx">
+      <DependentUpon>POS2_DATABASE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pos2_Class.resx">
       <DependentUpon>pos2_Class.cs</DependentUpon>
