@@ -313,7 +313,7 @@ namespace LESSON1
             listBox1.Items.Add(foodBRdbtn.Text + ": P" + V.price.ToString("n0"));
             listBox1.Items.Add("Discount Amount: P" + V.discount_amt.ToString("n0"));
         }
-
+       //F
 
         private void button1_Click(object sender, EventArgs e)
         {
