@@ -110,35 +110,35 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.no_Dept_Txtbox = new System.Windows.Forms.TextBox();
+            this.dept_Txtbox = new System.Windows.Forms.TextBox();
+            this.DateHiredComboBox = new System.Windows.Forms.ComboBox();
+            this.Emp_Stat_Txtbox = new System.Windows.Forms.TextBox();
+            this.position_Txtbox = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Others_Txtbox = new System.Windows.Forms.TextBox();
+            this.Award4_Txtbox = new System.Windows.Forms.TextBox();
+            this.YearGrad4ComboBox = new System.Windows.Forms.ComboBox();
+            this.course_Txtbox = new System.Windows.Forms.TextBox();
+            this.Address4_Txtbox = new System.Windows.Forms.TextBox();
+            this.College_Txtbox = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.College_Txtbox = new System.Windows.Forms.TextBox();
-            this.Address4_Txtbox = new System.Windows.Forms.TextBox();
-            this.course_Txtbox = new System.Windows.Forms.TextBox();
-            this.YearGrad4ComboBox = new System.Windows.Forms.ComboBox();
-            this.Award4_Txtbox = new System.Windows.Forms.TextBox();
-            this.Others_Txtbox = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.position_Txtbox = new System.Windows.Forms.TextBox();
-            this.Emp_Stat_Txtbox = new System.Windows.Forms.TextBox();
-            this.DateHiredComboBox = new System.Windows.Forms.ComboBox();
-            this.dept_Txtbox = new System.Windows.Forms.TextBox();
-            this.no_Dept_Txtbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Exit_Button = new System.Windows.Forms.Button();
+            this.Cancel_Button = new System.Windows.Forms.Button();
+            this.New_Button = new System.Windows.Forms.Button();
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Edit_Button = new System.Windows.Forms.Button();
             this.Add_Button = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,6 +180,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(84, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(268, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -982,6 +983,181 @@
             this.panel1.Size = new System.Drawing.Size(691, 272);
             this.panel1.TabIndex = 36;
             // 
+            // no_Dept_Txtbox
+            // 
+            this.no_Dept_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no_Dept_Txtbox.Location = new System.Drawing.Point(497, 180);
+            this.no_Dept_Txtbox.Multiline = true;
+            this.no_Dept_Txtbox.Name = "no_Dept_Txtbox";
+            this.no_Dept_Txtbox.Size = new System.Drawing.Size(174, 36);
+            this.no_Dept_Txtbox.TabIndex = 99;
+            // 
+            // dept_Txtbox
+            // 
+            this.dept_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dept_Txtbox.Location = new System.Drawing.Point(497, 139);
+            this.dept_Txtbox.Multiline = true;
+            this.dept_Txtbox.Name = "dept_Txtbox";
+            this.dept_Txtbox.Size = new System.Drawing.Size(174, 36);
+            this.dept_Txtbox.TabIndex = 98;
+            // 
+            // DateHiredComboBox
+            // 
+            this.DateHiredComboBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateHiredComboBox.FormattingEnabled = true;
+            this.DateHiredComboBox.Location = new System.Drawing.Point(497, 107);
+            this.DateHiredComboBox.Name = "DateHiredComboBox";
+            this.DateHiredComboBox.Size = new System.Drawing.Size(174, 28);
+            this.DateHiredComboBox.TabIndex = 97;
+            // 
+            // Emp_Stat_Txtbox
+            // 
+            this.Emp_Stat_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emp_Stat_Txtbox.Location = new System.Drawing.Point(497, 52);
+            this.Emp_Stat_Txtbox.Multiline = true;
+            this.Emp_Stat_Txtbox.Name = "Emp_Stat_Txtbox";
+            this.Emp_Stat_Txtbox.Size = new System.Drawing.Size(174, 52);
+            this.Emp_Stat_Txtbox.TabIndex = 96;
+            // 
+            // position_Txtbox
+            // 
+            this.position_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position_Txtbox.Location = new System.Drawing.Point(497, 23);
+            this.position_Txtbox.Name = "position_Txtbox";
+            this.position_Txtbox.Size = new System.Drawing.Size(174, 24);
+            this.position_Txtbox.TabIndex = 95;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(373, 184);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(107, 34);
+            this.label49.TabIndex = 94;
+            this.label49.Text = "Number of \r\nDependants:";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(373, 153);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(107, 17);
+            this.label48.TabIndex = 93;
+            this.label48.Text = "Department:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(373, 118);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(107, 17);
+            this.label47.TabIndex = 92;
+            this.label47.Text = "Date Hired:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(373, 70);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(80, 34);
+            this.label46.TabIndex = 91;
+            this.label46.Text = "Employee\r\nStatus:\r\n";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(373, 30);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(89, 17);
+            this.label45.TabIndex = 90;
+            this.label45.Text = "Position:";
+            // 
+            // Others_Txtbox
+            // 
+            this.Others_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Others_Txtbox.Location = new System.Drawing.Point(161, 205);
+            this.Others_Txtbox.Multiline = true;
+            this.Others_Txtbox.Name = "Others_Txtbox";
+            this.Others_Txtbox.Size = new System.Drawing.Size(174, 52);
+            this.Others_Txtbox.TabIndex = 89;
+            // 
+            // Award4_Txtbox
+            // 
+            this.Award4_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Award4_Txtbox.Location = new System.Drawing.Point(161, 175);
+            this.Award4_Txtbox.Name = "Award4_Txtbox";
+            this.Award4_Txtbox.Size = new System.Drawing.Size(174, 24);
+            this.Award4_Txtbox.TabIndex = 88;
+            // 
+            // YearGrad4ComboBox
+            // 
+            this.YearGrad4ComboBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearGrad4ComboBox.FormattingEnabled = true;
+            this.YearGrad4ComboBox.Location = new System.Drawing.Point(161, 141);
+            this.YearGrad4ComboBox.Name = "YearGrad4ComboBox";
+            this.YearGrad4ComboBox.Size = new System.Drawing.Size(174, 28);
+            this.YearGrad4ComboBox.TabIndex = 81;
+            // 
+            // course_Txtbox
+            // 
+            this.course_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.course_Txtbox.Location = new System.Drawing.Point(161, 111);
+            this.course_Txtbox.Name = "course_Txtbox";
+            this.course_Txtbox.Size = new System.Drawing.Size(174, 24);
+            this.course_Txtbox.TabIndex = 87;
+            // 
+            // Address4_Txtbox
+            // 
+            this.Address4_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address4_Txtbox.Location = new System.Drawing.Point(161, 53);
+            this.Address4_Txtbox.Multiline = true;
+            this.Address4_Txtbox.Name = "Address4_Txtbox";
+            this.Address4_Txtbox.Size = new System.Drawing.Size(174, 52);
+            this.Address4_Txtbox.TabIndex = 81;
+            // 
+            // College_Txtbox
+            // 
+            this.College_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.College_Txtbox.Location = new System.Drawing.Point(161, 23);
+            this.College_Txtbox.Name = "College_Txtbox";
+            this.College_Txtbox.Size = new System.Drawing.Size(174, 24);
+            this.College_Txtbox.TabIndex = 81;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(12, 225);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(71, 17);
+            this.label44.TabIndex = 86;
+            this.label44.Text = "Others:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(12, 182);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(80, 17);
+            this.label43.TabIndex = 85;
+            this.label43.Text = "Award/s:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(12, 141);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(98, 34);
+            this.label42.TabIndex = 84;
+            this.label42.Text = "Year\r\nGraduated:\r\n";
+            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -1012,194 +1188,89 @@
             this.label39.TabIndex = 81;
             this.label39.Text = "College School:";
             // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(12, 141);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(98, 34);
-            this.label42.TabIndex = 84;
-            this.label42.Text = "Year\r\nGraduated:\r\n";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(12, 182);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(80, 17);
-            this.label43.TabIndex = 85;
-            this.label43.Text = "Award/s:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(12, 225);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(71, 17);
-            this.label44.TabIndex = 86;
-            this.label44.Text = "Others:";
-            // 
-            // College_Txtbox
-            // 
-            this.College_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.College_Txtbox.Location = new System.Drawing.Point(161, 23);
-            this.College_Txtbox.Name = "College_Txtbox";
-            this.College_Txtbox.Size = new System.Drawing.Size(174, 24);
-            this.College_Txtbox.TabIndex = 81;
-            // 
-            // Address4_Txtbox
-            // 
-            this.Address4_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address4_Txtbox.Location = new System.Drawing.Point(161, 53);
-            this.Address4_Txtbox.Multiline = true;
-            this.Address4_Txtbox.Name = "Address4_Txtbox";
-            this.Address4_Txtbox.Size = new System.Drawing.Size(174, 52);
-            this.Address4_Txtbox.TabIndex = 81;
-            // 
-            // course_Txtbox
-            // 
-            this.course_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.course_Txtbox.Location = new System.Drawing.Point(161, 111);
-            this.course_Txtbox.Name = "course_Txtbox";
-            this.course_Txtbox.Size = new System.Drawing.Size(174, 24);
-            this.course_Txtbox.TabIndex = 87;
-            // 
-            // YearGrad4ComboBox
-            // 
-            this.YearGrad4ComboBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearGrad4ComboBox.FormattingEnabled = true;
-            this.YearGrad4ComboBox.Location = new System.Drawing.Point(161, 141);
-            this.YearGrad4ComboBox.Name = "YearGrad4ComboBox";
-            this.YearGrad4ComboBox.Size = new System.Drawing.Size(174, 28);
-            this.YearGrad4ComboBox.TabIndex = 81;
-            // 
-            // Award4_Txtbox
-            // 
-            this.Award4_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Award4_Txtbox.Location = new System.Drawing.Point(161, 175);
-            this.Award4_Txtbox.Name = "Award4_Txtbox";
-            this.Award4_Txtbox.Size = new System.Drawing.Size(174, 24);
-            this.Award4_Txtbox.TabIndex = 88;
-            // 
-            // Others_Txtbox
-            // 
-            this.Others_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Others_Txtbox.Location = new System.Drawing.Point(161, 205);
-            this.Others_Txtbox.Multiline = true;
-            this.Others_Txtbox.Name = "Others_Txtbox";
-            this.Others_Txtbox.Size = new System.Drawing.Size(174, 52);
-            this.Others_Txtbox.TabIndex = 89;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(373, 30);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(89, 17);
-            this.label45.TabIndex = 90;
-            this.label45.Text = "Position:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(373, 70);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(80, 34);
-            this.label46.TabIndex = 91;
-            this.label46.Text = "Employee\r\nStatus:\r\n";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(373, 118);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(107, 17);
-            this.label47.TabIndex = 92;
-            this.label47.Text = "Date Hired:";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(373, 153);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(107, 17);
-            this.label48.TabIndex = 93;
-            this.label48.Text = "Department:";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(373, 184);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(107, 34);
-            this.label49.TabIndex = 94;
-            this.label49.Text = "Number of \r\nDependants:";
-            // 
-            // position_Txtbox
-            // 
-            this.position_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.position_Txtbox.Location = new System.Drawing.Point(497, 23);
-            this.position_Txtbox.Name = "position_Txtbox";
-            this.position_Txtbox.Size = new System.Drawing.Size(174, 24);
-            this.position_Txtbox.TabIndex = 95;
-            // 
-            // Emp_Stat_Txtbox
-            // 
-            this.Emp_Stat_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emp_Stat_Txtbox.Location = new System.Drawing.Point(497, 52);
-            this.Emp_Stat_Txtbox.Multiline = true;
-            this.Emp_Stat_Txtbox.Name = "Emp_Stat_Txtbox";
-            this.Emp_Stat_Txtbox.Size = new System.Drawing.Size(174, 52);
-            this.Emp_Stat_Txtbox.TabIndex = 96;
-            // 
-            // DateHiredComboBox
-            // 
-            this.DateHiredComboBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateHiredComboBox.FormattingEnabled = true;
-            this.DateHiredComboBox.Location = new System.Drawing.Point(497, 107);
-            this.DateHiredComboBox.Name = "DateHiredComboBox";
-            this.DateHiredComboBox.Size = new System.Drawing.Size(174, 28);
-            this.DateHiredComboBox.TabIndex = 97;
-            // 
-            // dept_Txtbox
-            // 
-            this.dept_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dept_Txtbox.Location = new System.Drawing.Point(497, 139);
-            this.dept_Txtbox.Multiline = true;
-            this.dept_Txtbox.Name = "dept_Txtbox";
-            this.dept_Txtbox.Size = new System.Drawing.Size(174, 36);
-            this.dept_Txtbox.TabIndex = 98;
-            // 
-            // no_Dept_Txtbox
-            // 
-            this.no_Dept_Txtbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.no_Dept_Txtbox.Location = new System.Drawing.Point(497, 180);
-            this.no_Dept_Txtbox.Multiline = true;
-            this.no_Dept_Txtbox.Name = "no_Dept_Txtbox";
-            this.no_Dept_Txtbox.Size = new System.Drawing.Size(174, 36);
-            this.no_Dept_Txtbox.TabIndex = 99;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.Exit_Button);
+            this.panel2.Controls.Add(this.Cancel_Button);
+            this.panel2.Controls.Add(this.New_Button);
+            this.panel2.Controls.Add(this.Delete_Button);
+            this.panel2.Controls.Add(this.Edit_Button);
             this.panel2.Controls.Add(this.Add_Button);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(1002, 320);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(691, 475);
             this.panel2.TabIndex = 37;
+            // 
+            // Exit_Button
+            // 
+            this.Exit_Button.AutoSize = true;
+            this.Exit_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.Exit_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Exit_Button.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit_Button.Location = new System.Drawing.Point(573, 412);
+            this.Exit_Button.Name = "Exit_Button";
+            this.Exit_Button.Size = new System.Drawing.Size(113, 55);
+            this.Exit_Button.TabIndex = 40;
+            this.Exit_Button.Text = "Exit";
+            this.Exit_Button.UseVisualStyleBackColor = false;
+            this.Exit_Button.Click += new System.EventHandler(this.Exit_Button_Click);
+            // 
+            // Cancel_Button
+            // 
+            this.Cancel_Button.AutoSize = true;
+            this.Cancel_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.Cancel_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Cancel_Button.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_Button.Location = new System.Drawing.Point(460, 412);
+            this.Cancel_Button.Name = "Cancel_Button";
+            this.Cancel_Button.Size = new System.Drawing.Size(113, 55);
+            this.Cancel_Button.TabIndex = 39;
+            this.Cancel_Button.Text = "Cancel";
+            this.Cancel_Button.UseVisualStyleBackColor = false;
+            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
+            // 
+            // New_Button
+            // 
+            this.New_Button.AutoSize = true;
+            this.New_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.New_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.New_Button.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.New_Button.Location = new System.Drawing.Point(347, 412);
+            this.New_Button.Name = "New_Button";
+            this.New_Button.Size = new System.Drawing.Size(113, 55);
+            this.New_Button.TabIndex = 38;
+            this.New_Button.Text = "New";
+            this.New_Button.UseVisualStyleBackColor = false;
+            this.New_Button.Click += new System.EventHandler(this.New_Button_Click);
+            // 
+            // Delete_Button
+            // 
+            this.Delete_Button.AutoSize = true;
+            this.Delete_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Delete_Button.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_Button.Location = new System.Drawing.Point(234, 412);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(113, 55);
+            this.Delete_Button.TabIndex = 37;
+            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.UseVisualStyleBackColor = false;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
+            // 
+            // Edit_Button
+            // 
+            this.Edit_Button.AutoSize = true;
+            this.Edit_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.Edit_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Edit_Button.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Button.Location = new System.Drawing.Point(120, 412);
+            this.Edit_Button.Name = "Edit_Button";
+            this.Edit_Button.Size = new System.Drawing.Size(113, 55);
+            this.Edit_Button.TabIndex = 36;
+            this.Edit_Button.Text = "Edit";
+            this.Edit_Button.UseVisualStyleBackColor = false;
+            this.Edit_Button.Click += new System.EventHandler(this.Edit_Button_Click);
             // 
             // Add_Button
             // 
@@ -1214,71 +1285,6 @@
             this.Add_Button.Text = "Add";
             this.Add_Button.UseVisualStyleBackColor = false;
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
-            // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.IndianRed;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button4.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(120, 412);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 55);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.IndianRed;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(234, 412);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 55);
-            this.button5.TabIndex = 37;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.IndianRed;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(347, 412);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(113, 55);
-            this.button6.TabIndex = 38;
-            this.button6.Text = "New";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.AutoSize = true;
-            this.button7.BackColor = System.Drawing.Color.IndianRed;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button7.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(460, 412);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(113, 55);
-            this.button7.TabIndex = 39;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.AutoSize = true;
-            this.button8.BackColor = System.Drawing.Color.IndianRed;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button8.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(573, 412);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(113, 55);
-            this.button8.TabIndex = 40;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // EMP_REGISTRATION_DATABASE
             // 
@@ -1441,11 +1447,11 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Exit_Button;
+        private System.Windows.Forms.Button Cancel_Button;
+        private System.Windows.Forms.Button New_Button;
+        private System.Windows.Forms.Button Delete_Button;
+        private System.Windows.Forms.Button Edit_Button;
         private System.Windows.Forms.Button Add_Button;
     }
 }
