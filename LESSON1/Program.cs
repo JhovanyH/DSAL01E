@@ -16,7 +16,7 @@ namespace LESSON1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EMP_REGISTRATION_DATABASE());
+            Application.Run(new PAYROL_DATABASE());
         }
     }
 }

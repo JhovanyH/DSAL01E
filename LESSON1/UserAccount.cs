@@ -38,6 +38,11 @@ namespace LESSON1
             total_contrib = 0.00,
             total_loan = 0.00;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void updatebttn_Click(object sender, EventArgs e)
         {
             //codes for calling the other form connected to the current form

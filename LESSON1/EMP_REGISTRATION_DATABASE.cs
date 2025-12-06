@@ -233,7 +233,7 @@ namespace LESSON1
             GenderComboBox.Items.Clear();
             GenderComboBox.Items.Add("Male");
             GenderComboBox.Items.Add("Female");
-
+            GenderComboBox.Items.Add("Other");
             // Status ComboBox (Civil Status)
             StatusComboBox.Items.Clear();
             StatusComboBox.Items.Add("Single");

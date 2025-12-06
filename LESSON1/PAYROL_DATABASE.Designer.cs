@@ -1,6 +1,7 @@
 ﻿namespace LESSON1
 {
-    partial class UserAccount
+    partial class PAYROL_DATABASE
+
     {
         /// <summary>
         /// Required designer variable.
@@ -100,18 +101,21 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.total_deducTxtbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.newbttn = new System.Windows.Forms.Button();
-            this.updatebttn = new System.Windows.Forms.Button();
-            this.savebttn = new System.Windows.Forms.Button();
-            this.netincomebttn = new System.Windows.Forms.Button();
+            this.preview_button = new System.Windows.Forms.Button();
+            this.printpayslip_button = new System.Windows.Forms.Button();
+            this.new_button = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
             this.grossincomebutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             this.paydateCombo = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
+            this.browse_button = new System.Windows.Forms.Button();
             this.Payslip_viewlistbox = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.picpathtxtbox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picpathtxtbox = new System.Windows.Forms.TextBox();
+            this.edit_button = new System.Windows.Forms.Button();
+            this.delete_button = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,7 +132,7 @@
             this.employeenumtxtbox.Location = new System.Drawing.Point(154, 12);
             this.employeenumtxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.employeenumtxtbox.Name = "employeenumtxtbox";
-            this.employeenumtxtbox.Size = new System.Drawing.Size(223, 22);
+            this.employeenumtxtbox.Size = new System.Drawing.Size(135, 22);
             this.employeenumtxtbox.TabIndex = 39;
             // 
             // label10
@@ -177,7 +181,6 @@
             this.fnametxtbox.Name = "fnametxtbox";
             this.fnametxtbox.Size = new System.Drawing.Size(244, 22);
             this.fnametxtbox.TabIndex = 60;
-            this.fnametxtbox.TextChanged += new System.EventHandler(this.fnametxtbox_TextChanged);
             // 
             // label33
             // 
@@ -253,7 +256,6 @@
             this.income_basicintxtbox.Name = "income_basicintxtbox";
             this.income_basicintxtbox.Size = new System.Drawing.Size(242, 30);
             this.income_basicintxtbox.TabIndex = 72;
-            this.income_basicintxtbox.TextChanged += new System.EventHandler(this.income_basicintxtbox_TextChanged);
             // 
             // no_hours_basicIntxtbox
             // 
@@ -275,7 +277,6 @@
             this.rate_hour_basicIntxtbox.Name = "rate_hour_basicIntxtbox";
             this.rate_hour_basicIntxtbox.Size = new System.Drawing.Size(242, 30);
             this.rate_hour_basicIntxtbox.TabIndex = 70;
-            this.rate_hour_basicIntxtbox.TextChanged += new System.EventHandler(this.rate_hour_basicIntxtbox_TextChanged);
             // 
             // label17
             // 
@@ -354,7 +355,6 @@
             this.income_HonorariumTxtbox.Name = "income_HonorariumTxtbox";
             this.income_HonorariumTxtbox.Size = new System.Drawing.Size(242, 30);
             this.income_HonorariumTxtbox.TabIndex = 80;
-            this.income_HonorariumTxtbox.TextChanged += new System.EventHandler(this.income_HonorariumTxtbox_TextChanged);
             // 
             // label2
             // 
@@ -398,7 +398,6 @@
             this.rate_hourHonorTxtbox.Name = "rate_hourHonorTxtbox";
             this.rate_hourHonorTxtbox.Size = new System.Drawing.Size(242, 30);
             this.rate_hourHonorTxtbox.TabIndex = 78;
-            this.rate_hourHonorTxtbox.TextChanged += new System.EventHandler(this.rate_hourHonorTxtbox_TextChanged);
             // 
             // label1
             // 
@@ -438,7 +437,6 @@
             this.Income_otherTxtbox.Name = "Income_otherTxtbox";
             this.Income_otherTxtbox.Size = new System.Drawing.Size(242, 30);
             this.Income_otherTxtbox.TabIndex = 86;
-            this.Income_otherTxtbox.TextChanged += new System.EventHandler(this.Income_otherTxtbox_TextChanged);
             // 
             // ratehour_OtherTxtbox
             // 
@@ -449,7 +447,6 @@
             this.ratehour_OtherTxtbox.Name = "ratehour_OtherTxtbox";
             this.ratehour_OtherTxtbox.Size = new System.Drawing.Size(242, 30);
             this.ratehour_OtherTxtbox.TabIndex = 84;
-            this.ratehour_OtherTxtbox.TextChanged += new System.EventHandler(this.ratehour_OtherTxtbox_TextChanged);
             // 
             // label5
             // 
@@ -529,7 +526,6 @@
             this.grossIncometxtbox.Name = "grossIncometxtbox";
             this.grossIncometxtbox.Size = new System.Drawing.Size(242, 30);
             this.grossIncometxtbox.TabIndex = 54;
-            this.grossIncometxtbox.TextChanged += new System.EventHandler(this.grossIncometxtbox_TextChanged);
             // 
             // label39
             // 
@@ -565,7 +561,7 @@
             // employeestatustxtbox
             // 
             this.employeestatustxtbox.BackColor = System.Drawing.Color.LavenderBlush;
-            this.employeestatustxtbox.Location = new System.Drawing.Point(543, 77);
+            this.employeestatustxtbox.Location = new System.Drawing.Point(532, 79);
             this.employeestatustxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.employeestatustxtbox.Name = "employeestatustxtbox";
             this.employeestatustxtbox.Size = new System.Drawing.Size(239, 22);
@@ -575,7 +571,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(407, 80);
+            this.label31.Location = new System.Drawing.Point(396, 82);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(136, 17);
@@ -586,7 +582,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(407, 112);
+            this.label3.Location = new System.Drawing.Point(396, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 17);
@@ -597,7 +593,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(407, 48);
+            this.label28.Location = new System.Drawing.Point(396, 50);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(72, 17);
@@ -608,7 +604,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(407, 12);
+            this.label8.Location = new System.Drawing.Point(396, 14);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 34);
@@ -618,7 +614,7 @@
             // numberDependentsTxtbox
             // 
             this.numberDependentsTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numberDependentsTxtbox.Location = new System.Drawing.Point(543, 12);
+            this.numberDependentsTxtbox.Location = new System.Drawing.Point(532, 14);
             this.numberDependentsTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.numberDependentsTxtbox.Name = "numberDependentsTxtbox";
             this.numberDependentsTxtbox.Size = new System.Drawing.Size(239, 22);
@@ -627,7 +623,7 @@
             // departmentTxtbox
             // 
             this.departmentTxtbox.BackColor = System.Drawing.Color.LavenderBlush;
-            this.departmentTxtbox.Location = new System.Drawing.Point(543, 107);
+            this.departmentTxtbox.Location = new System.Drawing.Point(532, 109);
             this.departmentTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.departmentTxtbox.Name = "departmentTxtbox";
             this.departmentTxtbox.Size = new System.Drawing.Size(239, 22);
@@ -813,7 +809,6 @@
             this.pagibigloantxtbox.Name = "pagibigloantxtbox";
             this.pagibigloantxtbox.Size = new System.Drawing.Size(187, 30);
             this.pagibigloantxtbox.TabIndex = 77;
-            this.pagibigloantxtbox.TextChanged += new System.EventHandler(this.pagibigloantxtbox_TextChanged);
             // 
             // sssloantxtbox
             // 
@@ -924,63 +919,64 @@
             this.label12.TabIndex = 52;
             this.label12.Text = "TOTAL DEDUCTION:";
             // 
-            // newbttn
+            // preview_button
             // 
-            this.newbttn.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.newbttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.newbttn.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.newbttn.Location = new System.Drawing.Point(643, 787);
-            this.newbttn.Margin = new System.Windows.Forms.Padding(4);
-            this.newbttn.Name = "newbttn";
-            this.newbttn.Size = new System.Drawing.Size(215, 52);
-            this.newbttn.TabIndex = 82;
-            this.newbttn.Text = "PREVIEW PAYSLIP DETAILS";
-            this.newbttn.UseVisualStyleBackColor = false;
-            this.newbttn.Click += new System.EventHandler(this.newbttn_Click);
+            this.preview_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.preview_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.preview_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.preview_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.preview_button.Location = new System.Drawing.Point(296, 784);
+            this.preview_button.Margin = new System.Windows.Forms.Padding(4);
+            this.preview_button.Name = "preview_button";
+            this.preview_button.Size = new System.Drawing.Size(230, 52);
+            this.preview_button.TabIndex = 82;
+            this.preview_button.Text = "PREVIEW PAYSLIP DETAILS";
+            this.preview_button.UseVisualStyleBackColor = false;
+            this.preview_button.Click += new System.EventHandler(this.newbttn_Click);
             // 
-            // updatebttn
+            // printpayslip_button
             // 
-            this.updatebttn.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.updatebttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updatebttn.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updatebttn.Location = new System.Drawing.Point(469, 787);
-            this.updatebttn.Margin = new System.Windows.Forms.Padding(4);
-            this.updatebttn.Name = "updatebttn";
-            this.updatebttn.Size = new System.Drawing.Size(166, 52);
-            this.updatebttn.TabIndex = 81;
-            this.updatebttn.Text = "PRINT PAYSLIP";
-            this.updatebttn.UseVisualStyleBackColor = false;
-            this.updatebttn.Click += new System.EventHandler(this.updatebttn_Click);
+            this.printpayslip_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.printpayslip_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.printpayslip_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printpayslip_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.printpayslip_button.Location = new System.Drawing.Point(133, 784);
+            this.printpayslip_button.Margin = new System.Windows.Forms.Padding(4);
+            this.printpayslip_button.Name = "printpayslip_button";
+            this.printpayslip_button.Size = new System.Drawing.Size(156, 52);
+            this.printpayslip_button.TabIndex = 81;
+            this.printpayslip_button.Text = "PRINT PAYSLIP";
+            this.printpayslip_button.UseVisualStyleBackColor = false;
+            this.printpayslip_button.Click += new System.EventHandler(this.updatebttn_Click);
             // 
-            // savebttn
+            // new_button
             // 
-            this.savebttn.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.savebttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.savebttn.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.savebttn.Location = new System.Drawing.Point(178, 787);
-            this.savebttn.Margin = new System.Windows.Forms.Padding(4);
-            this.savebttn.Name = "savebttn";
-            this.savebttn.Size = new System.Drawing.Size(134, 52);
-            this.savebttn.TabIndex = 80;
-            this.savebttn.Text = "NEW";
-            this.savebttn.UseVisualStyleBackColor = false;
+            this.new_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.new_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.new_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.new_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.new_button.Location = new System.Drawing.Point(534, 784);
+            this.new_button.Margin = new System.Windows.Forms.Padding(4);
+            this.new_button.Name = "new_button";
+            this.new_button.Size = new System.Drawing.Size(78, 52);
+            this.new_button.TabIndex = 80;
+            this.new_button.Text = "NEW";
+            this.new_button.UseVisualStyleBackColor = false;
             // 
-            // netincomebttn
+            // save_button
             // 
-            this.netincomebttn.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.netincomebttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.netincomebttn.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.netincomebttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.netincomebttn.Location = new System.Drawing.Point(320, 787);
-            this.netincomebttn.Margin = new System.Windows.Forms.Padding(4);
-            this.netincomebttn.Name = "netincomebttn";
-            this.netincomebttn.Size = new System.Drawing.Size(141, 52);
-            this.netincomebttn.TabIndex = 79;
-            this.netincomebttn.Text = "CANCEL";
-            this.netincomebttn.UseVisualStyleBackColor = false;
+            this.save_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.save_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.save_button.Location = new System.Drawing.Point(705, 784);
+            this.save_button.Margin = new System.Windows.Forms.Padding(4);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(87, 52);
+            this.save_button.TabIndex = 79;
+            this.save_button.Text = "SAVE";
+            this.save_button.UseVisualStyleBackColor = false;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // grossincomebutton
             // 
@@ -988,50 +984,51 @@
             this.grossincomebutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.grossincomebutton.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grossincomebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grossincomebutton.Location = new System.Drawing.Point(16, 787);
+            this.grossincomebutton.Location = new System.Drawing.Point(16, 784);
             this.grossincomebutton.Margin = new System.Windows.Forms.Padding(4);
             this.grossincomebutton.Name = "grossincomebutton";
-            this.grossincomebutton.Size = new System.Drawing.Size(154, 52);
+            this.grossincomebutton.Size = new System.Drawing.Size(109, 52);
             this.grossincomebutton.TabIndex = 78;
             this.grossincomebutton.Text = "CALCULATE\r\n";
             this.grossincomebutton.UseVisualStyleBackColor = false;
             this.grossincomebutton.Click += new System.EventHandler(this.grossincomebutton_Click);
             // 
-            // button1
+            // exit_button
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(866, 787);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 52);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "EXIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.exit_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exit_button.Location = new System.Drawing.Point(620, 784);
+            this.exit_button.Margin = new System.Windows.Forms.Padding(4);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(77, 52);
+            this.exit_button.TabIndex = 83;
+            this.exit_button.Text = "EXIT";
+            this.exit_button.UseVisualStyleBackColor = false;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // paydateCombo
             // 
-            this.paydateCombo.Location = new System.Drawing.Point(543, 43);
+            this.paydateCombo.Location = new System.Drawing.Point(532, 45);
             this.paydateCombo.Name = "paydateCombo";
             this.paydateCombo.Size = new System.Drawing.Size(239, 22);
             this.paydateCombo.TabIndex = 84;
             // 
-            // button2
+            // browse_button
             // 
-            this.button2.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(830, 175);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 24);
-            this.button2.TabIndex = 86;
-            this.button2.Text = "BROWSE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.browse_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.browse_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.browse_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browse_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.browse_button.Location = new System.Drawing.Point(830, 175);
+            this.browse_button.Margin = new System.Windows.Forms.Padding(4);
+            this.browse_button.Name = "browse_button";
+            this.browse_button.Size = new System.Drawing.Size(118, 24);
+            this.browse_button.TabIndex = 86;
+            this.browse_button.Text = "BROWSE";
+            this.browse_button.UseVisualStyleBackColor = false;
+            this.browse_button.Click += new System.EventHandler(this.button2_Click);
             // 
             // Payslip_viewlistbox
             // 
@@ -1054,6 +1051,16 @@
             this.label11.TabIndex = 88;
             this.label11.Text = "PAYSLIP VIEW DETAILS:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(789, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
+            // 
             // picpathtxtbox
             // 
             this.picpathtxtbox.BackColor = System.Drawing.Color.LavenderBlush;
@@ -1063,32 +1070,71 @@
             this.picpathtxtbox.Size = new System.Drawing.Size(159, 22);
             this.picpathtxtbox.TabIndex = 89;
             // 
-            // pictureBox1
+            // edit_button
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(789, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 151);
-            this.pictureBox1.TabIndex = 85;
-            this.pictureBox1.TabStop = false;
+            this.edit_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.edit_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.edit_button.Location = new System.Drawing.Point(800, 784);
+            this.edit_button.Margin = new System.Windows.Forms.Padding(4);
+            this.edit_button.Name = "edit_button";
+            this.edit_button.Size = new System.Drawing.Size(91, 52);
+            this.edit_button.TabIndex = 90;
+            this.edit_button.Text = "EDIT";
+            this.edit_button.UseVisualStyleBackColor = false;
+            this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
-            // UserAccount
+            // delete_button
+            // 
+            this.delete_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.delete_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.delete_button.Location = new System.Drawing.Point(898, 784);
+            this.delete_button.Margin = new System.Windows.Forms.Padding(4);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(91, 52);
+            this.delete_button.TabIndex = 91;
+            this.delete_button.Text = "DELETE";
+            this.delete_button.UseVisualStyleBackColor = false;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
+            // search_button
+            // 
+            this.search_button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.search_button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.search_button.Location = new System.Drawing.Point(307, 10);
+            this.search_button.Margin = new System.Windows.Forms.Padding(4);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(70, 24);
+            this.search_button.TabIndex = 92;
+            this.search_button.Text = "Search";
+            this.search_button.UseVisualStyleBackColor = false;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
+            // 
+            // PAYROL_DATABASE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1541, 852);
+            this.Controls.Add(this.search_button);
+            this.Controls.Add(this.delete_button);
+            this.Controls.Add(this.edit_button);
             this.Controls.Add(this.picpathtxtbox);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.exit_button);
             this.Controls.Add(this.Payslip_viewlistbox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.browse_button);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.paydateCombo);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.newbttn);
-            this.Controls.Add(this.updatebttn);
-            this.Controls.Add(this.savebttn);
-            this.Controls.Add(this.netincomebttn);
+            this.Controls.Add(this.preview_button);
+            this.Controls.Add(this.printpayslip_button);
+            this.Controls.Add(this.new_button);
+            this.Controls.Add(this.save_button);
             this.Controls.Add(this.grossincomebutton);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -1117,7 +1163,7 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.employeenumtxtbox);
             this.Controls.Add(this.label10);
-            this.Name = "UserAccount";
+            this.Name = "PAYROL_DATABASE";
             this.Text = "UserAccount";
             this.Load += new System.EventHandler(this.UserAccount_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1212,19 +1258,22 @@
         private System.Windows.Forms.GroupBox groupBox7;
         public System.Windows.Forms.TextBox total_deducTxtbox;
         private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.Button newbttn;
-        private System.Windows.Forms.Button updatebttn;
-        private System.Windows.Forms.Button savebttn;
-        private System.Windows.Forms.Button netincomebttn;
+        public System.Windows.Forms.Button preview_button;
+        private System.Windows.Forms.Button printpayslip_button;
+        private System.Windows.Forms.Button new_button;
+        private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button grossincomebutton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.DateTimePicker paydateCombo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button browse_button;
         private System.Windows.Forms.ListBox Payslip_viewlistbox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox other_loanCombo;
         public System.Windows.Forms.TextBox other_loanTxtbox;
         public System.Windows.Forms.TextBox picpathtxtbox;
+        private System.Windows.Forms.Button edit_button;
+        private System.Windows.Forms.Button delete_button;
+        private System.Windows.Forms.Button search_button;
     }
 }
