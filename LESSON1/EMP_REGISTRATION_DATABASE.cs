@@ -54,78 +54,109 @@ namespace LESSON1
 
         private void Browse_Button_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp; *.jpeg";
-            openFileDialog1.ShowDialog();
-            pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
-            picpath = openFileDialog1.FileName;
-            picpathTxtbox.Text = picpath;
+            try
+            {
+                openFileDialog1.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp; *.jpeg";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                    picpath = openFileDialog1.FileName;
+                    picpathTxtbox.Text = picpath;
+                    MessageBox.Show("Picture selected successfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting picture: " + ex.Message);
+            }
         }
 
         private void Search_Button_Click(object sender, EventArgs e)
         {
-            edb.employee_sql = "SELECT * FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
-            edb.employee_cmd();
-            edb.employee_sqladapterSelect();
-            edb.employee_sqldatasetSELECT();
-            dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
-            fname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][2].ToString();
-            mname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][3].ToString();
-            Sname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][4].ToString();
-            AgecomboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][5].ToString();
-            GenderComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][6].ToString();
-            SSS_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][7].ToString();
-            TIN_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][8].ToString();
-            Philhealth_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][9].ToString();
-            Pagibig_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][10].ToString();
-            StatusComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][11].ToString();
-            Height_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][12].ToString();
-            Weight_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][13].ToString();
-            Years_stay_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][14].ToString();
-            House_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][15].ToString();
-            subdname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][16].ToString();
-            phone_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][17].ToString();
-            street_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][18].ToString();
-            brgy_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][19].ToString();
-            municip_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][20].ToString();
-            city_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][21].ToString();
-            state_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][22].ToString();
-            country_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][23].ToString();
-            zip_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][24].ToString();
-            ElemSchool_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][25].ToString();
-            Address1_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][26].ToString();
-            YearGraduatedComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][27].ToString();
-            Award1_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][28].ToString();
-            JuniorHigh_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][29].ToString();
-            Address2_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][30].ToString();
-            YearGrad2ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][31].ToString();
-            Award2_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][32].ToString();
-            SeniorHigh_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][33].ToString();
-            Address3_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][34].ToString();
-            yearGrad3ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][35].ToString();
-            Award3_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][36].ToString();
-            Track_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][37].ToString();
-            College_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][38].ToString();
-            Address4_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][39].ToString();
-            YearGrad4ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][40].ToString();
-            Award4_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][41].ToString();
-            course_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][42].ToString();
-            Others_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][43].ToString();
-            position_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][44].ToString();
-            Emp_Stat_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][45].ToString();
-            DateHiredComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][46].ToString();
-            dept_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][47].ToString();
-            no_Dept_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][48].ToString();
-            picpathTxtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][49].ToString();
 
-            //modified code to let the program run whithout error if picture path is invalid
-            if (!string.IsNullOrEmpty(picpathTxtbox.Text) && System.IO.File.Exists(picpathTxtbox.Text))
+            try
             {
-                pictureBox1.Image = Image.FromFile(picpathTxtbox.Text);
+                if (string.IsNullOrEmpty(emp_idTxtbox.Text))
+                {
+                    MessageBox.Show("Please enter an Employee ID");
+                    return;
+                }
+
+                edb.employee_sql = "SELECT * FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
+                edb.employee_cmd();
+                edb.employee_sqladapterSelect();
+                edb.employee_sqldatasetSELECT();
+
+                if (edb.employee_sql_dataset.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("Employee not found!");
+                    return;
+                }
+
+                dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
+                fname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][2].ToString();
+                mname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][3].ToString();
+                Sname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][4].ToString();
+                AgecomboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][5].ToString();
+                GenderComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][6].ToString();
+                SSS_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][7].ToString();
+                TIN_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][8].ToString();
+                Philhealth_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][9].ToString();
+                Pagibig_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][10].ToString();
+                StatusComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][11].ToString();
+                Height_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][12].ToString();
+                Weight_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][13].ToString();
+                Years_stay_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][14].ToString();
+                House_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][15].ToString();
+                subdname_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][16].ToString();
+                phone_no_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][17].ToString();
+                street_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][18].ToString();
+                brgy_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][19].ToString();
+                municip_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][20].ToString();
+                city_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][21].ToString();
+                state_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][22].ToString();
+                country_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][23].ToString();
+                zip_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][24].ToString();
+                ElemSchool_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][25].ToString();
+                Address1_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][26].ToString();
+                YearGraduatedComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][27].ToString();
+                Award1_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][28].ToString();
+                JuniorHigh_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][29].ToString();
+                Address2_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][30].ToString();
+                YearGrad2ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][31].ToString();
+                Award2_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][32].ToString();
+                SeniorHigh_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][33].ToString();
+                Address3_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][34].ToString();
+                yearGrad3ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][35].ToString();
+                Award3_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][36].ToString();
+                Track_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][37].ToString();
+                College_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][38].ToString();
+                Address4_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][39].ToString();
+                YearGrad4ComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][40].ToString();
+                Award4_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][41].ToString();
+                course_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][42].ToString();
+                Others_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][43].ToString();
+                position_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][44].ToString();
+                Emp_Stat_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][45].ToString();
+                DateHiredComboBox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][46].ToString();
+                dept_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][47].ToString();
+                no_Dept_Txtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][48].ToString();
+                picpathTxtbox.Text = edb.employee_sql_dataset.Tables[0].Rows[0][49].ToString();
+
+                if (!string.IsNullOrEmpty(picpathTxtbox.Text) && System.IO.File.Exists(picpathTxtbox.Text))
+                {
+                    pictureBox1.Image = Image.FromFile(picpathTxtbox.Text);
+                }
+                else
+                {
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\question.png");
+                }
+
+                MessageBox.Show("Employee found!");
             }
-            else
+            catch (Exception ex)
             {
-                // Show default image if path is empty or file doesn't exist
-                pictureBox1.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\question.png");
+                MessageBox.Show("Error searching employee: " + ex.Message);
             }
 
 
@@ -133,32 +164,46 @@ namespace LESSON1
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            edb.employee_sql = "INSERT INTO pos_empRegTbl (emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender," +
-                "emp_sss_no, emp_tin_no, emp_philhealth_no, emp_pagibig_no, emp_status, emp_height, emp_weight, add_yrs_stay," +
-                "add_house_no, add_sub_name, add_phase_no, add_street, add_baranggay, add_municipality, add_city, add_state_province," +
-                "add_country, add_zipcode, elem_name, elem_address, elem_yr_grad, elem_award, junior_high_name, junior_high_address, " +
-                "junior_high_yr_grad, junior_high_award, senior_high_name, senior_high_address, senior_high_yr_grad, senior_high_award," +
-                "track, college_school_name, college_address, college_yr_grad, college_award, college_course, others, position," +
-                "emp_work_status, emp_date_hired, emp_department, emp_no_of_dependents, picpath) VALUES ('" + emp_idTxtbox.Text + "','" + fname_Txtbox.Text + "','" + mname_Txtbox.Text + "','" + Sname_Txtbox.Text +
-                "','" + AgecomboBox.Text + "','" + GenderComboBox.Text + "','" + SSS_no_Txtbox.Text + "','" + TIN_no_Txtbox.Text +
-                "','" + Philhealth_Txtbox.Text + "','" + Pagibig_Txtbox.Text + "','" + StatusComboBox.Text + "','" + Height_Txtbox.Text +
-                "','" + Weight_Txtbox.Text + "','" + Years_stay_Txtbox.Text + "','" + House_no_Txtbox.Text + "','" + subdname_Txtbox.Text +
-                "','" + phone_no_Txtbox.Text + "','" + street_Txtbox.Text + "','" + brgy_Txtbox.Text + "','" + municip_Txtbox.Text + "','" + city_Txtbox.Text +
-                "','" + state_Txtbox.Text + "','" + country_Txtbox.Text + "','" + zip_Txtbox.Text + "','" + ElemSchool_Txtbox.Text +
-                "','" + Address1_Txtbox.Text + "','" + YearGraduatedComboBox.Text + "','" + Award1_Txtbox.Text + "','" + JuniorHigh_Txtbox.Text +
-                "','" + Address2_Txtbox.Text + "','" + YearGrad2ComboBox.Text + "','" + Award2_Txtbox.Text + "','" + SeniorHigh_Txtbox.Text +
-                "','" + Address3_Txtbox.Text + "','" + yearGrad3ComboBox.Text + "','" + Award3_Txtbox.Text + "','" + Track_Txtbox.Text +
-                "','" + College_Txtbox.Text + "','" + Address4_Txtbox.Text + "','" + YearGrad4ComboBox.Text + "','" + Award4_Txtbox.Text +
-                "','" + course_Txtbox.Text + "','" + Others_Txtbox.Text + "','" + position_Txtbox.Text + "','" + Emp_Stat_Txtbox.Text +
-                "','" + DateHiredComboBox.Text + "','" + dept_Txtbox.Text + "','" + no_Dept_Txtbox.Text + "','" + picpathTxtbox.Text + "')";
-            edb.employee_cmd();
-            edb.employee_sqladapterInsert();
-            edb.employee_sql = "SELECT * FROM pos_empRegTbl";
-            edb.employee_cmd();
-            edb.employee_sqladapterSelect();
-            edb.employee_sqldatasetSELECT();
-            dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
-            cleartextboxes();
+            try
+            {
+                if (string.IsNullOrEmpty(emp_idTxtbox.Text) || string.IsNullOrEmpty(fname_Txtbox.Text))
+                {
+                    MessageBox.Show("Please fill in Employee ID and First Name");
+                    return;
+                }
+
+                edb.employee_sql = "INSERT INTO pos_empRegTbl (emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender," +
+                    "emp_sss_no, emp_tin_no, emp_philhealth_no, emp_pagibig_no, emp_status, emp_height, emp_weight, add_yrs_stay," +
+                    "add_house_no, add_sub_name, add_phase_no, add_street, add_baranggay, add_municipality, add_city, add_state_province," +
+                    "add_country, add_zipcode, elem_name, elem_address, elem_yr_grad, elem_award, junior_high_name, junior_high_address, " +
+                    "junior_high_yr_grad, junior_high_award, senior_high_name, senior_high_address, senior_high_yr_grad, senior_high_award," +
+                    "track, college_school_name, college_address, college_yr_grad, college_award, college_course, others, position," +
+                    "emp_work_status, emp_date_hired, emp_department, emp_no_of_dependents, picpath) VALUES ('" + emp_idTxtbox.Text + "','" + fname_Txtbox.Text + "','" + mname_Txtbox.Text + "','" + Sname_Txtbox.Text +
+                    "','" + AgecomboBox.Text + "','" + GenderComboBox.Text + "','" + SSS_no_Txtbox.Text + "','" + TIN_no_Txtbox.Text +
+                    "','" + Philhealth_Txtbox.Text + "','" + Pagibig_Txtbox.Text + "','" + StatusComboBox.Text + "','" + Height_Txtbox.Text +
+                    "','" + Weight_Txtbox.Text + "','" + Years_stay_Txtbox.Text + "','" + House_no_Txtbox.Text + "','" + subdname_Txtbox.Text +
+                    "','" + phone_no_Txtbox.Text + "','" + street_Txtbox.Text + "','" + brgy_Txtbox.Text + "','" + municip_Txtbox.Text + "','" + city_Txtbox.Text +
+                    "','" + state_Txtbox.Text + "','" + country_Txtbox.Text + "','" + zip_Txtbox.Text + "','" + ElemSchool_Txtbox.Text +
+                    "','" + Address1_Txtbox.Text + "','" + YearGraduatedComboBox.Text + "','" + Award1_Txtbox.Text + "','" + JuniorHigh_Txtbox.Text +
+                    "','" + Address2_Txtbox.Text + "','" + YearGrad2ComboBox.Text + "','" + Award2_Txtbox.Text + "','" + SeniorHigh_Txtbox.Text +
+                    "','" + Address3_Txtbox.Text + "','" + yearGrad3ComboBox.Text + "','" + Award3_Txtbox.Text + "','" + Track_Txtbox.Text +
+                    "','" + College_Txtbox.Text + "','" + Address4_Txtbox.Text + "','" + YearGrad4ComboBox.Text + "','" + Award4_Txtbox.Text +
+                    "','" + course_Txtbox.Text + "','" + Others_Txtbox.Text + "','" + position_Txtbox.Text + "','" + Emp_Stat_Txtbox.Text +
+                    "','" + DateHiredComboBox.Text + "','" + dept_Txtbox.Text + "','" + no_Dept_Txtbox.Text + "','" + picpathTxtbox.Text + "')";
+                edb.employee_cmd();
+                edb.employee_sqladapterInsert();
+                edb.employee_sql = "SELECT * FROM pos_empRegTbl";
+                edb.employee_cmd();
+                edb.employee_sqladapterSelect();
+                edb.employee_sqldatasetSELECT();
+                dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
+                MessageBox.Show("Employee added successfully!");
+                cleartextboxes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding employee: " + ex.Message);
+            }
 
 
         }
@@ -194,20 +239,55 @@ namespace LESSON1
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
-            edb.employee_sql = "DELETE FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
-            edb.employee_cmd();
-            edb.employee_sqladapterDelete();
-            edb.employee_sql = "SELECT * FROM pos_empRegTbl";
-            edb.employee_cmd();
-            edb.employee_sqladapterSelect();
-            edb.employee_sqldatasetSELECT();
-            dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
-            cleartextboxes();
+            try
+            {
+                if (string.IsNullOrEmpty(emp_idTxtbox.Text))
+                {
+                    MessageBox.Show("Please search for an employee first");
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this employee?", "Confirm Delete", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                    return;
+
+                edb.employee_sql = "DELETE FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
+                edb.employee_cmd();
+                edb.employee_sqladapterDelete();
+                edb.employee_sql = "SELECT * FROM pos_empRegTbl";
+                edb.employee_cmd();
+                edb.employee_sqladapterSelect();
+                edb.employee_sqldatasetSELECT();
+                dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
+                MessageBox.Show("Employee deleted successfully!");
+                cleartextboxes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting employee: " + ex.Message);
+            }
         }
 
         private void New_Button_Click(object sender, EventArgs e)
         {
-            cleartextboxes();
+            try
+            {
+                // Reload all employee records in the DataGridView
+                edb.employee_sql = "SELECT * FROM pos_empRegTbl";
+                edb.employee_cmd();
+                edb.employee_sqladapterSelect();
+                edb.employee_sqldatasetSELECT();
+                dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
+
+                // Clear all textboxes
+                cleartextboxes();
+
+                MessageBox.Show("All records loaded!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error refreshing records: " + ex.Message);
+            }
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
