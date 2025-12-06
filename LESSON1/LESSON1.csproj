@@ -58,6 +58,12 @@
     <Compile Include="Activitty4_PrintForm.Designer.cs">
       <DependentUpon>Activitty4_PrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Reports.Designer.cs">
+      <DependentUpon>Employee_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMP_REGISTRATION_DATABASE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity2.resx">
       <DependentUpon>Activity2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Reports.resx">
+      <DependentUpon>Employee_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMP_REGISTRATION_DATABASE.resx">
       <DependentUpon>EMP_REGISTRATION_DATABASE.cs</DependentUpon>

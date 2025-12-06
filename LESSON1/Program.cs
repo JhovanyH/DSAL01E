@@ -16,7 +16,7 @@ namespace LESSON1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PAYROL_DATABASE());
+            Application.Run(new Employee_Reports());
         }
     }
 }
