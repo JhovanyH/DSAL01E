@@ -70,6 +70,7 @@
     <Compile Include="EMP_REGISTRATION_DATABASE.Designer.cs">
       <DependentUpon>EMP_REGISTRATION_DATABASE.cs</DependentUpon>
     </Compile>
+    <Compile Include="loginDb_dbconnections.cs" />
     <Compile Include="Payroll_Variables_Database.cs" />
     <Compile Include="payrol_dbconnection.cs" />
     <Compile Include="payrol_reports.cs">
@@ -216,23 +217,17 @@
     <Compile Include="PAYROL_DATABASE.Designer.cs">
       <DependentUpon>PAYROL_DATABASE.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount_Database.cs">
+    <Compile Include="sales_reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount_Database.Designer.cs">
-      <DependentUpon>UserAccount_Database.cs</DependentUpon>
+    <Compile Include="sales_reports.Designer.cs">
+      <DependentUpon>sales_reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount.cs">
+    <Compile Include="payrol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount.Designer.cs">
-      <DependentUpon>UserAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserAccount_DatabasePrintForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserAccount_DatabasePrintForm.Designer.cs">
-      <DependentUpon>UserAccount_DatabasePrintForm.cs</DependentUpon>
+    <Compile Include="payrol.Designer.cs">
+      <DependentUpon>payrol.cs</DependentUpon>
     </Compile>
     <Compile Include="PAYROL_DATABASE_PRINTFORM.cs">
       <SubType>Form</SubType>
@@ -240,11 +235,18 @@
     <Compile Include="PAYROL_DATABASE_PRINTFORM.Designer.cs">
       <DependentUpon>PAYROL_DATABASE_PRINTFORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount_PrintForm.cs">
+    <Compile Include="payrol_PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount_PrintForm.Designer.cs">
-      <DependentUpon>UserAccount_PrintForm.cs</DependentUpon>
+    <Compile Include="payrol_PrintForm.Designer.cs">
+      <DependentUpon>payrol_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useraccount_db_connection.cs" />
+    <Compile Include="user_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_account.Designer.cs">
+      <DependentUpon>user_account.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables1.cs" />
     <EmbeddedResource Include="Acitivity1.resx">
@@ -338,20 +340,20 @@
     <EmbeddedResource Include="PAYROL_DATABASE.resx">
       <DependentUpon>PAYROL_DATABASE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount_Database.resx">
-      <DependentUpon>UserAccount_Database.cs</DependentUpon>
+    <EmbeddedResource Include="sales_reports.resx">
+      <DependentUpon>sales_reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount.resx">
-      <DependentUpon>UserAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount_DatabasePrintForm.resx">
-      <DependentUpon>UserAccount_DatabasePrintForm.cs</DependentUpon>
+    <EmbeddedResource Include="payrol.resx">
+      <DependentUpon>payrol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PAYROL_DATABASE_PRINTFORM.resx">
       <DependentUpon>PAYROL_DATABASE_PRINTFORM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount_PrintForm.resx">
-      <DependentUpon>UserAccount_PrintForm.cs</DependentUpon>
+    <EmbeddedResource Include="payrol_PrintForm.resx">
+      <DependentUpon>payrol_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_account.resx">
+      <DependentUpon>user_account.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -434,6 +436,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

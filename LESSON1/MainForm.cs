@@ -73,7 +73,7 @@ namespace LESSON1
 
         private void userAccountPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserAccount useracc = new UserAccount();
+            payrol useracc = new payrol();
             useracc.MdiParent = this;
             useracc.Show();
         }

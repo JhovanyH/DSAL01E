@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LESSON1
 {
-    public partial class UserAccount : Form
+    public partial class payrol : Form
     {
         private string picpath;
         private double basic_income = 0.00,
@@ -46,7 +46,7 @@ namespace LESSON1
         private void updatebttn_Click(object sender, EventArgs e)
         {
             //codes for calling the other form connected to the current form
-            UserAccount_PrintForm pf = new UserAccount_PrintForm();
+            payrol_PrintForm pf = new payrol_PrintForm();
             //codes to display the contents of the listbox from other form to the current form.
             pf.Display_ListBox.Items.AddRange(this.Payslip_viewlistbox.Items);
             pf.Show();
@@ -219,7 +219,7 @@ namespace LESSON1
 
         }
 
-        public UserAccount()
+        public payrol()
         {
             InitializeComponent();
         }

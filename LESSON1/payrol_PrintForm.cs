@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LESSON1
 {
-    public partial class UserAccount_PrintForm : Form
+    public partial class payrol_PrintForm : Form
     {
-        public UserAccount_PrintForm()
+        public payrol_PrintForm()
         {
             InitializeComponent();
         }

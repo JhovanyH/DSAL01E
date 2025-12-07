@@ -1,6 +1,6 @@
 ﻿namespace LESSON1
 {
-    partial class UserAccount_DatabasePrintForm
+    partial class payrol_PrintForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,15 +41,14 @@
             this.Display_ListBox.Size = new System.Drawing.Size(824, 763);
             this.Display_ListBox.TabIndex = 0;
             // 
-            // UserAccount_DatabasePrintForm
+            // UserAccount_PrintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 838);
             this.Controls.Add(this.Display_ListBox);
-            this.Name = "UserAccount_DatabasePrintForm";
+            this.Name = "UserAccount_PrintForm";
             this.Text = "UserAccount_PrintForm";
-            this.Load += new System.EventHandler(this.UserAccount_DatabasePrintForm_Load);
             this.ResumeLayout(false);
 
         }
