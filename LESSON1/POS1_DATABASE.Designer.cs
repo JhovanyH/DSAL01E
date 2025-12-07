@@ -1644,7 +1644,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(387, 48);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(133, 20);
             this.radioButton1.TabIndex = 21;
@@ -1657,7 +1657,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(387, 76);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(141, 20);
             this.radioButton2.TabIndex = 22;
@@ -1670,7 +1670,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(387, 105);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(138, 20);
             this.radioButton3.TabIndex = 23;
@@ -1683,7 +1683,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(387, 134);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(121, 20);
             this.radioButton4.TabIndex = 24;
@@ -2060,11 +2060,11 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label emp_id;
-        private System.Windows.Forms.Label emp_fname;
-        private System.Windows.Forms.Label terminal_no;
-        private System.Windows.Forms.Label time_date;
-        private System.Windows.Forms.Label emp_surname;
+        public System.Windows.Forms.Label emp_id;
+        public System.Windows.Forms.Label emp_fname;
+        public System.Windows.Forms.Label terminal_no;
+        public System.Windows.Forms.Label time_date;
+        public System.Windows.Forms.Label emp_surname;
     }
 }
 

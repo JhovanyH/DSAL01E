@@ -125,7 +125,6 @@ namespace LESSON1
                 }
 
                 useraccount_db_connect.useraccount_sql = "SELECT emp_id, emp_fname, emp_mname, emp_surname, position, picpath FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
-
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqladapterSelect();
                 useraccount_db_connect.useraccount_sqldatasetSELECT();
@@ -395,6 +394,12 @@ namespace LESSON1
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
+            // Reload all employee records in the DataGridView
+            useraccount_db_connect.useraccount_sql = "SELECT * FROM useraccountTbl";
+            useraccount_db_connect.useraccount_cmd();
+            useraccount_db_connect.useraccount_sqladapterSelect();
+            useraccount_db_connect.useraccount_sqldatasetSELECT();
+            dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
             cleartextboxes();
             MessageBox.Show("All fields cleared!");
         }

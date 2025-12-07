@@ -16,12 +16,40 @@ namespace LESSON1
         Variables1 V = new Variables1();
         Price_Item_Value PIV = new Price_Item_Value();
         pos_dbconnection P = new pos_dbconnection();
+
+
+        //admin purposes
+        // ADD THESE VARIABLES AT THE TOP OF YOUR CLASS
+        private string _terminalNo = "1";
+        private string _empId = "";
+        private string _firstName = "";
+        private string _surname = "";
+        private bool _isAdminMode = false;
         public POS2_DATABASE()
         {
             P.pos_connString();
             InitializeComponent();
         }
+
+        //admin purposes
+        public void SetTerminalInfo(string terminalNo, string empId, string firstName, string surname)
+        {
+            _terminalNo = terminalNo;
+            _empId = empId;
+            _firstName = firstName;
+            _surname = surname;
+            _isAdminMode = false;
+        }
+
         
+        public void SetAsAdminMode(string terminalNo)
+        {
+            _terminalNo = terminalNo;
+            _empId = "ADMIN-TEST";
+            _firstName = "Admin";
+            _surname = "Testing";
+            _isAdminMode = true;
+        }
 
         private void quantityTextBox()
         {

@@ -1450,8 +1450,8 @@
         private System.Windows.Forms.Button Exit_Button;
         private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.Button New_Button;
-        private System.Windows.Forms.Button Delete_Button;
         private System.Windows.Forms.Button Edit_Button;
         private System.Windows.Forms.Button Add_Button;
+        public System.Windows.Forms.Button Delete_Button;
     }
 }

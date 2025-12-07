@@ -26,11 +26,36 @@ namespace LESSON1
         int qty = 0;
         double discount_amt = 0, discounted_amt = 0, cash_rendered = 0, change = 0;
 
+        //admin
+        private string _terminalNo = "1";
+        private string _empId = "";
+        private string _firstName = "";
+        private string _surname = "";
+        private bool _isAdminMode = false;
 
         public POS1_DATABASE()
         {
             pb.pos_connString();
             InitializeComponent();
+        }
+        //admin purposes
+        public void SetTerminalInfo(string terminalNo, string empId, string firstName, string surname)
+        {
+            _terminalNo = terminalNo;
+            _empId = empId;
+            _firstName = firstName;
+            _surname = surname;
+            _isAdminMode = false;
+        }
+
+        //admin purposes
+        public void SetAsAdminMode(string terminalNo)
+        {
+            _terminalNo = terminalNo;
+            _empId = "ADMIN-TEST";
+            _firstName = "Admin";
+            _surname = "Testing";
+            _isAdminMode = true;
         }
         private void quantityTxtbox()
         {

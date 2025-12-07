@@ -116,6 +116,7 @@
             this.edit_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
             this.search_button = new System.Windows.Forms.Button();
+            this.Search_Edit_Button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1115,12 +1116,28 @@
             this.search_button.UseVisualStyleBackColor = false;
             this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
+            // Search_Edit_Button
+            // 
+            this.Search_Edit_Button.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.Search_Edit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Search_Edit_Button.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Edit_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Search_Edit_Button.Location = new System.Drawing.Point(399, 144);
+            this.Search_Edit_Button.Margin = new System.Windows.Forms.Padding(4);
+            this.Search_Edit_Button.Name = "Search_Edit_Button";
+            this.Search_Edit_Button.Size = new System.Drawing.Size(133, 52);
+            this.Search_Edit_Button.TabIndex = 93;
+            this.Search_Edit_Button.Text = " Search For Edit";
+            this.Search_Edit_Button.UseVisualStyleBackColor = false;
+            this.Search_Edit_Button.Click += new System.EventHandler(this.Search_Edit_Button_Click);
+            // 
             // PAYROL_DATABASE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1541, 852);
+            this.Controls.Add(this.Search_Edit_Button);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.edit_button);
@@ -1272,8 +1289,9 @@
         private System.Windows.Forms.ComboBox other_loanCombo;
         public System.Windows.Forms.TextBox other_loanTxtbox;
         public System.Windows.Forms.TextBox picpathtxtbox;
-        private System.Windows.Forms.Button edit_button;
-        private System.Windows.Forms.Button delete_button;
         private System.Windows.Forms.Button search_button;
+        public System.Windows.Forms.Button edit_button;
+        public System.Windows.Forms.Button delete_button;
+        public System.Windows.Forms.Button Search_Edit_Button;
     }
 }

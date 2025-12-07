@@ -432,12 +432,12 @@
         private System.Windows.Forms.ComboBox accountTypeComboBox;
         private System.Windows.Forms.TextBox surnameTxtbox;
         private System.Windows.Forms.TextBox confirmPasswordTxtbox;
-        private System.Windows.Forms.Button search_for_updateButton;
-        private System.Windows.Forms.Button Update_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button submit_button;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Button Exit_button;
         private System.Windows.Forms.TextBox picpathTxtbox;
+        public System.Windows.Forms.Button search_for_updateButton;
+        public System.Windows.Forms.Button Update_button;
+        public System.Windows.Forms.Button Delete_button;
     }
 }

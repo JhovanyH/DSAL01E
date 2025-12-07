@@ -19,9 +19,14 @@ namespace LESSON1
 
         private void pOSVanyColleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pos1function activity3 = new pos1function();
-            activity3.MdiParent = this;
-            activity3.Show();
+            // Allow Admin to open POS1 (Terminal 1) for testing
+            POS1_DATABASE pos1Form = new POS1_DATABASE();
+
+            // Set it as admin mode (no terminal required)
+            pos1Form.SetAsAdminMode("1"); // Test Terminal 1
+
+            pos1Form.MdiParent = this;
+            pos1Form.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -33,9 +38,14 @@ namespace LESSON1
 
         private void pOSVanyOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pos2function activity4 = new pos2function();
-            activity4.MdiParent = this;
-            activity4.Show();
+            // Allow Admin to open POS2 (Terminal 2) for testing
+            POS2_DATABASE pos2Form = new POS2_DATABASE();
+
+            // Set it as admin mode (no terminal required)
+            pos2Form.SetAsAdminMode("2"); // Test Terminal 2
+
+            pos2Form.MdiParent = this;
+            pos2Form.Show();
         }
 
         private void payrollApplicationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,7 +57,7 @@ namespace LESSON1
 
         private void simplePOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Activity2 activity2 = new Activity2();
+            POS_Admin activity2 = new POS_Admin();
             activity2.MdiParent = this;
             activity2.Show();
         }
@@ -95,6 +105,55 @@ namespace LESSON1
             //all child forms in cascade display
             this.LayoutMdi(MdiLayout.Cascade);
 
+        }
+
+        private void pOSAdministratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PAYROL_DATABASE pb = new PAYROL_DATABASE();
+            pb.MdiParent = this;
+            pb.Show();
+        }
+
+        private void userAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EMP_REGISTRATION_DATABASE er = new EMP_REGISTRATION_DATABASE();
+            er.MdiParent = this;
+            er.Show();
+        }
+
+        private void payrolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            user_account ua = new user_account();
+            ua.MdiParent = this;
+            ua.Show();
+        }
+
+        private void salesReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sales_reports sr = new sales_reports();
+            sr.MdiParent = this;
+            sr.Show();
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employee_Reports er = new Employee_Reports();   
+            er.MdiParent = this;
+            er.Show();
+        }
+
+        private void payrolReportsToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            payrol_reports pr = new payrol_reports();
+            pr.MdiParent = this;
+            pr.Show();
+        }
+
+        private void userAccountReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            useraccount_report uar = new useraccount_report();
+            uar.MdiParent = this;
+            uar.Show();
         }
     }
 }

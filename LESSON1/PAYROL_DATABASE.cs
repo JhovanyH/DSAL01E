@@ -42,6 +42,77 @@ namespace LESSON1
             total_contrib = 0.00,
             total_loan = 0.00;
 
+        private void Search_Edit_Button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(paydateCombo.Text))
+                {
+                    MessageBox.Show("Please enter a Pay Date to load payroll data.");
+                    return;
+                }
+
+                pd.payrol_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, " +
+                   "emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, " +
+                   "emp_work_status, emp_department, picpath, basic_rate_hr, " +
+                   "basic_no_of_hrs_cutOff, basic_income_per_cutOff, honorarium_rate_hr, " +
+                   "honorarium_no_of_hrs_cutOff, honorarium_income_per_cutOff, " +
+                   "other_rate_hr, other_no_of_hrs_cutOff, other_income_per_cutOff, " +
+                   "sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, " +
+                   "sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, " +
+                   "salary_loan, other_loans, total_deductions, gross_income, " +
+                   "net_income, pay_date FROM pos_empRegTbl INNER JOIN payrolTbl " +
+                   "ON pos_empRegTbl.emp_id = payrolTbl.emp_id WHERE " +
+                   "payrolTbl.emp_id = '" + employeenumtxtbox.Text + "' AND " +
+                   "payrolTbl.pay_date = '" + paydateCombo.Text + "'";
+
+                pd.payrol_cmd();
+                pd.payrol_sqladapterSelect();
+                pd.payrol_sqldatasetSELECT();
+
+                if (pd.payrol_sql_dataset.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("No payroll record found. You can create a new one by clicking Save.");
+                    return;
+                }
+
+                // Load payroll data
+                rate_hour_basicIntxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][10].ToString();
+                no_hours_basicIntxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][11].ToString();
+                income_basicintxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][12].ToString();
+
+                rate_hourHonorTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][13].ToString();
+                no_hoursHonotxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][14].ToString();
+                income_HonorariumTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][15].ToString();
+
+                ratehour_OtherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][16].ToString();
+                no_HoursOtherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][17].ToString();
+                Income_otherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][18].ToString();
+
+                ssscontritxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][19].ToString();
+                philhealthcontritxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][20].ToString();
+                pagibigcontrittxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][21].ToString();
+                tax_contribTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][22].ToString();
+
+                sssloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][23].ToString();
+                pagibigloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][24].ToString();
+                facultydeposittxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][25].ToString();
+                facultysavingstxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][26].ToString();
+                salaryloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][27].ToString();
+                other_loanTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
+
+                total_deducTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][29].ToString();
+                grossIncometxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
+                netincometxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][31].ToString();
+
+                MessageBox.Show("Payroll data loaded successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading payroll data: " + ex.Message);
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files (*.gif, *.jpg, *.png, *.bmp, *.jpeg)|*.gif;*.jpg;*.png;*.bmp;*.jpeg";
@@ -123,76 +194,7 @@ namespace LESSON1
             catch (Exception ex)
             {
                 MessageBox.Show("Error searching employee: " + ex.Message);
-            }
-
-            // Second query - get payroll data
-            try
-            {
-                if (string.IsNullOrEmpty(paydateCombo.Text))
-                {
-                    MessageBox.Show("Please enter a Pay Date to load payroll data.");
-                    return;
-                }
-
-                pd.payrol_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, " +
-                   "emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, " +
-                   "emp_work_status, emp_department, picpath, basic_rate_hr, " +
-                   "basic_no_of_hrs_cutOff, basic_income_per_cutOff, honorarium_rate_hr, " +
-                   "honorarium_no_of_hrs_cutOff, honorarium_income_per_cutOff, " +
-                   "other_rate_hr, other_no_of_hrs_cutOff, other_income_per_cutOff, " +
-                   "sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, " +
-                   "sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, " +
-                   "salary_loan, other_loans, total_deductions, gross_income, " +
-                   "net_income, pay_date FROM pos_empRegTbl INNER JOIN payrolTbl " +
-                   "ON pos_empRegTbl.emp_id = payrolTbl.emp_id WHERE " +
-                   "payrolTbl.emp_id = '" + employeenumtxtbox.Text + "' AND " +
-                   "payrolTbl.pay_date = '" + paydateCombo.Text + "'";
-
-                pd.payrol_cmd();
-                pd.payrol_sqladapterSelect();
-                pd.payrol_sqldatasetSELECT();
-
-                if (pd.payrol_sql_dataset.Tables[0].Rows.Count == 0)
-                {
-                    MessageBox.Show("No payroll record found. You can create a new one by clicking Save.");
-                    return;
-                }
-
-                // Load payroll data
-                rate_hour_basicIntxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][10].ToString();
-                no_hours_basicIntxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][11].ToString();
-                income_basicintxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][12].ToString();
-
-                rate_hourHonorTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][13].ToString();
-                no_hoursHonotxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][14].ToString();
-                income_HonorariumTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][15].ToString();
-
-                ratehour_OtherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][16].ToString();
-                no_HoursOtherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][17].ToString();
-                Income_otherTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][18].ToString();
-
-                ssscontritxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][19].ToString();
-                philhealthcontritxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][20].ToString();
-                pagibigcontrittxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][21].ToString();
-                tax_contribTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][22].ToString();
-
-                sssloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][23].ToString();
-                pagibigloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][24].ToString();
-                facultydeposittxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][25].ToString();
-                facultysavingstxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][26].ToString();
-                salaryloantxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][27].ToString();
-                other_loanTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
-
-                total_deducTxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][29].ToString();
-                grossIncometxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
-                netincometxtbox.Text = pd.payrol_sql_dataset.Tables[0].Rows[0][31].ToString();
-
-                MessageBox.Show("Payroll data loaded successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading payroll data: " + ex.Message);
-            }
+            }            
         }
 
         private void delete_button_Click(object sender, EventArgs e)

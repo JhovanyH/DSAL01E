@@ -71,6 +71,12 @@
       <DependentUpon>EMP_REGISTRATION_DATABASE.cs</DependentUpon>
     </Compile>
     <Compile Include="loginDb_dbconnections.cs" />
+    <Compile Include="LoginFrm_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm_Database.Designer.cs">
+      <DependentUpon>LoginFrm_Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payroll_Variables_Database.cs" />
     <Compile Include="payrol_dbconnection.cs" />
     <Compile Include="payrol_reports.cs">
@@ -242,6 +248,12 @@
       <DependentUpon>payrol_PrintForm.cs</DependentUpon>
     </Compile>
     <Compile Include="useraccount_db_connection.cs" />
+    <Compile Include="useraccount_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="useraccount_report.Designer.cs">
+      <DependentUpon>useraccount_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMP_REGISTRATION_DATABASE.resx">
       <DependentUpon>EMP_REGISTRATION_DATABASE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm_Database.resx">
+      <DependentUpon>LoginFrm_Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="payrol_reports.resx">
       <DependentUpon>payrol_reports.cs</DependentUpon>
@@ -351,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="payrol_PrintForm.resx">
       <DependentUpon>payrol_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useraccount_report.resx">
+      <DependentUpon>useraccount_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_account.resx">
       <DependentUpon>user_account.cs</DependentUpon>
