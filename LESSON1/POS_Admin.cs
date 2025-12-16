@@ -12,6 +12,11 @@ namespace LESSON1
 {
     public partial class POS_Admin : Form
     {
+
+
+
+        private Size baseSize;
+
         pos_dbconnection posdb = new pos_dbconnection();
         private string picpath;
         private Image pic;
@@ -44,9 +49,30 @@ namespace LESSON1
                 //MessageBox.Show("Error occurs in this area. Please contact your administrator!");
             }
 
+            baseSize = this.Size;
+            this.WindowState = FormWindowState.Maximized;
+            ScaleToScreen();
+
+
         }
 
-        
+
+
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
+
         private void cleartextboxes()
         {
             try

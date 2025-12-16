@@ -31,6 +31,46 @@
         {
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.price20 = new System.Windows.Forms.Label();
+            this.price15 = new System.Windows.Forms.Label();
+            this.price10 = new System.Windows.Forms.Label();
+            this.price5 = new System.Windows.Forms.Label();
+            this.price19 = new System.Windows.Forms.Label();
+            this.price18 = new System.Windows.Forms.Label();
+            this.price17 = new System.Windows.Forms.Label();
+            this.price16 = new System.Windows.Forms.Label();
+            this.price14 = new System.Windows.Forms.Label();
+            this.price13 = new System.Windows.Forms.Label();
+            this.price12 = new System.Windows.Forms.Label();
+            this.price11 = new System.Windows.Forms.Label();
+            this.price9 = new System.Windows.Forms.Label();
+            this.price8 = new System.Windows.Forms.Label();
+            this.price7 = new System.Windows.Forms.Label();
+            this.price6 = new System.Windows.Forms.Label();
+            this.price4 = new System.Windows.Forms.Label();
+            this.price3 = new System.Windows.Forms.Label();
+            this.price2 = new System.Windows.Forms.Label();
+            this.price1 = new System.Windows.Forms.Label();
+            this.picpath20 = new System.Windows.Forms.TextBox();
+            this.picpath19 = new System.Windows.Forms.TextBox();
+            this.picpath18 = new System.Windows.Forms.TextBox();
+            this.picpath17 = new System.Windows.Forms.TextBox();
+            this.picpath16 = new System.Windows.Forms.TextBox();
+            this.picpath15 = new System.Windows.Forms.TextBox();
+            this.picpath14 = new System.Windows.Forms.TextBox();
+            this.picpath13 = new System.Windows.Forms.TextBox();
+            this.picpath12 = new System.Windows.Forms.TextBox();
+            this.picpath11 = new System.Windows.Forms.TextBox();
+            this.picpath10 = new System.Windows.Forms.TextBox();
+            this.picpath9 = new System.Windows.Forms.TextBox();
+            this.picpath8 = new System.Windows.Forms.TextBox();
+            this.picpath7 = new System.Windows.Forms.TextBox();
+            this.picpath6 = new System.Windows.Forms.TextBox();
+            this.picpath5 = new System.Windows.Forms.TextBox();
+            this.picpath4 = new System.Windows.Forms.TextBox();
+            this.picpath3 = new System.Windows.Forms.TextBox();
+            this.picpath2 = new System.Windows.Forms.TextBox();
+            this.picpath1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -115,46 +155,7 @@
             this.FoodARdbtn = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
-            this.picpath1 = new System.Windows.Forms.TextBox();
-            this.picpath2 = new System.Windows.Forms.TextBox();
-            this.picpath3 = new System.Windows.Forms.TextBox();
-            this.picpath4 = new System.Windows.Forms.TextBox();
-            this.picpath5 = new System.Windows.Forms.TextBox();
-            this.picpath6 = new System.Windows.Forms.TextBox();
-            this.picpath7 = new System.Windows.Forms.TextBox();
-            this.picpath8 = new System.Windows.Forms.TextBox();
-            this.picpath9 = new System.Windows.Forms.TextBox();
-            this.picpath10 = new System.Windows.Forms.TextBox();
-            this.picpath11 = new System.Windows.Forms.TextBox();
-            this.picpath12 = new System.Windows.Forms.TextBox();
-            this.picpath13 = new System.Windows.Forms.TextBox();
-            this.picpath14 = new System.Windows.Forms.TextBox();
-            this.picpath15 = new System.Windows.Forms.TextBox();
-            this.picpath16 = new System.Windows.Forms.TextBox();
-            this.picpath17 = new System.Windows.Forms.TextBox();
-            this.picpath18 = new System.Windows.Forms.TextBox();
-            this.picpath19 = new System.Windows.Forms.TextBox();
-            this.picpath20 = new System.Windows.Forms.TextBox();
-            this.price1 = new System.Windows.Forms.Label();
-            this.price2 = new System.Windows.Forms.Label();
-            this.price3 = new System.Windows.Forms.Label();
-            this.price4 = new System.Windows.Forms.Label();
-            this.price6 = new System.Windows.Forms.Label();
-            this.price7 = new System.Windows.Forms.Label();
-            this.price8 = new System.Windows.Forms.Label();
-            this.price9 = new System.Windows.Forms.Label();
-            this.price11 = new System.Windows.Forms.Label();
-            this.price12 = new System.Windows.Forms.Label();
-            this.price13 = new System.Windows.Forms.Label();
-            this.price14 = new System.Windows.Forms.Label();
-            this.price16 = new System.Windows.Forms.Label();
-            this.price17 = new System.Windows.Forms.Label();
-            this.price18 = new System.Windows.Forms.Label();
-            this.price19 = new System.Windows.Forms.Label();
-            this.price5 = new System.Windows.Forms.Label();
-            this.price10 = new System.Windows.Forms.Label();
-            this.price15 = new System.Windows.Forms.Label();
-            this.price20 = new System.Windows.Forms.Label();
+            this.submit_button = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -186,10 +187,10 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(115, 805);
+            this.button6.Location = new System.Drawing.Point(23, 757);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 36);
+            this.button6.Size = new System.Drawing.Size(101, 36);
             this.button6.TabIndex = 75;
             this.button6.Text = "TRANSFER";
             this.button6.UseVisualStyleBackColor = true;
@@ -295,6 +296,366 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Items Display";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // price20
+            // 
+            this.price20.AutoSize = true;
+            this.price20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price20.ForeColor = System.Drawing.Color.Purple;
+            this.price20.Location = new System.Drawing.Point(777, 609);
+            this.price20.Name = "price20";
+            this.price20.Size = new System.Drawing.Size(52, 17);
+            this.price20.TabIndex = 102;
+            this.price20.Text = "Price:";
+            // 
+            // price15
+            // 
+            this.price15.AutoSize = true;
+            this.price15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price15.ForeColor = System.Drawing.Color.Purple;
+            this.price15.Location = new System.Drawing.Point(777, 445);
+            this.price15.Name = "price15";
+            this.price15.Size = new System.Drawing.Size(52, 17);
+            this.price15.TabIndex = 101;
+            this.price15.Text = "Price:";
+            // 
+            // price10
+            // 
+            this.price10.AutoSize = true;
+            this.price10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price10.ForeColor = System.Drawing.Color.Purple;
+            this.price10.Location = new System.Drawing.Point(777, 288);
+            this.price10.Name = "price10";
+            this.price10.Size = new System.Drawing.Size(52, 17);
+            this.price10.TabIndex = 100;
+            this.price10.Text = "Price:";
+            // 
+            // price5
+            // 
+            this.price5.AutoSize = true;
+            this.price5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price5.ForeColor = System.Drawing.Color.Purple;
+            this.price5.Location = new System.Drawing.Point(777, 127);
+            this.price5.Name = "price5";
+            this.price5.Size = new System.Drawing.Size(52, 17);
+            this.price5.TabIndex = 99;
+            this.price5.Text = "Price:";
+            // 
+            // price19
+            // 
+            this.price19.AutoSize = true;
+            this.price19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price19.ForeColor = System.Drawing.Color.Purple;
+            this.price19.Location = new System.Drawing.Point(597, 609);
+            this.price19.Name = "price19";
+            this.price19.Size = new System.Drawing.Size(52, 17);
+            this.price19.TabIndex = 98;
+            this.price19.Text = "Price:";
+            // 
+            // price18
+            // 
+            this.price18.AutoSize = true;
+            this.price18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price18.ForeColor = System.Drawing.Color.Purple;
+            this.price18.Location = new System.Drawing.Point(416, 609);
+            this.price18.Name = "price18";
+            this.price18.Size = new System.Drawing.Size(52, 17);
+            this.price18.TabIndex = 97;
+            this.price18.Text = "Price:";
+            // 
+            // price17
+            // 
+            this.price17.AutoSize = true;
+            this.price17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price17.ForeColor = System.Drawing.Color.Purple;
+            this.price17.Location = new System.Drawing.Point(237, 609);
+            this.price17.Name = "price17";
+            this.price17.Size = new System.Drawing.Size(52, 17);
+            this.price17.TabIndex = 96;
+            this.price17.Text = "Price:";
+            // 
+            // price16
+            // 
+            this.price16.AutoSize = true;
+            this.price16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price16.ForeColor = System.Drawing.Color.Purple;
+            this.price16.Location = new System.Drawing.Point(51, 609);
+            this.price16.Name = "price16";
+            this.price16.Size = new System.Drawing.Size(52, 17);
+            this.price16.TabIndex = 95;
+            this.price16.Text = "Price:";
+            // 
+            // price14
+            // 
+            this.price14.AutoSize = true;
+            this.price14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price14.ForeColor = System.Drawing.Color.Purple;
+            this.price14.Location = new System.Drawing.Point(597, 445);
+            this.price14.Name = "price14";
+            this.price14.Size = new System.Drawing.Size(52, 17);
+            this.price14.TabIndex = 94;
+            this.price14.Text = "Price:";
+            // 
+            // price13
+            // 
+            this.price13.AutoSize = true;
+            this.price13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price13.ForeColor = System.Drawing.Color.Purple;
+            this.price13.Location = new System.Drawing.Point(416, 444);
+            this.price13.Name = "price13";
+            this.price13.Size = new System.Drawing.Size(52, 17);
+            this.price13.TabIndex = 93;
+            this.price13.Text = "Price:";
+            // 
+            // price12
+            // 
+            this.price12.AutoSize = true;
+            this.price12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price12.ForeColor = System.Drawing.Color.Purple;
+            this.price12.Location = new System.Drawing.Point(237, 444);
+            this.price12.Name = "price12";
+            this.price12.Size = new System.Drawing.Size(52, 17);
+            this.price12.TabIndex = 92;
+            this.price12.Text = "Price:";
+            // 
+            // price11
+            // 
+            this.price11.AutoSize = true;
+            this.price11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price11.ForeColor = System.Drawing.Color.Purple;
+            this.price11.Location = new System.Drawing.Point(51, 444);
+            this.price11.Name = "price11";
+            this.price11.Size = new System.Drawing.Size(52, 17);
+            this.price11.TabIndex = 91;
+            this.price11.Text = "Price:";
+            // 
+            // price9
+            // 
+            this.price9.AutoSize = true;
+            this.price9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price9.ForeColor = System.Drawing.Color.Purple;
+            this.price9.Location = new System.Drawing.Point(597, 289);
+            this.price9.Name = "price9";
+            this.price9.Size = new System.Drawing.Size(52, 17);
+            this.price9.TabIndex = 90;
+            this.price9.Text = "Price:";
+            // 
+            // price8
+            // 
+            this.price8.AutoSize = true;
+            this.price8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price8.ForeColor = System.Drawing.Color.Purple;
+            this.price8.Location = new System.Drawing.Point(416, 288);
+            this.price8.Name = "price8";
+            this.price8.Size = new System.Drawing.Size(52, 17);
+            this.price8.TabIndex = 89;
+            this.price8.Text = "Price:";
+            // 
+            // price7
+            // 
+            this.price7.AutoSize = true;
+            this.price7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price7.ForeColor = System.Drawing.Color.Purple;
+            this.price7.Location = new System.Drawing.Point(237, 288);
+            this.price7.Name = "price7";
+            this.price7.Size = new System.Drawing.Size(52, 17);
+            this.price7.TabIndex = 88;
+            this.price7.Text = "Price:";
+            // 
+            // price6
+            // 
+            this.price6.AutoSize = true;
+            this.price6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price6.ForeColor = System.Drawing.Color.Purple;
+            this.price6.Location = new System.Drawing.Point(51, 288);
+            this.price6.Name = "price6";
+            this.price6.Size = new System.Drawing.Size(52, 17);
+            this.price6.TabIndex = 87;
+            this.price6.Text = "Price:";
+            // 
+            // price4
+            // 
+            this.price4.AutoSize = true;
+            this.price4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price4.ForeColor = System.Drawing.Color.Purple;
+            this.price4.Location = new System.Drawing.Point(597, 123);
+            this.price4.Name = "price4";
+            this.price4.Size = new System.Drawing.Size(52, 17);
+            this.price4.TabIndex = 86;
+            this.price4.Text = "Price:";
+            // 
+            // price3
+            // 
+            this.price3.AutoSize = true;
+            this.price3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price3.ForeColor = System.Drawing.Color.Purple;
+            this.price3.Location = new System.Drawing.Point(416, 123);
+            this.price3.Name = "price3";
+            this.price3.Size = new System.Drawing.Size(52, 17);
+            this.price3.TabIndex = 85;
+            this.price3.Text = "Price:";
+            // 
+            // price2
+            // 
+            this.price2.AutoSize = true;
+            this.price2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price2.ForeColor = System.Drawing.Color.Purple;
+            this.price2.Location = new System.Drawing.Point(237, 123);
+            this.price2.Name = "price2";
+            this.price2.Size = new System.Drawing.Size(52, 17);
+            this.price2.TabIndex = 84;
+            this.price2.Text = "Price:";
+            // 
+            // price1
+            // 
+            this.price1.AutoSize = true;
+            this.price1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price1.ForeColor = System.Drawing.Color.Purple;
+            this.price1.Location = new System.Drawing.Point(51, 123);
+            this.price1.Name = "price1";
+            this.price1.Size = new System.Drawing.Size(52, 17);
+            this.price1.TabIndex = 77;
+            this.price1.Text = "Price:";
+            // 
+            // picpath20
+            // 
+            this.picpath20.Location = new System.Drawing.Point(759, 584);
+            this.picpath20.Name = "picpath20";
+            this.picpath20.Size = new System.Drawing.Size(100, 22);
+            this.picpath20.TabIndex = 83;
+            // 
+            // picpath19
+            // 
+            this.picpath19.Location = new System.Drawing.Point(572, 584);
+            this.picpath19.Name = "picpath19";
+            this.picpath19.Size = new System.Drawing.Size(100, 22);
+            this.picpath19.TabIndex = 82;
+            // 
+            // picpath18
+            // 
+            this.picpath18.Location = new System.Drawing.Point(392, 584);
+            this.picpath18.Name = "picpath18";
+            this.picpath18.Size = new System.Drawing.Size(100, 22);
+            this.picpath18.TabIndex = 81;
+            // 
+            // picpath17
+            // 
+            this.picpath17.Location = new System.Drawing.Point(212, 584);
+            this.picpath17.Name = "picpath17";
+            this.picpath17.Size = new System.Drawing.Size(100, 22);
+            this.picpath17.TabIndex = 80;
+            // 
+            // picpath16
+            // 
+            this.picpath16.Location = new System.Drawing.Point(28, 584);
+            this.picpath16.Name = "picpath16";
+            this.picpath16.Size = new System.Drawing.Size(100, 22);
+            this.picpath16.TabIndex = 79;
+            // 
+            // picpath15
+            // 
+            this.picpath15.Location = new System.Drawing.Point(759, 420);
+            this.picpath15.Name = "picpath15";
+            this.picpath15.Size = new System.Drawing.Size(100, 22);
+            this.picpath15.TabIndex = 78;
+            // 
+            // picpath14
+            // 
+            this.picpath14.Location = new System.Drawing.Point(572, 420);
+            this.picpath14.Name = "picpath14";
+            this.picpath14.Size = new System.Drawing.Size(100, 22);
+            this.picpath14.TabIndex = 77;
+            // 
+            // picpath13
+            // 
+            this.picpath13.Location = new System.Drawing.Point(392, 419);
+            this.picpath13.Name = "picpath13";
+            this.picpath13.Size = new System.Drawing.Size(100, 22);
+            this.picpath13.TabIndex = 76;
+            // 
+            // picpath12
+            // 
+            this.picpath12.Location = new System.Drawing.Point(212, 419);
+            this.picpath12.Name = "picpath12";
+            this.picpath12.Size = new System.Drawing.Size(100, 22);
+            this.picpath12.TabIndex = 75;
+            // 
+            // picpath11
+            // 
+            this.picpath11.Location = new System.Drawing.Point(28, 419);
+            this.picpath11.Name = "picpath11";
+            this.picpath11.Size = new System.Drawing.Size(100, 22);
+            this.picpath11.TabIndex = 74;
+            // 
+            // picpath10
+            // 
+            this.picpath10.Location = new System.Drawing.Point(759, 252);
+            this.picpath10.Name = "picpath10";
+            this.picpath10.Size = new System.Drawing.Size(100, 22);
+            this.picpath10.TabIndex = 73;
+            // 
+            // picpath9
+            // 
+            this.picpath9.Location = new System.Drawing.Point(572, 249);
+            this.picpath9.Name = "picpath9";
+            this.picpath9.Size = new System.Drawing.Size(100, 22);
+            this.picpath9.TabIndex = 72;
+            // 
+            // picpath8
+            // 
+            this.picpath8.Location = new System.Drawing.Point(392, 249);
+            this.picpath8.Name = "picpath8";
+            this.picpath8.Size = new System.Drawing.Size(100, 22);
+            this.picpath8.TabIndex = 71;
+            // 
+            // picpath7
+            // 
+            this.picpath7.Location = new System.Drawing.Point(212, 249);
+            this.picpath7.Name = "picpath7";
+            this.picpath7.Size = new System.Drawing.Size(100, 22);
+            this.picpath7.TabIndex = 70;
+            // 
+            // picpath6
+            // 
+            this.picpath6.Location = new System.Drawing.Point(28, 249);
+            this.picpath6.Name = "picpath6";
+            this.picpath6.Size = new System.Drawing.Size(100, 22);
+            this.picpath6.TabIndex = 69;
+            // 
+            // picpath5
+            // 
+            this.picpath5.Location = new System.Drawing.Point(759, 87);
+            this.picpath5.Name = "picpath5";
+            this.picpath5.Size = new System.Drawing.Size(100, 22);
+            this.picpath5.TabIndex = 68;
+            // 
+            // picpath4
+            // 
+            this.picpath4.Location = new System.Drawing.Point(572, 87);
+            this.picpath4.Name = "picpath4";
+            this.picpath4.Size = new System.Drawing.Size(100, 22);
+            this.picpath4.TabIndex = 67;
+            // 
+            // picpath3
+            // 
+            this.picpath3.Location = new System.Drawing.Point(392, 86);
+            this.picpath3.Name = "picpath3";
+            this.picpath3.Size = new System.Drawing.Size(100, 22);
+            this.picpath3.TabIndex = 66;
+            // 
+            // picpath2
+            // 
+            this.picpath2.Location = new System.Drawing.Point(215, 87);
+            this.picpath2.Name = "picpath2";
+            this.picpath2.Size = new System.Drawing.Size(100, 22);
+            this.picpath2.TabIndex = 65;
+            // 
+            // picpath1
+            // 
+            this.picpath1.Location = new System.Drawing.Point(28, 86);
+            this.picpath1.Name = "picpath1";
+            this.picpath1.Size = new System.Drawing.Size(100, 22);
+            this.picpath1.TabIndex = 64;
             // 
             // button5
             // 
@@ -855,6 +1216,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(352, 157);
             this.listBox1.TabIndex = 73;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -1290,371 +1652,24 @@
             this.DisplayPictureBox.TabIndex = 65;
             this.DisplayPictureBox.TabStop = false;
             // 
-            // picpath1
-            // 
-            this.picpath1.Location = new System.Drawing.Point(28, 86);
-            this.picpath1.Name = "picpath1";
-            this.picpath1.Size = new System.Drawing.Size(100, 22);
-            this.picpath1.TabIndex = 64;
-            // 
-            // picpath2
-            // 
-            this.picpath2.Location = new System.Drawing.Point(215, 87);
-            this.picpath2.Name = "picpath2";
-            this.picpath2.Size = new System.Drawing.Size(100, 22);
-            this.picpath2.TabIndex = 65;
-            // 
-            // picpath3
-            // 
-            this.picpath3.Location = new System.Drawing.Point(392, 86);
-            this.picpath3.Name = "picpath3";
-            this.picpath3.Size = new System.Drawing.Size(100, 22);
-            this.picpath3.TabIndex = 66;
-            // 
-            // picpath4
-            // 
-            this.picpath4.Location = new System.Drawing.Point(572, 87);
-            this.picpath4.Name = "picpath4";
-            this.picpath4.Size = new System.Drawing.Size(100, 22);
-            this.picpath4.TabIndex = 67;
-            // 
-            // picpath5
-            // 
-            this.picpath5.Location = new System.Drawing.Point(759, 87);
-            this.picpath5.Name = "picpath5";
-            this.picpath5.Size = new System.Drawing.Size(100, 22);
-            this.picpath5.TabIndex = 68;
-            // 
-            // picpath6
-            // 
-            this.picpath6.Location = new System.Drawing.Point(28, 249);
-            this.picpath6.Name = "picpath6";
-            this.picpath6.Size = new System.Drawing.Size(100, 22);
-            this.picpath6.TabIndex = 69;
-            // 
-            // picpath7
-            // 
-            this.picpath7.Location = new System.Drawing.Point(212, 249);
-            this.picpath7.Name = "picpath7";
-            this.picpath7.Size = new System.Drawing.Size(100, 22);
-            this.picpath7.TabIndex = 70;
-            // 
-            // picpath8
-            // 
-            this.picpath8.Location = new System.Drawing.Point(392, 249);
-            this.picpath8.Name = "picpath8";
-            this.picpath8.Size = new System.Drawing.Size(100, 22);
-            this.picpath8.TabIndex = 71;
-            // 
-            // picpath9
-            // 
-            this.picpath9.Location = new System.Drawing.Point(572, 249);
-            this.picpath9.Name = "picpath9";
-            this.picpath9.Size = new System.Drawing.Size(100, 22);
-            this.picpath9.TabIndex = 72;
-            // 
-            // picpath10
-            // 
-            this.picpath10.Location = new System.Drawing.Point(759, 252);
-            this.picpath10.Name = "picpath10";
-            this.picpath10.Size = new System.Drawing.Size(100, 22);
-            this.picpath10.TabIndex = 73;
-            // 
-            // picpath11
-            // 
-            this.picpath11.Location = new System.Drawing.Point(28, 419);
-            this.picpath11.Name = "picpath11";
-            this.picpath11.Size = new System.Drawing.Size(100, 22);
-            this.picpath11.TabIndex = 74;
-            // 
-            // picpath12
-            // 
-            this.picpath12.Location = new System.Drawing.Point(212, 419);
-            this.picpath12.Name = "picpath12";
-            this.picpath12.Size = new System.Drawing.Size(100, 22);
-            this.picpath12.TabIndex = 75;
-            // 
-            // picpath13
-            // 
-            this.picpath13.Location = new System.Drawing.Point(392, 419);
-            this.picpath13.Name = "picpath13";
-            this.picpath13.Size = new System.Drawing.Size(100, 22);
-            this.picpath13.TabIndex = 76;
-            // 
-            // picpath14
-            // 
-            this.picpath14.Location = new System.Drawing.Point(572, 420);
-            this.picpath14.Name = "picpath14";
-            this.picpath14.Size = new System.Drawing.Size(100, 22);
-            this.picpath14.TabIndex = 77;
-            // 
-            // picpath15
-            // 
-            this.picpath15.Location = new System.Drawing.Point(759, 420);
-            this.picpath15.Name = "picpath15";
-            this.picpath15.Size = new System.Drawing.Size(100, 22);
-            this.picpath15.TabIndex = 78;
-            // 
-            // picpath16
-            // 
-            this.picpath16.Location = new System.Drawing.Point(28, 584);
-            this.picpath16.Name = "picpath16";
-            this.picpath16.Size = new System.Drawing.Size(100, 22);
-            this.picpath16.TabIndex = 79;
-            // 
-            // picpath17
-            // 
-            this.picpath17.Location = new System.Drawing.Point(212, 584);
-            this.picpath17.Name = "picpath17";
-            this.picpath17.Size = new System.Drawing.Size(100, 22);
-            this.picpath17.TabIndex = 80;
-            // 
-            // picpath18
-            // 
-            this.picpath18.Location = new System.Drawing.Point(392, 584);
-            this.picpath18.Name = "picpath18";
-            this.picpath18.Size = new System.Drawing.Size(100, 22);
-            this.picpath18.TabIndex = 81;
-            // 
-            // picpath19
-            // 
-            this.picpath19.Location = new System.Drawing.Point(572, 584);
-            this.picpath19.Name = "picpath19";
-            this.picpath19.Size = new System.Drawing.Size(100, 22);
-            this.picpath19.TabIndex = 82;
-            // 
-            // picpath20
-            // 
-            this.picpath20.Location = new System.Drawing.Point(759, 584);
-            this.picpath20.Name = "picpath20";
-            this.picpath20.Size = new System.Drawing.Size(100, 22);
-            this.picpath20.TabIndex = 83;
-            // 
-            // price1
-            // 
-            this.price1.AutoSize = true;
-            this.price1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price1.ForeColor = System.Drawing.Color.Purple;
-            this.price1.Location = new System.Drawing.Point(51, 123);
-            this.price1.Name = "price1";
-            this.price1.Size = new System.Drawing.Size(52, 17);
-            this.price1.TabIndex = 77;
-            this.price1.Text = "Price:";
-            // 
-            // price2
-            // 
-            this.price2.AutoSize = true;
-            this.price2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price2.ForeColor = System.Drawing.Color.Purple;
-            this.price2.Location = new System.Drawing.Point(237, 123);
-            this.price2.Name = "price2";
-            this.price2.Size = new System.Drawing.Size(52, 17);
-            this.price2.TabIndex = 84;
-            this.price2.Text = "Price:";
-            // 
-            // price3
-            // 
-            this.price3.AutoSize = true;
-            this.price3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price3.ForeColor = System.Drawing.Color.Purple;
-            this.price3.Location = new System.Drawing.Point(416, 123);
-            this.price3.Name = "price3";
-            this.price3.Size = new System.Drawing.Size(52, 17);
-            this.price3.TabIndex = 85;
-            this.price3.Text = "Price:";
-            // 
-            // price4
-            // 
-            this.price4.AutoSize = true;
-            this.price4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price4.ForeColor = System.Drawing.Color.Purple;
-            this.price4.Location = new System.Drawing.Point(597, 123);
-            this.price4.Name = "price4";
-            this.price4.Size = new System.Drawing.Size(52, 17);
-            this.price4.TabIndex = 86;
-            this.price4.Text = "Price:";
-            // 
-            // price6
-            // 
-            this.price6.AutoSize = true;
-            this.price6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price6.ForeColor = System.Drawing.Color.Purple;
-            this.price6.Location = new System.Drawing.Point(51, 288);
-            this.price6.Name = "price6";
-            this.price6.Size = new System.Drawing.Size(52, 17);
-            this.price6.TabIndex = 87;
-            this.price6.Text = "Price:";
-            // 
-            // price7
-            // 
-            this.price7.AutoSize = true;
-            this.price7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price7.ForeColor = System.Drawing.Color.Purple;
-            this.price7.Location = new System.Drawing.Point(237, 288);
-            this.price7.Name = "price7";
-            this.price7.Size = new System.Drawing.Size(52, 17);
-            this.price7.TabIndex = 88;
-            this.price7.Text = "Price:";
-            // 
-            // price8
-            // 
-            this.price8.AutoSize = true;
-            this.price8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price8.ForeColor = System.Drawing.Color.Purple;
-            this.price8.Location = new System.Drawing.Point(416, 288);
-            this.price8.Name = "price8";
-            this.price8.Size = new System.Drawing.Size(52, 17);
-            this.price8.TabIndex = 89;
-            this.price8.Text = "Price:";
-            // 
-            // price9
-            // 
-            this.price9.AutoSize = true;
-            this.price9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price9.ForeColor = System.Drawing.Color.Purple;
-            this.price9.Location = new System.Drawing.Point(597, 289);
-            this.price9.Name = "price9";
-            this.price9.Size = new System.Drawing.Size(52, 17);
-            this.price9.TabIndex = 90;
-            this.price9.Text = "Price:";
-            // 
-            // price11
-            // 
-            this.price11.AutoSize = true;
-            this.price11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price11.ForeColor = System.Drawing.Color.Purple;
-            this.price11.Location = new System.Drawing.Point(51, 444);
-            this.price11.Name = "price11";
-            this.price11.Size = new System.Drawing.Size(52, 17);
-            this.price11.TabIndex = 91;
-            this.price11.Text = "Price:";
-            // 
-            // price12
-            // 
-            this.price12.AutoSize = true;
-            this.price12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price12.ForeColor = System.Drawing.Color.Purple;
-            this.price12.Location = new System.Drawing.Point(237, 444);
-            this.price12.Name = "price12";
-            this.price12.Size = new System.Drawing.Size(52, 17);
-            this.price12.TabIndex = 92;
-            this.price12.Text = "Price:";
-            // 
-            // price13
-            // 
-            this.price13.AutoSize = true;
-            this.price13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price13.ForeColor = System.Drawing.Color.Purple;
-            this.price13.Location = new System.Drawing.Point(416, 444);
-            this.price13.Name = "price13";
-            this.price13.Size = new System.Drawing.Size(52, 17);
-            this.price13.TabIndex = 93;
-            this.price13.Text = "Price:";
-            // 
-            // price14
-            // 
-            this.price14.AutoSize = true;
-            this.price14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price14.ForeColor = System.Drawing.Color.Purple;
-            this.price14.Location = new System.Drawing.Point(597, 445);
-            this.price14.Name = "price14";
-            this.price14.Size = new System.Drawing.Size(52, 17);
-            this.price14.TabIndex = 94;
-            this.price14.Text = "Price:";
-            // 
-            // price16
-            // 
-            this.price16.AutoSize = true;
-            this.price16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price16.ForeColor = System.Drawing.Color.Purple;
-            this.price16.Location = new System.Drawing.Point(51, 609);
-            this.price16.Name = "price16";
-            this.price16.Size = new System.Drawing.Size(52, 17);
-            this.price16.TabIndex = 95;
-            this.price16.Text = "Price:";
-            // 
-            // price17
-            // 
-            this.price17.AutoSize = true;
-            this.price17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price17.ForeColor = System.Drawing.Color.Purple;
-            this.price17.Location = new System.Drawing.Point(237, 609);
-            this.price17.Name = "price17";
-            this.price17.Size = new System.Drawing.Size(52, 17);
-            this.price17.TabIndex = 96;
-            this.price17.Text = "Price:";
-            // 
-            // price18
-            // 
-            this.price18.AutoSize = true;
-            this.price18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price18.ForeColor = System.Drawing.Color.Purple;
-            this.price18.Location = new System.Drawing.Point(416, 609);
-            this.price18.Name = "price18";
-            this.price18.Size = new System.Drawing.Size(52, 17);
-            this.price18.TabIndex = 97;
-            this.price18.Text = "Price:";
-            // 
-            // price19
-            // 
-            this.price19.AutoSize = true;
-            this.price19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price19.ForeColor = System.Drawing.Color.Purple;
-            this.price19.Location = new System.Drawing.Point(597, 609);
-            this.price19.Name = "price19";
-            this.price19.Size = new System.Drawing.Size(52, 17);
-            this.price19.TabIndex = 98;
-            this.price19.Text = "Price:";
-            // 
-            // price5
-            // 
-            this.price5.AutoSize = true;
-            this.price5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price5.ForeColor = System.Drawing.Color.Purple;
-            this.price5.Location = new System.Drawing.Point(777, 127);
-            this.price5.Name = "price5";
-            this.price5.Size = new System.Drawing.Size(52, 17);
-            this.price5.TabIndex = 99;
-            this.price5.Text = "Price:";
-            // 
-            // price10
-            // 
-            this.price10.AutoSize = true;
-            this.price10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price10.ForeColor = System.Drawing.Color.Purple;
-            this.price10.Location = new System.Drawing.Point(777, 288);
-            this.price10.Name = "price10";
-            this.price10.Size = new System.Drawing.Size(52, 17);
-            this.price10.TabIndex = 100;
-            this.price10.Text = "Price:";
-            // 
-            // price15
-            // 
-            this.price15.AutoSize = true;
-            this.price15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price15.ForeColor = System.Drawing.Color.Purple;
-            this.price15.Location = new System.Drawing.Point(777, 445);
-            this.price15.Name = "price15";
-            this.price15.Size = new System.Drawing.Size(52, 17);
-            this.price15.TabIndex = 101;
-            this.price15.Text = "Price:";
-            // 
-            // price20
-            // 
-            this.price20.AutoSize = true;
-            this.price20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price20.ForeColor = System.Drawing.Color.Purple;
-            this.price20.Location = new System.Drawing.Point(777, 609);
-            this.price20.Name = "price20";
-            this.price20.Size = new System.Drawing.Size(52, 17);
-            this.price20.TabIndex = 102;
-            this.price20.Text = "Price:";
+            // submit_button
+            // 
+            this.submit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit_button.Location = new System.Drawing.Point(249, 758);
+            this.submit_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.submit_button.Name = "submit_button";
+            this.submit_button.Size = new System.Drawing.Size(126, 36);
+            this.submit_button.TabIndex = 76;
+            this.submit_button.Text = "SUBMIT";
+            this.submit_button.UseVisualStyleBackColor = true;
+            this.submit_button.Click += new System.EventHandler(this.submit_button_Click);
             // 
             // POS2_DATABASE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1583, 873);
+            this.Controls.Add(this.submit_button);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.listBox1);
@@ -1834,5 +1849,6 @@
         private System.Windows.Forms.Label price15;
         private System.Windows.Forms.Label price10;
         private System.Windows.Forms.Label price5;
+        private System.Windows.Forms.Button submit_button;
     }
 }

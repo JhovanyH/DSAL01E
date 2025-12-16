@@ -140,188 +140,242 @@ namespace LESSON1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            itemnametxtbox.Enabled = false;
-            pricetxtbox.Enabled = false;
-            discountedtxtbox.Enabled = false;
-            qty_totaltxtbox.Enabled = false;
-            discount_totaltxtbox.Enabled = false;
-            discounted_totaltxtbox.Enabled = false;
-            changetxtbox.Enabled = false;
-            discounttxtbox.Enabled = false;
+            try
+            {
+                itemnametxtbox.Enabled = false;
+                pricetxtbox.Enabled = false;
+                discountedtxtbox.Enabled = false;
+                qty_totaltxtbox.Enabled = false;
+                discount_totaltxtbox.Enabled = false;
+                discounted_totaltxtbox.Enabled = false;
+                changetxtbox.Enabled = false;
+                discounttxtbox.Enabled = false;
 
-           
+                name1.Text = "Winx Bloom Doll";
+                name2.Text = "Angry Red Bird";
+                name3.Text = "Pikachu Plushie";
+                name4.Text = "Wooden Bunny";
+                name5.Text = "Piggy Plushie";
+                name6.Text = "Kuromi Keychain";
+                name7.Text = "J. Rizal Statue";
+                name8.Text = "Sniper Toy Gun";
+                name9.Text = "Flying Elsa";
+                name10.Text = "Dinasaur Green";
 
-            name1.Text = "Winx Bloom Doll";
-            name2.Text = "Angry Red Bird";
-            name3.Text = "Pikachu Plushie";
-            name4.Text = "Wooden Bunny";
-            name5.Text = "Piggy Plushie";
-            name6.Text = "Kuromi Keychain";
-            name7.Text = "J. Rizal Statue";
-            name8.Text = "Sniper Toy Gun";
-            name9.Text = "Flying Elsa";
-            name10.Text = "Dinasaur Green";
+                //hide paths
+                picpath1.Hide(); picpath2.Hide(); picpath3.Hide(); picpath4.Hide(); picpath5.Hide();
+                picpath6.Hide(); picpath7.Hide(); picpath8.Hide(); picpath9.Hide(); picpath10.Hide();
+                picpath11.Hide(); picpath12.Hide(); picpath13.Hide(); picpath14.Hide(); picpath15.Hide();
+                picpath16.Hide(); picpath17.Hide(); picpath18.Hide(); picpath19.Hide(); picpath20.Hide();
+
+                // STEP 1: LOAD PRODUCTS FOR THE CORRECT TERMINAL
+                // This determines which pos_id (terminal) to load
+                if (_terminalNo == "1")
+                {
+                    pb.pos_select_cashier();  // ← Terminal 1 (pos_id = 1)
+                }
+                else if (_terminalNo == "2")
+                {
+                    pb.pos_select_cashier1(); // ← Terminal 2 (pos_id = 2)
+                }
+                else
+                {
+                    pb.pos_select_cashier(); // Default to Terminal 1
+                }
+
+                pb.pos_cmd();
+                pb.pos_sqladapterSelect();
+                pb.pos_sqldatasetSELECT();
+
+                // Check if data exists
+                if (pb.pos_sql_dataset.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show($"No product data found for Terminal {_terminalNo}. Please check your database.", "Error");
+                    return;
+                }
+
+                // Load all product names from database
+                name1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
+                name2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
+                name3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][4].ToString();
+                name4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][5].ToString();
+                name5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][6].ToString();
+                name6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][7].ToString();
+                name7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][8].ToString();
+                name8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][9].ToString();
+                name9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][10].ToString();
+                name10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][11].ToString();
+                name11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][12].ToString();
+                name12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][13].ToString();
+                name13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][14].ToString();
+                name14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][15].ToString();
+                name15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][16].ToString();
+                name16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][17].ToString();
+                name17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][18].ToString();
+                name18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][19].ToString();
+                name19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][20].ToString();
+                name20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][21].ToString();
+
+                // Load all images (picpath1 through picpath20)
+                picpath1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][24].ToString();
+                if (!string.IsNullOrEmpty(picpath1.Text) && System.IO.File.Exists(picpath1.Text))
+                    pictureBox1.Image = Image.FromFile(picpath1.Text);
+
+                picpath2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][25].ToString();
+                if (!string.IsNullOrEmpty(picpath2.Text) && System.IO.File.Exists(picpath2.Text))
+                    pictureBox2.Image = Image.FromFile(picpath2.Text);
+
+                picpath3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][26].ToString();
+                if (!string.IsNullOrEmpty(picpath3.Text) && System.IO.File.Exists(picpath3.Text))
+                    pictureBox3.Image = Image.FromFile(picpath3.Text);
+
+                picpath4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][27].ToString();
+                if (!string.IsNullOrEmpty(picpath4.Text) && System.IO.File.Exists(picpath4.Text))
+                    pictureBox4.Image = Image.FromFile(picpath4.Text);
+
+                picpath5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][28].ToString();
+                if (!string.IsNullOrEmpty(picpath5.Text) && System.IO.File.Exists(picpath5.Text))
+                    pictureBox5.Image = Image.FromFile(picpath5.Text);
+
+                picpath6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][29].ToString();
+                if (!string.IsNullOrEmpty(picpath6.Text) && System.IO.File.Exists(picpath6.Text))
+                    pictureBox6.Image = Image.FromFile(picpath6.Text);
+
+                picpath7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][30].ToString();
+                if (!string.IsNullOrEmpty(picpath7.Text) && System.IO.File.Exists(picpath7.Text))
+                    pictureBox7.Image = Image.FromFile(picpath7.Text);
+
+                picpath8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][31].ToString();
+                if (!string.IsNullOrEmpty(picpath8.Text) && System.IO.File.Exists(picpath8.Text))
+                    pictureBox8.Image = Image.FromFile(picpath8.Text);
+
+                picpath9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][32].ToString();
+                if (!string.IsNullOrEmpty(picpath9.Text) && System.IO.File.Exists(picpath9.Text))
+                    pictureBox9.Image = Image.FromFile(picpath9.Text);
+
+                picpath10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][33].ToString();
+                if (!string.IsNullOrEmpty(picpath10.Text) && System.IO.File.Exists(picpath10.Text))
+                    pictureBox10.Image = Image.FromFile(picpath10.Text);
+
+                picpath11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][34].ToString();
+                if (!string.IsNullOrEmpty(picpath11.Text) && System.IO.File.Exists(picpath11.Text))
+                    pictureBox11.Image = Image.FromFile(picpath11.Text);
+
+                picpath12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][35].ToString();
+                if (!string.IsNullOrEmpty(picpath12.Text) && System.IO.File.Exists(picpath12.Text))
+                    pictureBox12.Image = Image.FromFile(picpath12.Text);
+
+                picpath13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][36].ToString();
+                if (!string.IsNullOrEmpty(picpath13.Text) && System.IO.File.Exists(picpath13.Text))
+                    pictureBox13.Image = Image.FromFile(picpath13.Text);
+
+                picpath14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][37].ToString();
+                if (!string.IsNullOrEmpty(picpath14.Text) && System.IO.File.Exists(picpath14.Text))
+                    pictureBox14.Image = Image.FromFile(picpath14.Text);
+
+                picpath15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][38].ToString();
+                if (!string.IsNullOrEmpty(picpath15.Text) && System.IO.File.Exists(picpath15.Text))
+                    pictureBox15.Image = Image.FromFile(picpath15.Text);
+
+                picpath16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][39].ToString();
+                if (!string.IsNullOrEmpty(picpath16.Text) && System.IO.File.Exists(picpath16.Text))
+                    pictureBox16.Image = Image.FromFile(picpath16.Text);
+
+                picpath17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][40].ToString();
+                if (!string.IsNullOrEmpty(picpath17.Text) && System.IO.File.Exists(picpath17.Text))
+                    pictureBox17.Image = Image.FromFile(picpath17.Text);
+
+                picpath18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][41].ToString();
+                if (!string.IsNullOrEmpty(picpath18.Text) && System.IO.File.Exists(picpath18.Text))
+                    pictureBox18.Image = Image.FromFile(picpath18.Text);
+
+                picpath19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][42].ToString();
+                if (!string.IsNullOrEmpty(picpath19.Text) && System.IO.File.Exists(picpath19.Text))
+                    pictureBox19.Image = Image.FromFile(picpath19.Text);
+
+                picpath20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][43].ToString();
+                if (!string.IsNullOrEmpty(picpath20.Text) && System.IO.File.Exists(picpath20.Text))
+                    pictureBox20.Image = Image.FromFile(picpath20.Text);
+
+                // Load all prices
+                price1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][46].ToString();
+                price2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][47].ToString();
+                price3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][48].ToString();
+                price4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][49].ToString();
+                price5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][50].ToString();
+                price6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][51].ToString();
+                price7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][52].ToString();
+                price8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][53].ToString();
+                price9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][54].ToString();
+                price10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][55].ToString();
+                price11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][56].ToString();
+                price12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][57].ToString();
+                price13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][58].ToString();
+                price14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][59].ToString();
+                price15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][60].ToString();
+                price16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][61].ToString();
+                price17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][62].ToString();
+                price18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][63].ToString();
+                price19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][64].ToString();
+                price20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][65].ToString();
 
 
-            //hide marie
-            picpath1.Hide(); picpath2.Hide(); picpath3.Hide(); picpath4.Hide(); picpath5.Hide();
-            picpath6.Hide(); picpath7.Hide(); picpath8.Hide(); picpath9.Hide(); picpath10.Hide();
-            picpath11.Hide(); picpath12.Hide(); picpath13.Hide(); picpath14.Hide(); picpath15.Hide();
-            picpath16.Hide(); picpath17.Hide(); picpath18.Hide(); picpath19.Hide(); picpath20.Hide();
+                // STEP 2: SET EMPLOYEE/TERMINAL INFO
+                // Check if coming from login (SetTerminalInfo was called) or admin mode
+                if (!_isAdminMode && string.IsNullOrEmpty(_empId))
+                {
+                    // Coming from direct form load (not through login or admin)
+                    // Query the employee/cashier data for the CORRECT terminal
+                    pb.pos_select_cashier_display(_terminalNo);  // ← Pass the terminal number!
+                    pb.pos_cmd();
+                    pb.pos_sqladapterSelect();
+                    pb.pos_select_cashier_SELECTdisplay();
 
-            //retrieve data from the database and display it in the interface object
-            pb.pos_select_cashier();
-            pb.pos_cmd();
-            pb.pos_sqladapterSelect();
-            pb.pos_sqldatasetSELECT();
+                    // Check if cashier data exists
+                    if (pb.pos_sql_dataset.Tables[0].Rows.Count > 0)
+                    {
+                        // SELECT order: emp_id[0], emp_fname[1], emp_surname[2], pos_terminal_no[3]
+                        terminal_no.Text = pb.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
+                        emp_id.Text = pb.pos_sql_dataset.Tables[0].Rows[0][0].ToString();
+                        emp_fname.Text = pb.pos_sql_dataset.Tables[0].Rows[0][1].ToString();
+                        emp_surname.Text = pb.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
+                    }
+                    else
+                    {
+                        // No cashier data found
+                        terminal_no.Text = _terminalNo;
+                        emp_id.Text = "N/A";
+                        emp_fname.Text = "N/A";
+                        emp_surname.Text = "N/A";
+                    }
+                }
+                else
+                {
+                    // Coming from login (SetTerminalInfo) or admin mode
+                    terminal_no.Text = _terminalNo;
+                    emp_id.Text = _empId;
+                    emp_fname.Text = _firstName;
+                    emp_surname.Text = _surname;
+                }
 
-            //codes for throwing data from tables inside 
-            name1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
-            name2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
-            name3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][4].ToString();
-            name4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][5].ToString();
-            name5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][6].ToString();
-            name6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][7].ToString();
-            name7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][8].ToString();
-            name8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][9].ToString();
-            name9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][10].ToString();
-            name10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][11].ToString();
-            name11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][12].ToString();
-            name12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][13].ToString();
-            name13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][14].ToString();
-            name14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][15].ToString();
-            name15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][16].ToString();
-            name16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][17].ToString();
-            name17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][18].ToString();
-            name18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][19].ToString();
-            name19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][20].ToString();
-            name20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][21].ToString();
 
-            //image
-            picpath1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][24].ToString();
-            if (!string.IsNullOrEmpty(picpath1.Text) && System.IO.File.Exists(picpath1.Text))
-                pictureBox1.Image = Image.FromFile(picpath1.Text);
 
-            picpath2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][25].ToString();
-            if (!string.IsNullOrEmpty(picpath2.Text) && System.IO.File.Exists(picpath2.Text))
-                pictureBox2.Image = Image.FromFile(picpath2.Text);
+                DateTime dt = DateTime.Now;
+                time_date.Text = dt.ToString("MMMM dd, yyyy");
 
-            picpath3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][26].ToString();
-            if (!string.IsNullOrEmpty(picpath3.Text) && System.IO.File.Exists(picpath3.Text))
-                pictureBox3.Image = Image.FromFile(picpath3.Text);
+                // scaling to the highest level
+                baseSize = this.Size;
 
-            picpath4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][27].ToString();
-            if (!string.IsNullOrEmpty(picpath4.Text) && System.IO.File.Exists(picpath4.Text))
-                pictureBox4.Image = Image.FromFile(picpath4.Text);
+                // maximize the window
+                this.WindowState = FormWindowState.Maximized;
 
-            picpath5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][28].ToString();
-            if (!string.IsNullOrEmpty(picpath5.Text) && System.IO.File.Exists(picpath5.Text))
-                pictureBox5.Image = Image.FromFile(picpath5.Text);
-
-            picpath6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][29].ToString();
-            if (!string.IsNullOrEmpty(picpath6.Text) && System.IO.File.Exists(picpath6.Text))
-                pictureBox6.Image = Image.FromFile(picpath6.Text);
-
-            picpath7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][30].ToString();
-            if (!string.IsNullOrEmpty(picpath7.Text) && System.IO.File.Exists(picpath7.Text))
-                pictureBox7.Image = Image.FromFile(picpath7.Text);
-
-            picpath8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][31].ToString();
-            if (!string.IsNullOrEmpty(picpath8.Text) && System.IO.File.Exists(picpath8.Text))
-                pictureBox8.Image = Image.FromFile(picpath8.Text);
-
-            picpath9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][32].ToString();
-            if (!string.IsNullOrEmpty(picpath9.Text) && System.IO.File.Exists(picpath9.Text))
-                pictureBox9.Image = Image.FromFile(picpath9.Text);
-
-            picpath10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][33].ToString();
-            if (!string.IsNullOrEmpty(picpath10.Text) && System.IO.File.Exists(picpath10.Text))
-                pictureBox10.Image = Image.FromFile(picpath10.Text);
-
-            picpath11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][34].ToString();
-            if (!string.IsNullOrEmpty(picpath11.Text) && System.IO.File.Exists(picpath11.Text))
-                pictureBox11.Image = Image.FromFile(picpath11.Text);
-
-            picpath12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][35].ToString();
-            if (!string.IsNullOrEmpty(picpath12.Text) && System.IO.File.Exists(picpath12.Text))
-                pictureBox12.Image = Image.FromFile(picpath12.Text);
-
-            picpath13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][36].ToString();
-            if (!string.IsNullOrEmpty(picpath13.Text) && System.IO.File.Exists(picpath13.Text))
-                pictureBox13.Image = Image.FromFile(picpath13.Text);
-
-            picpath14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][37].ToString();
-            if (!string.IsNullOrEmpty(picpath14.Text) && System.IO.File.Exists(picpath14.Text))
-                pictureBox14.Image = Image.FromFile(picpath14.Text);
-
-            picpath15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][38].ToString();
-            if (!string.IsNullOrEmpty(picpath15.Text) && System.IO.File.Exists(picpath15.Text))
-                pictureBox15.Image = Image.FromFile(picpath15.Text);
-
-            picpath16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][39].ToString();
-            if (!string.IsNullOrEmpty(picpath16.Text) && System.IO.File.Exists(picpath16.Text))
-                pictureBox16.Image = Image.FromFile(picpath16.Text);
-
-            picpath17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][40].ToString();
-            if (!string.IsNullOrEmpty(picpath17.Text) && System.IO.File.Exists(picpath17.Text))
-                pictureBox17.Image = Image.FromFile(picpath17.Text);
-
-            picpath18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][41].ToString();
-            if (!string.IsNullOrEmpty(picpath18.Text) && System.IO.File.Exists(picpath18.Text))
-                pictureBox18.Image = Image.FromFile(picpath18.Text);
-
-            picpath19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][42].ToString();
-            if (!string.IsNullOrEmpty(picpath19.Text) && System.IO.File.Exists(picpath19.Text))
-                pictureBox19.Image = Image.FromFile(picpath19.Text);
-
-            picpath20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][43].ToString();
-            if (!string.IsNullOrEmpty(picpath20.Text) && System.IO.File.Exists(picpath20.Text))
-                pictureBox20.Image = Image.FromFile(picpath20.Text);
-
-            //price
-            price1.Text = pb.pos_sql_dataset.Tables[0].Rows[0][46].ToString();
-            price2.Text = pb.pos_sql_dataset.Tables[0].Rows[0][47].ToString();
-            price3.Text = pb.pos_sql_dataset.Tables[0].Rows[0][48].ToString();
-            price4.Text = pb.pos_sql_dataset.Tables[0].Rows[0][49].ToString();
-            price5.Text = pb.pos_sql_dataset.Tables[0].Rows[0][50].ToString();
-            price6.Text = pb.pos_sql_dataset.Tables[0].Rows[0][51].ToString();
-            price7.Text = pb.pos_sql_dataset.Tables[0].Rows[0][52].ToString();
-            price8.Text = pb.pos_sql_dataset.Tables[0].Rows[0][53].ToString();
-            price9.Text = pb.pos_sql_dataset.Tables[0].Rows[0][54].ToString();
-            price10.Text = pb.pos_sql_dataset.Tables[0].Rows[0][55].ToString();
-            price11.Text = pb.pos_sql_dataset.Tables[0].Rows[0][56].ToString();
-            price12.Text = pb.pos_sql_dataset.Tables[0].Rows[0][57].ToString();
-            price13.Text = pb.pos_sql_dataset.Tables[0].Rows[0][58].ToString();
-            price14.Text = pb.pos_sql_dataset.Tables[0].Rows[0][59].ToString();
-            price15.Text = pb.pos_sql_dataset.Tables[0].Rows[0][60].ToString();
-            price16.Text = pb.pos_sql_dataset.Tables[0].Rows[0][61].ToString();
-            price17.Text = pb.pos_sql_dataset.Tables[0].Rows[0][62].ToString();
-            price18.Text = pb.pos_sql_dataset.Tables[0].Rows[0][63].ToString();
-            price19.Text = pb.pos_sql_dataset.Tables[0].Rows[0][64].ToString();
-            price20.Text = pb.pos_sql_dataset.Tables[0].Rows[0][65].ToString();
-
-            //codes for retrieving data from the tables inside the database 
-            pb.pos_select_cashier_display();
-            pb.pos_cmd();
-            pb.pos_sqladapterSelect();
-            pb.pos_select_cashier_SELECTdisplay();
-
-            //codes for throwing data from tables 
-            terminal_no.Text = pb.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
-            emp_id.Text = pb.pos_sql_dataset.Tables[0].Rows[0][0].ToString();
-            emp_fname.Text = pb.pos_sql_dataset.Tables[0].Rows[0][1].ToString();
-            emp_surname.Text = pb.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
-            DateTime dt = DateTime.Now;
-            time_date.Text = dt.ToString("MMMM dd, yyyy");
-
-            //scaling to the highest level
-            baseSize = this.Size;
-
-            // maximize the window
-            this.WindowState = FormWindowState.Maximized;
-
-            // scale once to fit the screen
-            ScaleToScreen();
+                // scale once to fit the screen
+                ScaleToScreen();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Form1_Load: " + ex.Message);
+            }
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -659,55 +713,66 @@ namespace LESSON1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
+            try
             {
-                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
-                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
-                               + "', '" + pricetxtbox.Text + "', '" + radioButton1.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
-                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
-                               time_date.Text + "', '" + emp_id.Text + "')";
-                pb.pos_cmd();
-                pb.pos_sqladapterInsert();
-                clearTxtboxes();
+                // 1. Determine which Discount Option is selected
+                string selectedDiscount = "";
 
-            }
-            else if (radioButton2.Checked == true)
-            {
-                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
-                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
-                               + "', '" + pricetxtbox.Text + "', '" + radioButton2.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
-                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
-                               time_date.Text + "', '" + emp_id.Text + "')";
-                pb.pos_cmd();
-                pb.pos_sqladapterInsert();
-                clearTxtboxes();
+                if (radioButton1.Checked) selectedDiscount = radioButton1.Text;
+                else if (radioButton2.Checked) selectedDiscount = radioButton2.Text;
+                else if (radioButton3.Checked) selectedDiscount = radioButton3.Text;
+                else if (radioButton4.Checked) selectedDiscount = radioButton4.Text;
+                else
+                {
+                    MessageBox.Show("No selected discount option!");
+                    return; // Stop here if nothing is selected
+                }
 
+                // 2. Write the SQL with @placeholders (Safer!)
+                pb.pos_sql = "INSERT INTO salesTbl (" +
+                             "product_name, " +
+                             "product_quantity_per_transaction, " +
+                             "product_price, " +
+                             "discount_option, " +
+                             "discount_amount_per_transaction, " +
+                             "discounted_amount_per_transaction, " +
+                             "summary_total_quantity, " +
+                             "summary_total_disc_given, " +
+                             "summary_total_discounted_amount, " +
+                             "terminal_no, " +
+                             "time_date, " +
+                             "emp_id) " +
+                             "VALUES " +
+                             "(@prodName, @qty, @price, @discOption, @discAmt, @discTotalAmt, @sumQty, @sumDiscGiven, @sumDiscAmt, @termNo, @tDate, @empId)";
 
-            }
-            else if (radioButton3.Checked == true)
-            {
-                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
-                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
-                               + "', '" + pricetxtbox.Text + "', '" + radioButton3.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
-                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
-                               time_date.Text + "', '" + emp_id.Text + "')";
+                // 3. Initialize the command (This creates the command object)
                 pb.pos_cmd();
+
+                // 4. Fill in the placeholders using the new function
+                // Note: We use .Trim() to remove accidental spaces
+                pb.pos_add_param("@prodName", itemnametxtbox.Text.Trim());
+                pb.pos_add_param("@qty", qtytxtbox.Text.Trim());
+                pb.pos_add_param("@price", pricetxtbox.Text.Trim());
+                pb.pos_add_param("@discOption", selectedDiscount);
+                pb.pos_add_param("@discAmt", discounttxtbox.Text.Trim());
+                pb.pos_add_param("@discTotalAmt", discountedtxtbox.Text.Trim());
+                pb.pos_add_param("@sumQty", qty_totaltxtbox.Text.Trim());
+                pb.pos_add_param("@sumDiscGiven", discount_totaltxtbox.Text.Trim());
+                pb.pos_add_param("@sumDiscAmt", discounted_totaltxtbox.Text.Trim());
+                pb.pos_add_param("@termNo", terminal_no.Text.Trim());
+                pb.pos_add_param("@tDate", time_date.Text.Trim());
+                pb.pos_add_param("@empId", emp_id.Text.Trim());
+
+                // 5. Execute the Insert
                 pb.pos_sqladapterInsert();
+
+                // 6. Clear boxes
                 clearTxtboxes();
             }
-            else if (radioButton4.Checked == true)
+            catch (Exception ex)
             {
-                pb.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, " +
-                              "summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + qtytxtbox.Text
-                               + "', '" + pricetxtbox.Text + "', '" + radioButton4.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text +
-                               "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_no.Text + "', '" +
-                               time_date.Text + "', '" + emp_id.Text + "')";
-                pb.pos_cmd();
-                pb.pos_sqladapterInsert();
-                clearTxtboxes();
+                MessageBox.Show("Error Saving Transaction: " + ex.Message);
             }
-            else
-                MessageBox.Show("No selected discount option!");
         }
 
         private void pictureBox17_Click(object sender, EventArgs e)

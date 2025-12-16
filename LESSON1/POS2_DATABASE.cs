@@ -18,6 +18,8 @@ namespace LESSON1
         pos_dbconnection P = new pos_dbconnection();
 
 
+        private Size baseSize;  
+
         //admin purposes
         // ADD THESE VARIABLES AT THE TOP OF YOUR CLASS
         private string _terminalNo = "1";
@@ -30,6 +32,9 @@ namespace LESSON1
             P.pos_connString();
             InitializeComponent();
         }
+
+  
+
 
         //admin purposes
         public void SetTerminalInfo(string terminalNo, string empId, string firstName, string surname)
@@ -151,7 +156,7 @@ namespace LESSON1
                 limited2.Enabled = false;
 
                 // retrieve images from database
-                P.pos_select_cashier();
+                P.pos_select_cashier1();
                 P.pos_cmd();
                 P.pos_sqladapterSelect();
                 P.pos_sqldatasetSELECT();
@@ -291,6 +296,10 @@ namespace LESSON1
                 picpath11.Hide(); picpath12.Hide(); picpath13.Hide(); picpath14.Hide(); picpath15.Hide();
                 picpath16.Hide(); picpath17.Hide(); picpath18.Hide(); picpath19.Hide(); picpath20.Hide();
 
+                baseSize = this.Size;
+                this.WindowState = FormWindowState.Maximized;
+                ScaleToScreen();
+
             }
             catch (Exception ex)
             {
@@ -298,48 +307,87 @@ namespace LESSON1
             }
             }
 
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
+
         private void FoodARdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!FoodARdbtn.Checked) return;
+            if (FoodARdbtn.Checked)
+            {
+                // 1. Uncheck Bundle B items (Visual Only)
+                foodBRdbtn.Checked = false;
+                RandomPlushies.Checked = false; handmade.Checked = false;
+                protectkit2.Checked = false; notebooks.Checked = false; limited2.Checked = false;
 
-            foodBRdbtn.Checked = false;
+                DisplayPictureBox.Image = Image.FromFile(@"C:\Users\jhovany\OneDrive\Pictures\bundle A.jpg");
 
-            // Numeric values without commas
-            V.price = 1000; // assign numeric directly
-            V.discount_amt = 200;
+                // 2. Check Bundle A items (Visual Only - To show what is inside)
+                Keychains.Checked = true;
+                Plushies.Checked = true;
+                ProtectKit1.Checked = true;
+                Ballpens.Checked = true;
+                randomCollect1.Checked = true;
 
-            Pricetxtbox.Text = V.price.ToString("n0");
-            discounttxtbox.Text = V.discount_amt.ToString("n0");
+                // 3. Set the Price & Discount for the WHOLE Bundle
+                V.price = 1000;
+                V.discount_amt = 200;
 
-            // Set default quantity
-            qtytextbox.Text = "1";
+                // 4. Display the Price
+                Pricetxtbox.Text = V.price.ToString("n0");
+                discounttxtbox.Text = V.discount_amt.ToString("n0");
 
-            // Calculate totals properly
-            UpdateTotals();
+                // 5. Reset Quantity to 0 so you can type your own number
+                qtytextbox.Text = "0";
+                qtytextbox.Focus();
 
-            // Add to listbox
-            listBox1.Items.Add(FoodARdbtn.Text + ": P" + V.price.ToString("n0"));
-            listBox1.Items.Add("Discount Amount: P" + V.discount_amt.ToString("n0"));
+                listBox1.Items.Add("Bundle A - P" + V.price.ToString("n0"));
+            }
         }
 
         private void foodBRdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!foodBRdbtn.Checked) return;
+            if (foodBRdbtn.Checked)
+            {
+                // 1. Uncheck Bundle A items (Visual Only)
+                FoodARdbtn.Checked = false;
+                Keychains.Checked = false; Plushies.Checked = false;
+                ProtectKit1.Checked = false; Ballpens.Checked = false; randomCollect1.Checked = false;
 
-            FoodARdbtn.Checked = false;
+                DisplayPictureBox.Image = Image.FromFile(@"C:\Users\jhovany\OneDrive\Pictures\bundle B.jpg");
 
-            V.price = 1300;
-            V.discount_amt = 195;
+                // 2. Check Bundle B items (Visual Only)
+                RandomPlushies.Checked = true;
+                handmade.Checked = true;
+                protectkit2.Checked = true;
+                notebooks.Checked = true;
+                limited2.Checked = true;
 
-            Pricetxtbox.Text = V.price.ToString("n0");
-            discounttxtbox.Text = V.discount_amt.ToString("n0");
+                // 3. Set the Price & Discount for the WHOLE Bundle
+                V.price = 1300;
+                V.discount_amt = 195;
 
-            qtytextbox.Text = "1";
+                // 4. Display the Price
+                Pricetxtbox.Text = V.price.ToString("n0");
+                discounttxtbox.Text = V.discount_amt.ToString("n0");
 
-            UpdateTotals();
+                // 5. Reset Quantity to 0 so you can type your own number
+                qtytextbox.Text = "0";
+                qtytextbox.Focus();
 
-            listBox1.Items.Add(foodBRdbtn.Text + ": P" + V.price.ToString("n0"));
-            listBox1.Items.Add("Discount Amount: P" + V.discount_amt.ToString("n0"));
+                listBox1.Items.Add("Bundle B - P" + V.price.ToString("n0"));
+            }
         }
        //F
 
@@ -816,6 +864,59 @@ namespace LESSON1
             tf.Show();
         }
 
-        
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submit_button_Click(object sender, EventArgs e)
+        {
+            // Check if quantity is valid before saving
+            if (V.qty_total <= 0)
+            {
+                MessageBox.Show("Please enter a quantity first!");
+                return;
+            }
+
+            try
+            {
+                // Determine the Product Name based on which Radio Button is checked
+                string productName = "";
+                if (FoodARdbtn.Checked) productName = "Bundle A (Keychains, Plushies, etc)";
+                else if (foodBRdbtn.Checked) productName = "Bundle B (Random Plushies, etc)";
+                else productName = "Unknown Item"; // Fallback
+
+                P.pos_cmd(); // Initialize Connection
+
+                // Save to Database
+                P.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_amount_per_transaction, discounted_amount_per_transaction, terminal_no, time_date, emp_id) " +
+                            "VALUES ('" + productName + "', '" + qtytextbox.Text + "', '" + Pricetxtbox.Text + "', '" + discounttxtbox.Text + "', '" + totalbillstxtbox.Text + "', '" + _terminalNo + "', '" + DateTime.Now.ToString() + "', '" + _empId + "')";
+
+                P.pos_sql_command.CommandText = P.pos_sql;
+                P.pos_sqladapterInsert();
+
+                MessageBox.Show("Transaction Saved Successfully!");
+
+                // Optional: Clear fields after save
+                qtytextbox.Text = "0";
+                Pricetxtbox.Clear();
+                FoodARdbtn.Checked = false;
+                foodBRdbtn.Checked = false;
+                // Uncheck all visual boxes
+                Keychains.Checked = false; Plushies.Checked = false; ProtectKit1.Checked = false;
+                Ballpens.Checked = false; randomCollect1.Checked = false;
+                RandomPlushies.Checked = false; handmade.Checked = false; protectkit2.Checked = false;
+                notebooks.Checked = false; limited2.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Saving: " + ex.Message);
+            }
+        }
     }
 }

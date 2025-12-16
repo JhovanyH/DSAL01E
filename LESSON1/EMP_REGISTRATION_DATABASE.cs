@@ -12,15 +12,28 @@ namespace LESSON1
 {
     public partial class EMP_REGISTRATION_DATABASE : Form
     {
-        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog openFileDialog1;     
         string picpath;
         employee_dbconnection edb = new employee_dbconnection();
+
+        private Size baseSize;
         public EMP_REGISTRATION_DATABASE()
         {
             edb.employee_connString();
             InitializeComponent();
             openFileDialog1 = new OpenFileDialog();
+            this.emp_idTxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emp_idTxtbox_KeyPress);
         }
+
+        private void emp_idTxtbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the key is NOT a Control key (like Backspace) AND NOT a Digit (0-9)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Stop the character from appearing in the textbox
+            }
+        }
+
         private void cleartextboxes()
         {
             emp_idTxtbox.Clear(); fname_Txtbox.Clear(); mname_Txtbox.Clear(); Sname_Txtbox.Clear();
@@ -39,6 +52,23 @@ namespace LESSON1
 
         }
 
+
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale the whole form and controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale Fonts
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
+        }
+
+
         private void EMP_REGISTRATION_DATABASE_Load(object sender, EventArgs e)
         {
             picpathTxtbox.Hide();
@@ -50,6 +80,11 @@ namespace LESSON1
             dataGridView1.DataSource = edb.employee_sql_dataset.Tables[0];
 
             PopulateComboBoxes();
+
+
+            baseSize = this.Size; // Remember original design size
+            this.WindowState = FormWindowState.Maximized; // Maximize window
+            ScaleToScreen();
         }
 
         private void Browse_Button_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace LESSON1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new POS2_DATABASE());
         }
     }
 }

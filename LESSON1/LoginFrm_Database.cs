@@ -27,8 +27,8 @@ namespace LESSON1
             {
                 login_db_connect.login_connString(); // Ensure connection is established
 
-                // I removed the extra spaces inside the single quotes compared to the book image 
-                // to ensure it matches your database exactly.
+                
+                
                 login_db_connect.login_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_surname, username, password, account_type, pos_terminal_no FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE username = '" + usernameTxtbox.Text + "' AND password = '" + passwordTxtbox.Text + "'";
 
                 login_db_connect.login_cmd();
@@ -68,7 +68,7 @@ namespace LESSON1
                         myform.terminal_no.Text = login_db_connect.login_sql_dataset.Tables[0].Rows[0][6].ToString();
                         myform.emp_id.Text = login_db_connect.login_sql_dataset.Tables[0].Rows[0][0].ToString();
                         myform.emp_fname.Text = login_db_connect.login_sql_dataset.Tables[0].Rows[0][1].ToString();
-                        // Note: The book image accesses index [2] here for surname, but your SELECT has it at [2].
+                       
                         myform.emp_surname.Text = login_db_connect.login_sql_dataset.Tables[0].Rows[0][2].ToString();
 
                         DateTime dateTime = DateTime.Now;
@@ -88,7 +88,7 @@ namespace LESSON1
                     else if (user_level == "Accounting Staff")
                     {
                         MessageBox.Show("Access granted");
-                        PAYROL_DATABASE myform = new PAYROL_DATABASE(); // Note the spelling 'Payrol' from the book
+                        PAYROL_DATABASE myform = new PAYROL_DATABASE(); 
 
                         // Hide editing controls for Accounting Staff
                         myform.Search_Edit_Button.Hide();

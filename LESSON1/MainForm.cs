@@ -23,7 +23,7 @@ namespace LESSON1
             POS1_DATABASE pos1Form = new POS1_DATABASE();
 
             // Set it as admin mode (no terminal required)
-            pos1Form.SetAsAdminMode("1"); // Test Terminal 1
+            pos1Form.SetAsAdminMode("2"); // Test Terminal 1
 
             pos1Form.MdiParent = this;
             pos1Form.Show();
@@ -42,7 +42,7 @@ namespace LESSON1
             POS2_DATABASE pos2Form = new POS2_DATABASE();
 
             // Set it as admin mode (no terminal required)
-            pos2Form.SetAsAdminMode("2"); // Test Terminal 2
+            pos2Form.SetAsAdminMode("1"); // Test Terminal 2
 
             pos2Form.MdiParent = this;
             pos2Form.Show();

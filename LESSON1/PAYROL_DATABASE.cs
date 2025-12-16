@@ -17,6 +17,8 @@ namespace LESSON1
         private string picpath;
         private OpenFileDialog openFileDialog1;
 
+        private Size baseSize;
+
         private double basic_income = 0.00,
             rate_basic = 0.00,
             no_hours_basic = 0.00,
@@ -41,6 +43,15 @@ namespace LESSON1
             total_deductions = 0.00,
             total_contrib = 0.00,
             total_loan = 0.00;
+
+        private void new_button_Click(object sender, EventArgs e)
+        {
+            // This clears all fields so you can start over
+            cleartextboxes();
+
+            // Put the cursor back in the Employee ID box
+            employeenumtxtbox.Focus();
+        }
 
         private void Search_Edit_Button_Click(object sender, EventArgs e)
         {
@@ -278,51 +289,75 @@ namespace LESSON1
         {
             try
             {
+                // --- VALIDATION START ---
+
+                // 1. Check if ID is empty
                 if (string.IsNullOrEmpty(employeenumtxtbox.Text))
                 {
-                    MessageBox.Show("Please search for an employee first");
+                    MessageBox.Show("Please enter an Employee ID.");
                     return;
                 }
 
+                // 2. Check if ID is a NUMBER (Fixes your "letter" problem)
+                int parsedId;
+                if (!int.TryParse(employeenumtxtbox.Text, out parsedId))
+                {
+                    MessageBox.Show("Employee ID must be a number!");
+                    return; // Stops the code here
+                }
+
+                // 3. Check if an employee was actually found/loaded
+                // (Prevents saving if you typed a number but didn't click Search)
+                if (string.IsNullOrEmpty(fnametxtbox.Text))
+                {
+                    MessageBox.Show("Please SEARCH for a valid employee record first.");
+                    return;
+                }
+
+                // 4. Check Pay Date
                 if (string.IsNullOrEmpty(paydateCombo.Text))
                 {
-                    MessageBox.Show("Please enter a Pay Date");
+                    MessageBox.Show("Please enter a Pay Date.");
                     return;
                 }
 
+                // --- VALIDATION END ---
+
+
+                // PROCEED TO SAVE
                 pd.payrol_sql =
-                   "INSERT INTO payrolTbl (" +
-                   "basic_rate_hr, basic_no_of_hrs_cutOff, basic_income_per_cutOff, " +
-                   "honorarium_rate_hr, honorarium_no_of_hrs_cutOff, honorarium_income_per_cutOff, " +
-                   "other_rate_hr, other_no_of_hrs_cutOff, other_income_per_cutOff, " +
-                   "sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, " +
-                   "sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, " +
-                   "salary_loan, other_loans, total_deductions, gross_income, " +
-                   "net_income, emp_id, pay_date) " +
-                   "VALUES ('" + rate_hour_basicIntxtbox.Text +
-                   "', '" + no_hours_basicIntxtbox.Text +
-                   "', '" + income_basicintxtbox.Text +
-                   "', '" + rate_hourHonorTxtbox.Text +
-                   "', '" + no_hoursHonotxtbox.Text +
-                   "', '" + income_HonorariumTxtbox.Text +
-                   "', '" + ratehour_OtherTxtbox.Text +
-                   "', '" + no_HoursOtherTxtbox.Text +
-                   "', '" + Income_otherTxtbox.Text +
-                   "', '" + ssscontritxtbox.Text +
-                   "', '" + philhealthcontritxtbox.Text +
-                   "', '" + pagibigcontrittxtbox.Text +
-                   "', '" + tax_contribTxtbox.Text +
-                   "', '" + sssloantxtbox.Text +
-                   "', '" + pagibigloantxtbox.Text +
-                   "', '" + facultydeposittxtbox.Text +
-                   "', '" + facultysavingstxtbox.Text +
-                   "', '" + salaryloantxtbox.Text +
-                   "', '" + other_loanTxtbox.Text +
-                   "', '" + total_deducTxtbox.Text +
-                   "', '" + grossIncometxtbox.Text +
-                   "', '" + netincometxtbox.Text +
-                   "', '" + employeenumtxtbox.Text +
-                   "', '" + paydateCombo.Text + "')";
+                    "INSERT INTO payrolTbl (" +
+                    "basic_rate_hr, basic_no_of_hrs_cutOff, basic_income_per_cutOff, " +
+                    "honorarium_rate_hr, honorarium_no_of_hrs_cutOff, honorarium_income_per_cutOff, " +
+                    "other_rate_hr, other_no_of_hrs_cutOff, other_income_per_cutOff, " +
+                    "sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, " +
+                    "sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, " +
+                    "salary_loan, other_loans, total_deductions, gross_income, " +
+                    "net_income, emp_id, pay_date) " +
+                    "VALUES ('" + rate_hour_basicIntxtbox.Text +
+                    "', '" + no_hours_basicIntxtbox.Text +
+                    "', '" + income_basicintxtbox.Text +
+                    "', '" + rate_hourHonorTxtbox.Text +
+                    "', '" + no_hoursHonotxtbox.Text +
+                    "', '" + income_HonorariumTxtbox.Text +
+                    "', '" + ratehour_OtherTxtbox.Text +
+                    "', '" + no_HoursOtherTxtbox.Text +
+                    "', '" + Income_otherTxtbox.Text +
+                    "', '" + ssscontritxtbox.Text +
+                    "', '" + philhealthcontritxtbox.Text +
+                    "', '" + pagibigcontrittxtbox.Text +
+                    "', '" + tax_contribTxtbox.Text +
+                    "', '" + sssloantxtbox.Text +
+                    "', '" + pagibigloantxtbox.Text +
+                    "', '" + facultydeposittxtbox.Text +
+                    "', '" + facultysavingstxtbox.Text +
+                    "', '" + salaryloantxtbox.Text +
+                    "', '" + other_loanTxtbox.Text +
+                    "', '" + total_deducTxtbox.Text +
+                    "', '" + grossIncometxtbox.Text +
+                    "', '" + netincometxtbox.Text +
+                    "', '" + employeenumtxtbox.Text + // This is now safe because we checked it above
+                    "', '" + paydateCombo.Text + "')";
 
                 pd.payrol_cmd();
                 pd.payrol_sqladapterInsert();
@@ -514,7 +549,14 @@ namespace LESSON1
             other_loanCombo.Items.Add("Other 3");
             picpathtxtbox.Hide();
 
+            // scaling to the highest level
+            baseSize = this.Size;
+
+            // maximize the window
             this.WindowState = FormWindowState.Maximized;
+
+            // scale once to fit the screen
+            ScaleToScreen();
 
         }
         private void cleartextboxes()
@@ -539,6 +581,21 @@ namespace LESSON1
             pictureBox1.Image = Image.FromFile("C:\\Users\\jhovany\\OneDrive\\Pictures\\question.png");
 
 
+        }
+
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
         }
     }
 }

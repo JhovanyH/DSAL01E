@@ -963,6 +963,7 @@
             this.new_button.TabIndex = 80;
             this.new_button.Text = "NEW";
             this.new_button.UseVisualStyleBackColor = false;
+            this.new_button.Click += new System.EventHandler(this.new_button_Click);
             // 
             // save_button
             // 
