@@ -14,6 +14,8 @@ namespace LESSON1
     {
         useraccount_db_connection useraccount_db_connect = new useraccount_db_connection();
 
+        private Size baseSize;
+
         public user_account()
         {
             InitializeComponent();
@@ -26,6 +28,21 @@ namespace LESSON1
             if (textBox.Text == placeholderText)
                 return "";
             return textBox.Text;
+        }
+
+        private void ScaleToScreen()
+        {
+            float scaleX = (float)Screen.PrimaryScreen.Bounds.Width / baseSize.Width;
+            float scaleY = (float)Screen.PrimaryScreen.Bounds.Height / baseSize.Height;
+
+            // Scale all controls
+            this.Scale(new SizeF(scaleX, scaleY));
+
+            // Scale fonts too
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(ctrl.Font.FontFamily, ctrl.Font.Size * Math.Min(scaleX, scaleY));
+            }
         }
 
         private void cleartextboxes()
@@ -112,6 +129,15 @@ namespace LESSON1
             {
                 MessageBox.Show("Error loading form: " + ex.Message);
             }
+
+            // scaling to the highest level
+            baseSize = this.Size;
+
+            // maximize the window
+            this.WindowState = FormWindowState.Maximized;
+
+            // scale once to fit the screen
+            ScaleToScreen();
         }
 
         private void search_button_Click(object sender, EventArgs e)

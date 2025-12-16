@@ -169,10 +169,10 @@ namespace LESSON1
             baseSize = this.Size;
 
             // maximize the window
-            // this.WindowState = FormWindowState.Maximized;
+             this.WindowState = FormWindowState.Maximized;
 
             // scale once to fit the screen
-           // ScaleToScreen();
+           ScaleToScreen();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

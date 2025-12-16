@@ -12,6 +12,7 @@ namespace LESSON1
 {
     public partial class Activity2 : Form
     {
+        private Size baseSize;
         public Activity2()
         {
             InitializeComponent();

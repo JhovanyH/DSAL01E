@@ -155,5 +155,40 @@ namespace LESSON1
             uar.MdiParent = this;
             uar.Show();
         }
+
+        private void activity1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity1 A1 = new Activity1();
+            A1.MdiParent = this;
+            A1.Show();
+        }
+
+        private void activity2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity2 A2 = new Activity2(); 
+            A2.MdiParent = this;
+            A2.Show();
+        }
+
+        private void activity3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity3 A3 = new Activity3();
+            A3.MdiParent = this;
+            A3.Show();
+        }
+
+        private void activity4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity4 A4 = new Activity4();
+            A4.MdiParent = this;
+            A4.Show();
+        }
+
+        private void activity5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lesson5_Activity A5 = new Lesson5_Activity();
+            A5.MdiParent = this;
+            A5.Show();
+        }
     }
 }

@@ -1,223 +1,255 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient; // Standard SQL library
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO; // Needed for file checks
 using System.Windows.Forms;
 
 namespace LESSON1
 {
-    using System.Data.SqlClient;
-    using System.Data;
     public partial class Activity1 : Form
     {
-        string picpath;
-        string connectionString = null;
-        SqlConnection connection;
-        SqlCommand command;
-        DataSet dset;
-        SqlDataAdapter adaptersql;
-        string sql = null;
-  
+        // 1. Keep the connection string centralized.
+        // NOTE: Ideally, put this in App.config, but this works for now.
+        string connectionString = "Data Source=LAPTOP-8COQ8R8Q\\SQLEXPRESS;Initial Catalog=simpledatabaseDb;Integrated Security=True";
+        private Size baseSize;
+        // Variable to hold the selected image path
+        string globalPicPath = "";
 
         public Activity1()
         {
             InitializeComponent();
-            connectionString = @"Data Source = C203-36; Initial Catalog = SampleDB; user id = SA; password = B1Admin123@";
-            connection = new SqlConnection(connectionString);
         }
 
         private void Activity1_Load_1(object sender, EventArgs e)
         {
-            connection.Open();
-            sql = "Select * from studenttbl";
-            command = new SqlCommand(sql, connection);
-            adaptersql = new SqlDataAdapter(command);
-            dset = new DataSet();
-            adaptersql.Fill(dset, "studenttbl");
-            dataGridView1.DataSource = dset.Tables[0];
-            connection.Close();
+            LoadData(); // Call a reusable method to load the grid
         }
 
+        // --- HELPER METHOD: LOADS DATA INTO GRID ---
+        private void LoadData()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM studenttbl";
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, connection))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        // --- HELPER METHOD: SAFELY LOADS IMAGES ---
+        private void SafeLoadImage(string path)
+        {
+            // Clear current image first to release memory
+            if (picturebox.Image != null)
+            {
+                picturebox.Image.Dispose();
+                picturebox.Image = null;
+            }
+
+            if (File.Exists(path))
+            {
+                // This method prevents the file from being "locked" by the program
+                using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    picturebox.Image = Image.FromStream(stream);
+                }
+            }
+            else
+            {
+                // Load a default error image if file not found
+                // Ensure this file actually exists on your machine or remove this line
+                // picturebox.Image = Image.FromFile(@"C:\Path\To\Default.png"); 
+                picturebox.Image = null;
+            }
+        }
+
+        // --- HELPER METHOD: CLEAR INPUTS ---
+        private void ClearInputs()
+        {
+            student_numtxtbox.Clear();
+            stud_nametxtbox.Clear();
+            stud_depttxtbox.Clear();
+            picturepathtxtbox.Clear();
+            picturebox.Image = null;
+            globalPicPath = "";
+        }
+
+        // --- BUTTON 1: SAVE (INSERT) ---
         private void button1_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            sql = "INSERT INTO studenttbl (stud_id, stud_name, stud_dept, picpath) " +
-            "VALUES ('" + student_numtxtbox.Text + "', '" +
-                  stud_nametxtbox.Text + "', '" +
-                  stud_depttxtbox.Text + "', '" +
-                  picturepathtxtbox.Text + "')";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-            adaptersql = new SqlDataAdapter();
-            adaptersql.InsertCommand = command;
-            command.ExecuteNonQuery();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    // PARAMETERIZED QUERY (Prevents SQL Injection)
+                    string sql = "INSERT INTO studenttbl (stud_id, stud_name, stud_dept, picpath) VALUES (@id, @name, @dept, @pic)";
 
-            sql = "Select * from studenttbl ";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-            adaptersql = new SqlDataAdapter();
-            adaptersql.SelectCommand = command;
-            // command.ExecuteNonQuery();  <-- DELETE THIS LINE!
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        // Add values to parameters
+                        command.Parameters.AddWithValue("@id", student_numtxtbox.Text);
+                        command.Parameters.AddWithValue("@name", stud_nametxtbox.Text);
+                        command.Parameters.AddWithValue("@dept", stud_depttxtbox.Text);
+                        command.Parameters.AddWithValue("@pic", picturepathtxtbox.Text);
 
-            dset = new DataSet();
-            adaptersql.Fill(dset, "studenttbl");
-            dataGridView1.DataSource = dset.Tables[0];
-            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            student_numtxtbox.Clear();
-            stud_depttxtbox.Clear();
-            stud_nametxtbox.Clear();
-            picturepathtxtbox.Clear();
-            connection.Close();
+                        command.ExecuteNonQuery();
+                    }
+                }
 
+                MessageBox.Show("Record Saved!");
+                LoadData(); // Refresh Grid
+                ClearInputs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Saving: " + ex.Message);
+            }
+        }
+
+        // --- BUTTON 2: SEARCH ---
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM studenttbl WHERE stud_id = @id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", student_numtxtbox.Text);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                stud_nametxtbox.Text = reader["stud_name"].ToString();
+                                stud_depttxtbox.Text = reader["stud_dept"].ToString();
+                                picturepathtxtbox.Text = reader["picpath"].ToString();
+
+                                SafeLoadImage(picturepathtxtbox.Text);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Student not found.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Searching: " + ex.Message);
+            }
+        }
+
+        // --- BUTTON 3: DELETE ---
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "DELETE FROM studenttbl WHERE stud_id = @id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", student_numtxtbox.Text);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                            MessageBox.Show("Record Deleted.");
+                        else
+                            MessageBox.Show("ID not found to delete.");
+                    }
+                }
+                LoadData();
+                ClearInputs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Deleting: " + ex.Message);
+            }
+        }
+
+        // --- BUTTON 6: EDIT / UPDATE ---
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "UPDATE studenttbl SET stud_name=@name, stud_dept=@dept, picpath=@pic WHERE stud_id=@id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", stud_nametxtbox.Text);
+                        command.Parameters.AddWithValue("@dept", stud_depttxtbox.Text);
+                        command.Parameters.AddWithValue("@pic", picturepathtxtbox.Text);
+                        command.Parameters.AddWithValue("@id", student_numtxtbox.Text);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Record Updated!");
+                LoadData();
+                ClearInputs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Updating: " + ex.Message);
+            }
+        }
+
+        // --- BUTTON 4: CANCEL / CLEAR ---
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ClearInputs();
+        }
+
+        // --- BUTTON 5: NEW (Same as Cancel usually) ---
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ClearInputs();
+        }
+
+        // --- PICTURE BOX CLICK (Upload) ---
+        private void picturebox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.gif;*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                // Display using safe loader
+                SafeLoadImage(ofd.FileName);
+
+                // Save path to textbox
+                picturepathtxtbox.Text = ofd.FileName;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            connection.Open();
-
-            sql = "Select * from studenttbl where stud_id = '" +
-                student_numtxtbox.Text + "'";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-
-            adaptersql = new SqlDataAdapter();
-            adaptersql.SelectCommand = command;
-            //command.ExecuteNonQuery();
-
-            dset = new DataSet();
-            adaptersql.Fill(dset, "studenttbl");
-
-            dataGridView1.DataSource = dset.Tables[0];
-
-            stud_nametxtbox.Text = dset.Tables[0].Rows[0][1].ToString();
-            stud_depttxtbox.Text = dset.Tables[0].Rows[0][3].ToString();
-            picturepathtxtbox.Text = dset.Tables[0].Rows[0][2].ToString();
-            //iba code ni mam
-            if (System.IO.File.Exists(picturepathtxtbox.Text))
-            {
-                picturebox.Image = Image.FromFile(picturepathtxtbox.Text);
-            }
-            else
-            {
-                picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\question.png");
-            }
-            //
-            connection.Close();
-
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            connection.Open();
-
-            sql = "delete from studenttbl where stud_id = '" + student_numtxtbox.Text + "'";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-
-            adaptersql = new SqlDataAdapter();
-            adaptersql.DeleteCommand = command;
-            command.ExecuteNonQuery();
-
-
-            sql = "select * from studenttbl";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-            adaptersql.SelectCommand = command;  // ADD THIS LINE!
-
-
-            dset = new DataSet();
-            adaptersql.Fill(dset, "studenttbl");
-
-            dataGridView1.DataSource = dset.Tables[0];
-
-            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            connection.Close();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            connection.Open();
-            sql = "UPDATE studenttbl SET " +
-        "stud_name = '" + stud_nametxtbox.Text + "', " +
-        "stud_dept = '" + stud_depttxtbox.Text + "', " +
-        "picpath = '" + picturepathtxtbox.Text + "' " +
-        "WHERE stud_id = '" + student_numtxtbox.Text + "'";
-
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-
-            adaptersql = new SqlDataAdapter();
-            adaptersql.UpdateCommand  = command;
-            command.ExecuteNonQuery();
-
-
-            sql = "select * from studenttbl";
-            command = new SqlCommand(sql, connection);
-            command.CommandType = CommandType.Text;
-            adaptersql.SelectCommand = command;  // ADD THIS LINE!
-
-            dset = new DataSet();
-            adaptersql.Fill(dset, "studenttbl");
-
-            dataGridView1.DataSource = dset.Tables[0];
-
-            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            student_numtxtbox.Clear();
-            stud_depttxtbox.Clear();
-            stud_nametxtbox.Clear();
-            picturepathtxtbox.Clear();
-
-            connection.Close();
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            student_numtxtbox.Clear();
-            stud_depttxtbox.Clear();
-            stud_nametxtbox.Clear();
-            picturepathtxtbox.Clear();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            picturebox.Image = Image.FromFile("C:\\Users\\C203-36\\Pictures\\haunted.png");
-            student_numtxtbox.Clear();
-            stud_depttxtbox.Clear();
-            stud_nametxtbox.Clear();
-            picturepathtxtbox.Clear();
-        }
-
-        private void picturebox_Click(object sender, EventArgs e)
-        {
-            // Create an instance of OpenFileDialog
-            OpenFileDialog ofd = new OpenFileDialog();
-
-            // Set filter for image files
-            ofd.Filter = "Image Files|*.gif;*.jpg;*.jpeg;*.png;*.bmp";
-
-            // Show the dialog
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                // Display the selected image in the PictureBox
-                picturebox.Image = Image.FromFile(ofd.FileName);
-
-                // Save the path in a variable and textbox
-                picpath = ofd.FileName;
-                picturepathtxtbox.Text = picpath;
-            }
-
+            // Optional: If you want clicking the grid to fill the textboxes, 
+            // you can add logic here.
         }
     }
 }
